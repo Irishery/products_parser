@@ -1,0 +1,28 @@
+{
+  "url": "https://khinkalnaya1.ru/",
+  "charset": "utf-8",
+  "cssmode": "css",
+  "product": "div.product",
+  "selectors": {
+    "name": "h1",
+    "price": ".price",
+    "url": "a@href",
+    "picture": "img@src",
+    "description": ".description"
+  },
+  "menu": {
+    "main": ".categories",
+    "name": "a",
+    "url": "a@href",
+    "children": {
+      "main": ".categories-tile",
+      "name": "a",
+      "url": "a@href"
+    }
+  },
+  "follow_url": true,
+  "product_url": "",
+  "export": "xml",
+  "filename": "demo",
+  "delay": 1000
+}

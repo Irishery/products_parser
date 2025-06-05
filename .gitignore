@@ -1,0 +1,13 @@
+# Node.js
+/node_modules/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+
+# Other ignored files
+.DS_Store

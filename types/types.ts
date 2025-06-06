@@ -1,7 +1,5 @@
 interface menuConf {
     main: string;
-    name: string;
-    url: string;
     children: {
         main: string;
         name: string;
@@ -10,21 +8,48 @@ interface menuConf {
     
 }
 
-export interface Config {
-  url: string;
-  charset?: string;
-  cssmode?: string;
-  product: string;
-  menu: menuConf;
-  product_url?: string;
-  selectors: Record<string, string>;
-  follow_url?: boolean;
-  export?: string;
-  filename?: string;
-  delay?: number;
-  start_id?: number;
-  name?: string;
-  company?: string;
+namespace Types {
+  export interface ModifierGroup {
+  name: string;
+  type: string;
+  minimum: number;
+  maximum: number;
 }
 
-export default Config;
+  export interface Category {
+    id: number;
+    name: string;
+    url: string;
+  }
+
+  export interface Config {
+    url: string;
+    charset?: string;
+    cssmode?: string;
+    product: string;
+    menu: menuConf;
+    product_url?: string;
+    selectors: Record<string, string>;
+    follow_url?: boolean;
+    export?: string;
+    filename?: string;
+    delay?: number;
+    start_id?: number;
+    name?: string;
+    company?: string;
+  }
+
+  export interface Product {
+    id: string;
+    name: string;
+    description?: string;
+    picture?: string;
+    price?: any[];
+    category: number;
+    labels?: string[];
+    modifiers?: string[];
+  }
+}
+
+
+export default Types;

@@ -12,12 +12,10 @@
   },
   "menu": {
     "main": ".categories",
-    "name": "a",
-    "url": "a@href",
     "children": {
       "main": ".categories-tile",
-      "name": "a",
-      "url": "a@href"
+      "name": "a .cat-tile_name b",
+      "url": "a"
     }
   },
   "follow_url": true,

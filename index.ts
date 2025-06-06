@@ -1,14 +1,7 @@
 // index.ts
-import parser from "./parser";
+import parser from "./test";
 import config from "./config.json";
 
-parser.init(config, {
-  get_product: (data, product, dom) => {
-    return {
-      ...product,
-      ...data,
-    };
-  },
-});
+parser.init(config);
 
 parser.start();

@@ -3,33 +3,12 @@ import MenuParser from './menuParser';
 import ProductParser from './productParser';
 import Exporter from './exporter';
 import * as utils from './utils';
-import Config from './types/types'
+import Types from './types/types'
 
 
-interface Category {
-  id: number;
-  name: string;
-  url: string;
-  parent?: number;
-}
 
-interface Product {
-  id: string;
-  name: string;
-  description?: string;
-  picture?: string;
-  price?: any[];
-  category: number;
-  labels?: string[];
-  modifiers?: string[];
-}
 
-interface ModifierGroup {
-  name: string;
-  type: string;
-  minimum: number;
-  maximum: number;
-}
+
 
 interface Callbacks {
   get_product?: (...args: any[]) => any;
@@ -37,13 +16,13 @@ interface Callbacks {
 }
 
 class Parser {
-  private cfg!: Config;
+  private cfg!: Types.Config;
   private callbacks: Callbacks = {};
-  private categories: Category[] = [];
+  private categories: Types.Category[] = [];
   private products: Record<string, Product> = {};
   private modifiers_groups: ModifierGroup[] = [];
 
-  init(cfg: Config, callbacks: Callbacks = {}): void {
+  init(cfg: Types.Config, callbacks: Callbacks = {}): void {
     this.cfg = cfg;
     this.callbacks = callbacks;
   }

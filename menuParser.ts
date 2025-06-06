@@ -1,16 +1,16 @@
 // menuParser.ts
 import { JSDOM } from 'jsdom';
-import * as cssToXpath from 'csstoxpath';
+import cssToXpath from 'csstoxpath';
 import axios from 'axios';
 import iconv from 'iconv-lite';
 import * as utils from './utils';
 import Config from './types/types'
+import { types } from 'node:util';
 
 interface Category {
   id: number;
   name: string;
   url: string;
-  parent?: number;
 }
 
 export default class MenuParser {
@@ -27,7 +27,7 @@ export default class MenuParser {
       url,
       responseType: 'arraybuffer' as const,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/137.0.0.0 Safari/537.36'
       }
     };
     const response = await axios(options);
@@ -36,65 +36,46 @@ export default class MenuParser {
     return new JSDOM(html).window.document;
   }
 
-  extract(doc: Document, selectorMap: Record<string, string>, baseNode: Node = doc): Record<string, string[]> {
-    const data: Record<string, string[]> = {};
-    for (const key in selectorMap) {
-      const selector = selectorMap[key];
-      const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
-      const result = doc.evaluate(path, baseNode, null, 5, null);
-      data[key] = [];
-      let node;
-      while ((node = result.iterateNext())) {
-        data[key].push(node.textContent?.trim() || '');
-      }
-    }
-    return data;
-  }
-
   async getMenu(): Promise<Category[]> {
     const doc = await this.fetch(this.cfg.url);
     const menuConf = this.cfg.menu;
-    const menuNodes = this.select(doc, menuConf.main);
+    const menuNode = this.select(doc, menuConf.main);
+
+    console.log(menuNode.childNodes);
     let id = 1;
 
-    for (const node of menuNodes) {
-      const name = this.extract(doc, { name: menuConf.name }, node).name[0];
-      const url = this.extract(doc, { url: menuConf.url }, node).url[0];
-      if (!name) continue;
+    for (const node of menuNode.childNodes) {
+
+      const el = node as Element;
+      let cat: Category;
+
+      const urlElement = el.querySelector(menuConf.children.url);
+      const nameElement = el.querySelector(menuConf.children.name);
+
+      const rawUrl = urlElement?.getAttribute("href");
+      const rawName = nameElement?.textContent;
+
+      const url = utils.fixUrl(rawUrl ?? '', this.cfg.url);
+      const name = utils.convertString(rawName ?? '');
+
       this.categories.push({
         id,
         name: utils.convertString(name),
         url: utils.fixUrl(url, this.cfg.url)
       });
-      const children = this.select(doc, menuConf.children.main, node);
-      let parent = id;
+
       id++;
-      for (const child of children) {
-        const childName = this.extract(doc, { name: menuConf.children.name }, child).name[0];
-        const childUrl = this.extract(doc, { url: menuConf.children.url }, child).url[0];
-        if (!childName) continue;
-        this.categories.push({
-          id,
-          name: utils.convertString(childName),
-          url: utils.fixUrl(childUrl, this.cfg.url),
-          parent
-        });
-        id++;
-      }
+
     }
 
-    utils.log(`Найдено категорий: ${this.categories.length}`);
     return this.categories;
   }
 
-  select(doc: Document, selector: string, base: Node = doc): Element[] {
+  select(doc: Document, selector: string, base: Node = doc): Element {
     const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
+    console.log(path)
     const result = doc.evaluate(path, base, null, 5, null);
-    const nodes: Element[] = [];
-    let node;
-    while ((node = result.iterateNext())) {
-      nodes.push(node as Element);
-    }
-    return nodes;
+
+    return result.iterateNext() as Element;
   }
 }

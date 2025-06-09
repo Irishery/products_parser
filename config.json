@@ -1,8 +1,8 @@
 {
-  "url": "https://khinkalnaya1.ru/",
+  "url": "https://xn--80abhupjsev2h.xn--p1ai/",
   "charset": "utf-8",
   "cssmode": "css",
-  "product": "div.product",
+  "product": ".catalog-items__item",
   "selectors": {
     "name": "h1",
     "price": ".price",
@@ -11,10 +11,10 @@
     "description": ".description"
   },
   "menu": {
-    "main": ".categories",
+    "main": ".catalog-sections-horizontal",
     "children": {
-      "main": ".categories-tile",
-      "name": "a .cat-tile_name b",
+      "main": ".catalog-sections-horizontal__section",
+      "name": ".catalog-sections-horizontal__name",
       "url": "a"
     }
   },

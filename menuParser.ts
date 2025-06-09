@@ -4,7 +4,7 @@ import cssToXpath from 'csstoxpath';
 import axios from 'axios';
 import iconv from 'iconv-lite';
 import * as utils from './utils';
-import Config from './types/types'
+import Types from './types/types'
 import { types } from 'node:util';
 
 interface Category {
@@ -14,10 +14,10 @@ interface Category {
 }
 
 export default class MenuParser {
-  private cfg: Config;
+  private cfg: Types.Config;
   public categories: Category[] = [];
 
-  constructor(cfg: Config) {
+  constructor(cfg: Types.Config) {
     this.cfg = cfg;
   }
 
@@ -41,18 +41,16 @@ export default class MenuParser {
     const menuConf = this.cfg.menu;
     const menuNode = this.select(doc, menuConf.main);
 
-    console.log(menuNode.childNodes);
     let id = 1;
 
     for (const node of menuNode.childNodes) {
+      if (node.nodeType !== 1) continue;
 
       const el = node as Element;
-      let cat: Category;
 
-      const urlElement = el.querySelector(menuConf.children.url);
       const nameElement = el.querySelector(menuConf.children.name);
 
-      const rawUrl = urlElement?.getAttribute("href");
+      const rawUrl = el.getAttribute("href");
       const rawName = nameElement?.textContent;
 
       const url = utils.fixUrl(rawUrl ?? '', this.cfg.url);
@@ -73,7 +71,6 @@ export default class MenuParser {
 
   select(doc: Document, selector: string, base: Node = doc): Element {
     const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
-    console.log(path)
     const result = doc.evaluate(path, base, null, 5, null);
 
     return result.iterateNext() as Element;

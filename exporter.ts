@@ -2,13 +2,9 @@
 import fs from 'fs';
 import { URL } from 'url';
 import * as utils from './utils';
+import Types from './types/types'
 
-interface ModifierGroup {
-  name: string;
-  type: string;
-  minimum: number;
-  maximum: number;
-}
+
 
 interface ProductPrice {
   id?: string;
@@ -17,40 +13,11 @@ interface ProductPrice {
   index?: [number, number];
 }
 
-interface Product {
-  id: string;
-  name: string;
-  description?: string;
-  picture?: string;
-  price?: ProductPrice[];
-  category: number;
-  labels?: string[];
-  modifiers?: string[];
-}
-
-interface Category {
-  id: number;
-  name: string;
-  parent?: number;
-}
-
-interface ExportData {
-  name: string;
-  company: string;
-  url: string;
-  categories: Category[];
-  products: Record<string, Product>;
-  modifiers_groups: ModifierGroup[];
-}
-
-interface ExporterConfig {
-  filename?: string;
-}
 
 export default class Exporter {
-  constructor(private cfg: ExporterConfig) {}
+  constructor(private cfg: Types.ExporterConfig) {}
 
-  exportJSON({ name, company, url, categories, products, modifiers_groups }: ExportData): void {
+  exportJSON({ name, company, url, categories, products, modifiers_groups }: Types.ExportData): void {
     const output = {
       name,
       company,
@@ -66,9 +33,11 @@ export default class Exporter {
     utils.log(`JSON export done: ${fileName}`);
   }
 
-  exportXML({ name, company, url, categories, products, modifiers_groups }: ExportData): void {
+  exportXML({ name, company, url, categories, products, modifiers_groups }: Types.ExportData): void {
     const now = utils.getTime();
     const xml: string[] = [];
+    console.log(categories.length)
+    console.log(products.length)
 
     xml.push('<?xml version="1.0" encoding="UTF-8"?>');
     xml.push(`<yml_catalog date="${now}">`);
@@ -93,13 +62,15 @@ export default class Exporter {
 
     xml.push('<categories>');
     categories.forEach((cat) => {
-      const parentAttr = cat.parent ? ` parentId="${cat.parent}"` : '';
-      xml.push(`<category id="${cat.id}"${parentAttr}>${cat.name}</category>`);
+      console.log(cat)
+      // const parentAttr = cat.parent ? ` parentId="${cat.parent}"` : '';
+      xml.push(`<category id="${cat.id}">${cat.name}</category>`);
     });
     xml.push('</categories>');
 
     xml.push('<offers>');
     Object.values(products).forEach((product) => {
+      
       xml.push(`<offer id="${product.id}" available="true">`);
       xml.push(`<name>${product.name}</name>`);
       xml.push(`<description><![CDATA[${product.description || ''}]]></description>`);

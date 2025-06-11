@@ -49,6 +49,20 @@ namespace Types {
     labels?: string[];
     modifiers?: string[];
   }
+
+  export interface ExportData {
+    name: string;
+    company: string;
+    url: string;
+    categories: Category[];
+    products: Record<string, Product>;
+    modifiers_groups: ModifierGroup[];
+  }
+
+  export interface ExporterConfig {
+    filename?: string;
+  }
+
 }
 
 

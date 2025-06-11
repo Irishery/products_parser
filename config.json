@@ -4,11 +4,11 @@
   "cssmode": "css",
   "product": ".catalog-items__item",
   "selectors": {
-    "name": "h1",
-    "price": ".price",
-    "url": "a@href",
-    "picture": "img@src",
-    "description": ".description"
+    "name": ".catalog-item__name",
+    "price": ".catalog-item__price",
+    "url": "catalog-items__name",
+    "picture": ".catalog-item__img img",
+    "description": ".catalog-item__description"
   },
   "menu": {
     "main": ".catalog-sections-horizontal",

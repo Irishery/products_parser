@@ -64,34 +64,57 @@ class Parser{
   }
 
   async getProducts(): Promise<Types.Product[]> {
-    for (const category of this.categories) {
-      const doc = await this.fetch(category.url);
-      // console.log([1]);
+  let globalIndex = 1;
 
-      const productNodes = this.select(doc, this.cfg.product);
+  for (const category of this.categories) {
+    const doc = await this.fetch(category.url);
+    const productNodes = this.select(doc, this.cfg.product);
 
-      for (const node of productNodes) {
-        if (node.nodeType !== 1) continue;
-        const rawUrl = node.getElementsByClassName(this.cfg.selectors.url)[0].getAttribute('href') || '';
+    let localIndex = 1; // Для генерации ID внутри категории
 
-        if (!rawUrl) continue;
-        const url = utils.fixUrl(rawUrl, this.cfg.url);
-        await this.getDetailedProductInfo(url)
-          .then((product) => {
-            product.id = url;
-            product.category = category.id;
-            this.products.push(product);
-          })
-          .catch((e) => {
-            utils.err(`Error parsing product: ${e}`);
-          });
+    for (const node of productNodes) {
+      if (node.nodeType !== 1) continue;
 
-        
+      const rawUrl = node.getElementsByClassName(this.cfg.selectors.url)?.[0]?.getAttribute('href') || '';
+      if (!rawUrl) continue;
+
+      const url = utils.fixUrl(rawUrl, this.cfg.url);
+
+      try {
+        const product = await this.getDetailedProductInfo(url);
+
+        // Генерация ID в стиле 1000 * categoryId + index
+        const generatedId = 1000 * parseInt(category.id) + localIndex;
+
+        product.id = String(generatedId);
+        product.category = category.id;
+
+        // Генерация параметров (возможно, тебе нужно будет скорректировать структуру Types.Product)
+        const price = parseInt(product.price?.[0] ?? '0') || 0;
+        const weightMatch = product.description.match(/\d+\s?г/)?.[0] || '';
+
+        product.parameters = [
+          { 
+            id: String(generatedId * 10),
+            price,
+            weight: weightMatch,
+            description: product.description,
+            descriptionIndex: 10,
+          }
+        ];
+
+        this.products.push(product);
+
+        localIndex++;
+        globalIndex++;
+      } catch (e) {
+        utils.err(`Error parsing product: ${e}`);
       }
     }
-
-    return this.products;
   }
+
+  return this.products;
+}
 
   async getDetailedProductInfo(url: string): Promise<Types.Product> {
     console.log(url);
@@ -133,8 +156,8 @@ class Parser{
     modifiers_groups: [] // если есть — заполните по логике, иначе оставить пустым
     };
 
-    const exporter = new Exporter({ filename: this.cfg.filename });
-    exporter.exportXML(exportData);
+    const exporter = new Exporter(exportData, this.cfg);
+    exporter.exportXml();
   }
 
   select(doc: Document, selector: string, base: Node = doc): Element[] {

@@ -13,97 +13,142 @@ interface ProductPrice {
   index?: [number, number];
 }
 
-
 export default class Exporter {
-  constructor(private cfg: Types.ExporterConfig) {}
+  private data: Types.ExportData;
+  private cfg: Types.Config;
 
-  exportJSON({ name, company, url, categories, products, modifiers_groups }: Types.ExportData): void {
-    const output = {
-      name,
-      company,
-      url,
-      currency: 'RUB',
-      modifiers_groups,
-      products,
-      categories
-    };
-
-    const fileName = `./export/${this.cfg.filename || 'export'}.json`;
-    fs.writeFileSync(fileName, JSON.stringify(output, null, 2), 'utf8');
-    utils.log(`JSON export done: ${fileName}`);
+  constructor(data: Types.ExportData, cfg: Types.Config) {
+    this.data = data;
+    this.cfg = cfg;
   }
 
-  exportXML({ name, company, url, categories, products, modifiers_groups }: Types.ExportData): void {
-    const now = utils.getTime();
+  private getTime(): string {
+    return new Date().toISOString().slice(0, 19); // YYYY-MM-DDTHH:mm:ss
+  }
+
+  public exportXml(): void {
+    const fileName = this.cfg.filename
+      ? `./${this.cfg.filename}.xml`
+      : './export.xml';
+
+    const { name, company, url, categories, products, modifiers_groups } = this.data;
+
     const xml: string[] = [];
-    console.log(categories.length)
-    console.log(products.length)
 
     xml.push('<?xml version="1.0" encoding="UTF-8"?>');
-    xml.push(`<yml_catalog date="${now}">`);
+    xml.push(`<yml_catalog date="${this.getTime()}">`);
     xml.push('<shop>');
+
     xml.push(`<name>${name}</name>`);
     xml.push(`<company>${company}</company>`);
     xml.push(`<url>${url}</url>`);
+
     xml.push('<currencies><currency id="RUR" rate="1"/></currencies>');
 
-    if (modifiers_groups?.length > 0) {
-      xml.push('<modifiersGroups>');
-      modifiers_groups.forEach((group, i) => {
-        xml.push(`<modifiersGroup id="${i + 1}">`);
-        xml.push(`<name>${group.name}</name>`);
-        xml.push(`<type>${group.type}</type>`);
-        xml.push(`<minimum>${group.minimum}</minimum>`);
-        xml.push(`<maximum>${group.maximum}</maximum>`);
-        xml.push('</modifiersGroup>');
-      });
-      xml.push('</modifiersGroups>');
+    let groupId = 1;
+    let modifierId = 1;
+    const mg: string[] = [];
+    const mm: string[] = [];
+
+    for (const group of modifiers_groups) {
+      mg.push(`<modifiersGroup id="${groupId}">`);
+      mg.push(`<name>${group.name}</name>`);
+      mg.push(`<type>${group.type}</type>`);
+      mg.push(`<minimum>${group.minimum}</minimum>`);
+      mg.push(`<maximum>${group.maximum}</maximum>`);
+      mg.push('</modifiersGroup>');
+
+      // Если модификаторы внутри group
+      const anyGroup = group as any;
+      if (anyGroup.modifiers) {
+        for (const modifier of anyGroup.modifiers) {
+          mm.push(`<modifier id="${modifier.id || modifierId}" required="true">`);
+          mm.push(`<name>${modifier.name}</name>`);
+          mm.push(`<price>${modifier.price}</price>`);
+          mm.push(`<modifiersGroupId>${groupId}</modifiersGroupId>`);
+          mm.push('</modifier>');
+          modifierId++;
+        }
+      }
+
+      groupId++;
     }
 
+    if (mg.length) xml.push(`<modifiersGroups>${mg.join('')}</modifiersGroups>`);
+    if (mm.length) xml.push(`<modifiers>${mm.join('')}</modifiers>`);
+
     xml.push('<categories>');
-    categories.forEach((cat) => {
-      console.log(cat)
-      // const parentAttr = cat.parent ? ` parentId="${cat.parent}"` : '';
-      xml.push(`<category id="${cat.id}">${cat.name}</category>`);
-    });
+    for (const category of categories) {
+      xml.push(`<category id="${category.id}">${category.name}</category>`);
+    }
     xml.push('</categories>');
 
     xml.push('<offers>');
-    Object.values(products).forEach((product) => {
-      
+    for (const productId in products) {
+      const product = products[productId];
+      if (!product.name) continue;
+
       xml.push(`<offer id="${product.id}" available="true">`);
       xml.push(`<name>${product.name}</name>`);
-      xml.push(`<description><![CDATA[${product.description || ''}]]></description>`);
-      xml.push(`<picture>${product.picture || ''}</picture>`);
-      xml.push(`<parameters>`);
-      (product.price || []).forEach((p, idx) => {
-        xml.push(`<parameter id="${p.id || `${product.id}_${idx}`}">`);
-        xml.push(`<price>${p.price}</price>`);
-        if (p.old_price) xml.push(`<old_price>${p.old_price}</old_price>`);
-        xml.push(`<description>${p.index?.[0] || 1}</description>`);
-        xml.push(`<descriptionIndex>${p.index?.[1] || 10}</descriptionIndex>`);
-        xml.push(`</parameter>`);
-      });
-      xml.push(`</parameters>`);
+
+      if (product.description) {
+        xml.push(`<description><![CDATA[${product.description}]]></description>`);
+      } else {
+        xml.push('<description></description>');
+      }
+
+      if (product.picture) {
+        xml.push(`<picture>${product.picture}</picture>`);
+      }
+
+      xml.push('<parameters>');
+      if (product.price) {
+        for (const param of product.price) {
+          const paramId = param.id || product.id;
+          xml.push(`<parameter id="${paramId}">`);
+          xml.push(`<price>${param.price}</price>`);
+          if (param.old_price) {
+            xml.push(`<old_price>${param.old_price}</old_price>`);
+          }
+          xml.push(`<description>${param.index?.[0] ?? 1}</description>`);
+          xml.push(`<descriptionIndex>${param.index?.[1] ?? 10}</descriptionIndex>`);
+          xml.push('</parameter>');
+        }
+      }
+      xml.push('</parameters>');
+
       xml.push(`<categoryId>${product.category}</categoryId>`);
+
       if (product.labels?.length) {
         xml.push('<labelsIds>');
-        product.labels.forEach(l => xml.push(`<labelId>${l}</labelId>`));
+        for (const label of product.labels) {
+          xml.push(`<labelId>${label}</labelId>`);
+        }
         xml.push('</labelsIds>');
       }
+
       if (product.modifiers?.length) {
         xml.push('<modifiersGroupsIds>');
-        product.modifiers.forEach(m => xml.push(`<modifiersGroupId>${m}</modifiersGroupId>`));
+        for (const mod of product.modifiers) {
+          xml.push(`<modifiersGroupId>${mod}</modifiersGroupId>`);
+        }
         xml.push('</modifiersGroupsIds>');
       }
+
       xml.push('</offer>');
-    });
+    }
     xml.push('</offers>');
+
     xml.push('</shop>');
     xml.push('</yml_catalog>');
 
-    const fileName = `./export/${this.cfg.filename || 'export'}.xml`;
-    fs.writeFileSync(fileName, xml.join(''), 'utf8');
-    utils.log(`XML export done: ${fileName}`);
+    fs.writeFile(fileName, xml.join(''), (err) => {
+      if (err) {
+        console.error('Ошибка при записи файла:', err.message);
+      } else {
+        console.log('Экспорт завершён успешно:', fileName);
+      }
+    });
   }
 }
+

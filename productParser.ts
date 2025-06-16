@@ -7,11 +7,12 @@ import axios, { AxiosError } from 'axios';
 import iconv from 'iconv-lite';
 import * as utils from './utils';
 import Exporter from './exporter';
+import { HttpsProxyAgent } from 'https-proxy-agent';
+import ProxyManager from './proxyManager';
 
 
 
-
-class Parser{
+class Parser {
   private cfg!: Types.Config;
   private categories: Types.Category[] = [];
   private products: Types.Product[] = [];
@@ -20,30 +21,30 @@ class Parser{
     this.cfg = cfg;
   }
 
-    async fetch(url: string): Promise<Document> {
+  async fetch(url: string): Promise<Document> {
     const options = {
       method: 'GET',
       url,
       responseType: 'arraybuffer' as const,
       headers: {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
       }
     };
     // const response = await axios(options);
     let response: any;
 
-  try {
-    response = await axios.get(url, { responseType: 'arraybuffer' });
-  } catch (error) {
-    if (error instanceof AxiosError) {
-      console.error('Axios error:', error.message);
-    } else if (error instanceof Error) {
-      console.error('General error:', error.message);
-    } else {
-      console.error('Unknown error:', error);
-    }
-    console.error('Response data:', error);
-    return new JSDOM('').window.document; // Возврат в случае ошибки
+    try {
+      response = await axios.get(url, { responseType: 'arraybuffer' });
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        console.error('Axios error:', error.message);
+      } else if (error instanceof Error) {
+        console.error('General error:', error.message);
+      } else {
+        console.error('Unknown error:', error);
+      }
+      console.error('Response data:', error);
+      return new JSDOM('').window.document; // Возврат в случае ошибки
     }
 
     const encoding = this.cfg.charset || 'utf-8';
@@ -60,100 +61,99 @@ class Parser{
     console.log("PRODUCTS ", this.products.length);
 
     await this.Export();
-    
+
   }
 
   async getProducts(): Promise<Types.Product[]> {
-  let globalIndex = 1;
+    let globalIndex = 1;
 
-  for (const category of this.categories) {
-    const doc = await this.fetch(category.url);
-    const productNodes = this.select(doc, this.cfg.product);
+    for (const category of this.categories) {
+      const doc = await this.fetch(category.url);
+      const productNodes = this.select(doc, this.cfg.product);
 
-    let localIndex = 1; // Для генерации ID внутри категории
+      let localIndex = 1; // Для генерации ID внутри категории
 
-    for (const node of productNodes) {
-      if (node.nodeType !== 1) continue;
+      let counter = 0;
 
-      const rawUrl = node.getElementsByClassName(this.cfg.selectors.url)?.[0]?.getAttribute('href') || '';
-      if (!rawUrl) continue;
+      for (const node of productNodes) {
+        if (node.nodeType !== 1) continue;
 
-      const url = utils.fixUrl(rawUrl, this.cfg.url);
+        const rawUrl = node.getElementsByClassName(this.cfg.selectors.url)?.[0]?.getAttribute('href') || '';
+        if (!rawUrl) continue;
 
-      try {
-        const product = await this.getDetailedProductInfo(url);
+        const url = utils.fixUrl(rawUrl, this.cfg.url);
 
-        // Генерация ID в стиле 1000 * categoryId + index
-        const generatedId = 1000 * parseInt(category.id) + localIndex;
+        try {
+          const product = await this.getDetailedProductInfo(url);
 
-        product.id = String(generatedId);
-        product.category = category.id;
+          // Генерация ID в стиле 1000 * categoryId + index
+          const generatedId = 1000 * category.id + localIndex;
 
-        // Генерация параметров (возможно, тебе нужно будет скорректировать структуру Types.Product)
-        const price = parseInt(product.price?.[0] ?? '0') || 0;
-        const weightMatch = product.description.match(/\d+\s?г/)?.[0] || '';
+          product.id = generatedId;
+          product.category = category.id;
 
-        product.parameters = [
-          { 
-            id: String(generatedId * 10),
-            price,
-            weight: weightMatch,
-            description: product.description,
-            descriptionIndex: 10,
-          }
-        ];
+          // Генерация параметров (возможно, тебе нужно будет скорректировать структуру Types.Product)
+          const price = parseInt(product.price?.[0] ?? '0') || 0;
+          const weightMatch = product.description.match(/\d+\s?г/)?.[0] || '';
 
-        this.products.push(product);
+          product.parameters = [
+            {
+              id: String(generatedId * 10),
+              price,
+              weight: weightMatch,
+              description: product.description,
+              descriptionIndex: 10,
+            }
+          ];
 
-        localIndex++;
-        globalIndex++;
-      } catch (e) {
-        utils.err(`Error parsing product: ${e}`);
+          this.products.push(product);
+
+          localIndex++;
+          globalIndex++;
+        } catch (e) {
+          utils.err(`Error parsing product: ${e}`);
+        }
+        counter++
+        if (counter >= 3) { break }
       }
     }
-  }
 
-  return this.products;
-}
+    return this.products;
+  }
 
   async getDetailedProductInfo(url: string): Promise<Types.Product> {
-    console.log(url);
     const doc = await this.fetch(url);
-    const product: Types.Product = {
-      id: '',
-      name: '',
-      description: '',
-      picture: '',
-      price: [],
-      category: 10,
+
+    const name = doc.querySelector(this.cfg.selectors.name)?.textContent ?? '';
+    const description = doc.querySelector(this.cfg.selectors.description)?.textContent ?? '';
+    const picture = doc.querySelector(this.cfg.selectors.picture)?.getAttribute('src') ?? '';
+    const price = doc.querySelector(this.cfg.selectors.price)?.textContent ?? '';
+
+    return {
+      id: 0,
+      name: name.trim(),
+      description: description.trim(),
+      picture: picture.trim(),
+      price: price ? [price.trim()] : [],
+      category: 0,
       labels: [],
-      modifiers: []
+      modifiers: [],
+      parameters: [] // будет заполняться позже
     };
-
-    const name = doc.querySelector(this.cfg.selectors.name)?.textContent;
-    const description = doc.querySelector(this.cfg.selectors.description)?.textContent;
-    const picture = doc.querySelector(this.cfg.selectors.picture)?.getAttribute('src')
-    const price = doc.querySelector(this.cfg.selectors.price)?.textContent;
-
-    product.name = name ?? '';
-    product.description = description ?? '';
-    product.picture = picture ?? '';
-    product.price = price ? [price] : [];
-
-    return product;
   }
+
 
   async Export() {
     const exportData = {
-    name: this.cfg.name || '',
-    company: this.cfg.company || '',
-    url: this.cfg.url,
-    categories: this.categories,
-    products: this.products.reduce((acc, product) => {
-      acc[product.id] = product;
-      return acc;
-    }, {} as Record<string, Types.Product>),
-    modifiers_groups: [] // если есть — заполните по логике, иначе оставить пустым
+      name: this.cfg.name || '',
+      company: this.cfg.company || '',
+      url: this.cfg.url,
+      categories: this.categories,
+      products: this.products.reduce((acc, product) => {
+        acc[product.id] = product;
+        return acc;
+      }, {} as Record<string, Types.Product>),
+      modifiers_groups: [] // если есть — заполните по логике, иначе оставить пустым
     };
 
     const exporter = new Exporter(exportData, this.cfg);
@@ -161,16 +161,16 @@ class Parser{
   }
 
   select(doc: Document, selector: string, base: Node = doc): Element[] {
-      const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
-      const result = doc.evaluate(path, base, null, 5, null);
+    const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
+    const result = doc.evaluate(path, base, null, 5, null);
 
-      let els = new Array<Element>();
-      for (let el = result.iterateNext(); el; el = result.iterateNext()) {
-        els.push(el as Element);
-      }
-  
-      return els;
+    let els = new Array<Element>();
+    for (let el = result.iterateNext(); el; el = result.iterateNext()) {
+      els.push(el as Element);
     }
+
+    return els;
+  }
 }
 
 export default new Parser();

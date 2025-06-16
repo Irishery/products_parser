@@ -40,14 +40,15 @@ namespace Types {
   }
 
   export interface Product {
-    id: string;
+    id: number;
     name: string;
-    description?: string;
+    description: string;
     picture?: string;
     price?: any[];
     category: number;
     labels?: string[];
     modifiers?: string[];
+    parameters: any[];
   }
 
   export interface ExportData {

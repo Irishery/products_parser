@@ -4,15 +4,6 @@ import { URL } from 'url';
 import * as utils from './utils';
 import Types from './types/types'
 
-
-
-interface ProductPrice {
-  id?: string;
-  price: number;
-  old_price?: number;
-  index?: [number, number];
-}
-
 export default class Exporter {
   private data: Types.ExportData;
   private cfg: Types.Config;
@@ -86,6 +77,8 @@ export default class Exporter {
     xml.push('<offers>');
     for (const productId in products) {
       const product = products[productId];
+      console.log('🔍 Product:', product.id, product.name, 'Price:', product.price);
+
       if (!product.name) continue;
 
       xml.push(`<offer id="${product.id}" available="true">`);

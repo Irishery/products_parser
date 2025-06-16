@@ -27,22 +27,22 @@ export default class MenuParser {
       url,
       responseType: 'arraybuffer' as const,
       headers: {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
       }
     };
     let response: any;
 
-  try {
-    response = await axios.get(this.cfg.url, { responseType: 'arraybuffer' });
-  } catch (error) {
-    if (error instanceof AxiosError) {
-      console.error('Axios error:', error.message);
-    } else if (error instanceof Error) {
-      console.error('General error:', error.message);
-    } else {
-      console.error('Unknown error:', error);
-    }
-    return new JSDOM('').window.document; // Возврат в случае ошибки
+    try {
+      response = await axios.get(this.cfg.url, { responseType: 'arraybuffer' });
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        console.error('Axios error:', error.message);
+      } else if (error instanceof Error) {
+        console.error('General error:', error.message);
+      } else {
+        console.error('Unknown error:', error);
+      }
+      return new JSDOM('').window.document; // Возврат в случае ошибки
     }
     const encoding = this.cfg.charset || 'utf-8';
     const html = iconv.decode(response.data, encoding);

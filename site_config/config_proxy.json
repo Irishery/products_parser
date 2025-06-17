@@ -25,10 +25,5 @@
   "export": "xml",
   "filename": "export/demo1",
   "delay": 1000,
-  "proxy": {
-    "host": "198.23.239.134",
-    "port": 6540,
-    "user": "wfndkxfp",
-    "pass": "i7ob05nm8s5s"
-  }
+  "proxy": "./proxy.txt"
 }

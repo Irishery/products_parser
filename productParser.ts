@@ -7,6 +7,7 @@ import iconv from 'iconv-lite';
 import * as utils from './utils';
 import Exporter from './exporter';
 import { HttpsProxyAgent } from 'https-proxy-agent';
+import ProxyManager from './proxyManager';
 
 
 
@@ -29,20 +30,9 @@ class Parser {
 
     let agent;
     if (this.cfg.proxy) {
-      const { host, port } = this.cfg.proxy;
-      const proxyUrl = `http://${host}:${port}`;
-      const proxy = new URL(proxyUrl);
-      proxy.host = this.cfg.proxy.host;
-      proxy.username = this.cfg.proxy.user;
-      proxy.password = this.cfg.proxy.pass;
-      console.log(`http://${proxy.username}:${proxy.password}@${proxy.host}:${proxy.port}`)
-
-      agent = new HttpsProxyAgent(`http://${proxy.username}:${proxy.password}@${proxy.host}`);
-
-      console.log(proxy)
-
-      console.log(proxyUrl)
-      console.log(agent)
+      console.log("Proxy using")
+      const proxyManager = new ProxyManager(this.cfg.proxy);
+      agent = new HttpsProxyAgent(proxyManager.getRandomProxy());
     }
 
     try {
@@ -65,9 +55,9 @@ class Parser {
 
     this.categories = await menuParser.getMenu();
     console.log(this.categories)
-    // await this.getProducts();
+    await this.getProducts();
 
-    // await this.Export();
+    await this.Export();
 
   }
 
@@ -79,7 +69,7 @@ class Parser {
       const doc = await this.fetch(category.url);
       const productNodes = this.select(doc, this.cfg.product);
 
-      let localIndex = 1; // Для генерации ID внутри категории
+      let localIndex = 1;
 
 
       for (const node of productNodes) {
@@ -93,28 +83,11 @@ class Parser {
         try {
           const product = await this.getDetailedProductInfoUrl(url);
 
-
-
-
-          // Генерация ID в стиле 1000 * categoryId + index
           const generatedId = 1000 * category.id + localIndex;
 
           product.id = generatedId;
           product.category = category.id;
 
-          // Генерация параметров (возможно, тебе нужно будет скорректировать структуру Types.Product)
-          // const price = parseInt(product.price?.[0] ?? '0') || 0;
-          // const weightMatch = product.description.match(/\d+\s?г/)?.[0] || '';
-
-          // product.parameters = [
-          //   {
-          //     id: String(generatedId * 10),
-          //     price,
-          //     weight: weightMatch,
-          //     description: product.description,
-          //     descriptionIndex: 10,
-          //   }
-          // ];
           product.price[0].id = String(generatedId + localIndex + 1000)
 
           this.products.push(product);
@@ -156,7 +129,7 @@ class Parser {
       category: 0,
       labels: [],
       modifiers: [],
-      parameters: [] // будет заполняться позже
+      parameters: []
     };
   }
 

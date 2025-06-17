@@ -1,30 +1,43 @@
 import fs from 'fs';
-import path from 'path';
+import Types from './types/types'
 
-export default class ProxyManager {
-  private proxies: string[] = [];
+
+class ProxyManager {
+  private proxies: Types.Proxy[] = [];
 
   constructor(filePath: string) {
-    const raw = fs.readFileSync(path.resolve(filePath), 'utf-8');
-    const lines = raw.split('\n');
-
-    this.proxies = lines
-      .map(line => line.trim())
-      .filter(line => /^\d{1,3}(\.\d{1,3}){3}:\d+/.test(line)) // IP:PORT
-      .map(line => {
-        const match = line.match(/^(\d{1,3}(?:\.\d{1,3}){3}:\d+)/);
-        return match ? `https://${match[1]}` : null;
-      })
-      .filter((proxy): proxy is string => !!proxy);
+    this.loadProxies(filePath);
   }
 
-  getRandom(): string | null {
-    if (this.proxies.length === 0) return null;
-    const index = Math.floor(Math.random() * this.proxies.length);
-    return this.proxies[index];
-  }
-  length(): number {
-    return this.proxies.length;
+  private loadProxies(filePath: string) {
+    try {
+      const data = fs.readFileSync(filePath, 'utf-8');
+      const lines = data.split(/\r?\n/).filter(line => line.trim().length > 0);
+
+      this.proxies = lines.map(line => {
+        const [host, portStr, user, pass] = line.split(':');
+        if (!host || !portStr || !user || !pass) {
+          throw new Error(`Invalid proxy format: ${line}`);
+        }
+        return {
+          host,
+          port: Number(portStr),
+          user,
+          pass,
+        };
+      });
+    } catch (error) {
+      console.error('Error loading proxies:', error);
+      this.proxies = [];
+    }
   }
 
+  public getRandomProxy(): string {
+    if (this.proxies.length === 0) return '';
+    const idx = Math.floor(Math.random() * this.proxies.length);
+    const proxy = this.proxies[idx]
+    return `http://${proxy.user}:${proxy.pass}@${proxy.host}:${proxy.port}`;
+  }
 }
+
+export default ProxyManager;

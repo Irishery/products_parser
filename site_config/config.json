@@ -28,5 +28,6 @@
   "product_url": "",
   "export": "xml",
   "filename": "export/hink1",
-  "delay": 1000
+  "delay": 1000,
+  "proxy": ""
 }

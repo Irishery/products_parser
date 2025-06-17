@@ -7,6 +7,7 @@ import * as utils from './utils';
 import Types from './types/types'
 import { types } from 'node:util';
 import { HttpsProxyAgent } from 'https-proxy-agent';
+import ProxyManager from './proxyManager';
 
 
 export default class MenuParser {
@@ -26,20 +27,9 @@ export default class MenuParser {
 
     let agent;
     if (this.cfg.proxy) {
-      const { host, port } = this.cfg.proxy;
-      const proxyUrl = `http://${host}:${port}`;
-      const proxy = new URL(proxyUrl);
-      proxy.host = this.cfg.proxy.host;
-      proxy.username = this.cfg.proxy.user;
-      proxy.password = this.cfg.proxy.pass;
-      console.log(`http://${proxy.username}:${proxy.password}@${proxy.host}:${proxy.port}`)
-
-      agent = new HttpsProxyAgent(`http://${proxy.username}:${proxy.password}@${proxy.host}`);
-
-      console.log(proxy)
-
-      console.log(proxyUrl)
-      console.log(agent)
+      console.log("Proxy using")
+      const proxyManager = new ProxyManager(this.cfg.proxy);
+      agent = new HttpsProxyAgent(proxyManager.getRandomProxy());
     }
 
     try {
@@ -68,7 +58,6 @@ export default class MenuParser {
     const doc = await this.fetch(this.cfg.url);
     const menuConf = this.cfg.menu;
     const menuNode = this.select(doc, menuConf.main);
-    console.log("DOC ", doc.childNodes[0].textContent)
 
     for (const node of menuNode.childNodes) {
       if (node.nodeType !== 1) continue;

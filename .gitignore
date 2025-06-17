@@ -8,6 +8,6 @@
 # IDE files
 .vscode/
 .idea/
-
 # Other ignored files
 .DS_Store
+proxy.txt

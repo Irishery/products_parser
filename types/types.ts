@@ -12,16 +12,13 @@ interface menuConf {
   };
 }
 
-interface Proxy {
-  host: string;
-  port: number;
-  user: string;
-  pass: string;
-}
-
-
-
 namespace Types {
+  export interface Proxy {
+    host: string;
+    port: number;
+    user: string;
+    pass: string;
+  }
 
   export interface ModifierGroup {
     id: number;
@@ -68,7 +65,7 @@ namespace Types {
     start_id?: number;
     name?: string;
     company?: string;
-    proxy?: Proxy;
+    proxy: string;
   }
 
   export interface Product {
@@ -97,6 +94,5 @@ namespace Types {
   }
 
 }
-
 
 export default Types;

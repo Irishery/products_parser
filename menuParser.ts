@@ -6,62 +6,77 @@ import iconv from 'iconv-lite';
 import * as utils from './utils';
 import Types from './types/types'
 import { types } from 'node:util';
+import { HttpsProxyAgent } from 'https-proxy-agent';
 
-interface Category {
-  id: number;
-  name: string;
-  url: string;
-}
 
 export default class MenuParser {
   private cfg: Types.Config;
-  public categories: Category[] = [];
+  public categories: Types.Category[] = [];
 
   constructor(cfg: Types.Config) {
     this.cfg = cfg;
   }
 
   async fetch(url: string): Promise<Document> {
-    const options = {
-      method: 'GET',
-      url,
-      responseType: 'arraybuffer' as const,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
-      }
+    const encoding = this.cfg.charset || 'utf-8';
+    const headers: Record<string, string> = {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
     };
-    let response: any;
+
+
+    let agent;
+    if (this.cfg.proxy) {
+      const { host, port } = this.cfg.proxy;
+      const proxyUrl = `http://${host}:${port}`;
+      const proxy = new URL(proxyUrl);
+      proxy.host = this.cfg.proxy.host;
+      proxy.username = this.cfg.proxy.user;
+      proxy.password = this.cfg.proxy.pass;
+      console.log(`http://${proxy.username}:${proxy.password}@${proxy.host}:${proxy.port}`)
+
+      agent = new HttpsProxyAgent(`http://${proxy.username}:${proxy.password}@${proxy.host}`);
+
+      console.log(proxy)
+
+      console.log(proxyUrl)
+      console.log(agent)
+    }
 
     try {
-      response = await axios.get(this.cfg.url, { responseType: 'arraybuffer' });
+      const response = await axios.get(url, {
+        responseType: 'arraybuffer',
+        headers,
+        ...(agent && { httpAgent: agent, httpsAgent: agent })
+      });
+
+      const html = iconv.decode(response.data, encoding);
+      return new JSDOM(html).window.document;
     } catch (error) {
-      if (error instanceof AxiosError) {
-        console.error('Axios error:', error.message);
-      } else if (error instanceof Error) {
-        console.error('General error:', error.message);
-      } else {
-        console.error('Unknown error:', error);
-      }
-      return new JSDOM('').window.document; // Возврат в случае ошибки
+      console.error('Axios error:', (error as AxiosError).message);
+      return new JSDOM('').window.document;
     }
-    const encoding = this.cfg.charset || 'utf-8';
-    const html = iconv.decode(response.data, encoding);
-    return new JSDOM(html).window.document;
   }
 
-  async getMenu(): Promise<Category[]> {
+
+  getRandomBase(min = 70000, max = 80000): number {
+    // Генерируем случайное число кратное 10 в заданном диапазоне
+    const rand = Math.floor(Math.random() * ((max - min) / 10)) * 10 + min;
+    return rand;
+  }
+
+  async getMenu(): Promise<Types.Category[]> {
     const doc = await this.fetch(this.cfg.url);
     const menuConf = this.cfg.menu;
     const menuNode = this.select(doc, menuConf.main);
-
-    let id = 1;
+    console.log("DOC ", doc.childNodes[0].textContent)
 
     for (const node of menuNode.childNodes) {
       if (node.nodeType !== 1) continue;
 
       const el = node as Element;
-
       const nameElement = el.querySelector(menuConf.children.name);
+
+      // const rawUrl = nameElement?.getAttribute("href");
 
       const rawUrl = el.getAttribute("href");
       const rawName = nameElement?.textContent;
@@ -69,17 +84,47 @@ export default class MenuParser {
       const url = utils.fixUrl(rawUrl ?? '', this.cfg.url);
       const name = utils.convertString(rawName ?? '');
 
+      const baseId = this.getRandomBase();
+
       this.categories.push({
-        id,
-        name: utils.convertString(name),
-        url: utils.fixUrl(url, this.cfg.url)
+        id: baseId,
+        name: name,
+        url: url
       });
 
-      id++;
-
+      if (this.cfg.menu.sub_catgs.main != undefined) {
+        const subcatgs = await this.getSubCatgs(url, baseId);
+        this.categories.push(...subcatgs);
+      }
     }
 
     return this.categories;
+  }
+
+  async getSubCatgs(url: string, parentId: number): Promise<Types.Category[]> {
+    const doc = await this.fetch(url);
+    const doc_catgs = this.selectmany(doc, this.cfg.menu.sub_catgs.main);
+    let catgs: Types.Category[] = [];
+
+    let offset = 1;
+
+    for (const cat of doc_catgs) {
+      const rawUrl = cat.querySelector(this.cfg.menu.sub_catgs.url)?.getAttribute("href");
+      const rawName = cat.textContent;
+      const name = utils.convertString(rawName ?? '');
+      const fixedUrl = utils.fixUrl(rawUrl ?? '', this.cfg.url);
+
+      catgs.push({
+        id: parentId + offset,
+        name: name,
+        url: fixedUrl,
+        parent_id: parentId
+      });
+
+      offset++;
+    }
+
+    return catgs;
   }
 
   select(doc: Document, selector: string, base: Node = doc): Element {
@@ -87,5 +132,17 @@ export default class MenuParser {
     const result = doc.evaluate(path, base, null, 5, null);
 
     return result.iterateNext() as Element;
+  }
+
+  selectmany(doc: Document, selector: string, base: Node = doc): Element[] {
+    const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
+    const result = doc.evaluate(path, base, null, 5, null);
+
+    let els = new Array<Element>();
+    for (let el = result.iterateNext(); el; el = result.iterateNext()) {
+      els.push(el as Element);
+    }
+
+    return els;
   }
 }

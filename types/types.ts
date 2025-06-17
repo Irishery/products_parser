@@ -1,25 +1,56 @@
 interface menuConf {
+  main: string;
+  children: {
     main: string;
-    children: {
-        main: string;
-        name: string;
-        url: string;
-    };
-    
+    name: string;
+    url: string;
+  };
+  sub_catgs: {
+    main: string;
+    name: string;
+    url: string;
+  };
 }
 
-namespace Types {
-  export interface ModifierGroup {
-  name: string;
-  type: string;
-  minimum: number;
-  maximum: number;
+interface Proxy {
+  host: string;
+  port: number;
+  user: string;
+  pass: string;
 }
+
+
+
+namespace Types {
+
+  export interface ModifierGroup {
+    id: number;
+    type: string;
+    name: string;
+    max: number;
+    min: number;
+  }
+
+  export interface Modifier {
+    id: number;
+    name: string;
+    group: number;
+    price: number;
+  }
+
+  export interface ProductPrice {
+    id?: string;
+    price: number;
+    description?: string;
+    old_price?: number;
+    index?: [number, number];
+  }
 
   export interface Category {
     id: number;
     name: string;
     url: string;
+    parent_id?: number;
   }
 
   export interface Config {
@@ -37,6 +68,7 @@ namespace Types {
     start_id?: number;
     name?: string;
     company?: string;
+    proxy?: Proxy;
   }
 
   export interface Product {
@@ -44,7 +76,7 @@ namespace Types {
     name: string;
     description: string;
     picture?: string;
-    price?: any[];
+    price: ProductPrice[];
     category: number;
     labels?: string[];
     modifiers?: string[];

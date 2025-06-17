@@ -8,7 +8,8 @@
     "price": ".catalog-item__price",
     "url": "catalog-items__name",
     "picture": ".catalog-item__img img",
-    "description": ".catalog-item__description"
+    "description": ".catalog-item__description",
+    "weight": ".catalog-item__weight"
   },
   "menu": {
     "main": ".catalog-sections-horizontal",
@@ -16,11 +17,18 @@
       "main": ".catalog-sections-horizontal__section",
       "name": ".catalog-sections-horizontal__name",
       "url": "a"
-    }
+    },
+    "sub_catgs": {}
   },
   "follow_url": true,
   "product_url": "",
   "export": "xml",
-  "filename": "demo",
-  "delay": 1000
+  "filename": "export/demo1",
+  "delay": 1000,
+  "proxy": {
+    "host": "198.23.239.134",
+    "port": 6540,
+    "user": "wfndkxfp",
+    "pass": "i7ob05nm8s5s"
+  }
 }

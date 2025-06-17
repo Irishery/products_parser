@@ -45,8 +45,8 @@ export default class Exporter {
       mg.push(`<modifiersGroup id="${groupId}">`);
       mg.push(`<name>${group.name}</name>`);
       mg.push(`<type>${group.type}</type>`);
-      mg.push(`<minimum>${group.minimum}</minimum>`);
-      mg.push(`<maximum>${group.maximum}</maximum>`);
+      mg.push(`<minimum>${group.min}</minimum>`);
+      mg.push(`<maximum>${group.max}</maximum>`);
       mg.push('</modifiersGroup>');
 
       // Если модификаторы внутри group
@@ -70,9 +70,11 @@ export default class Exporter {
 
     xml.push('<categories>');
     for (const category of categories) {
-      xml.push(`<category id="${category.id}">${category.name}</category>`);
+      const parentAttr = category.parent_id ? ` parent_id="${category.parent_id}"` : '';
+      xml.push(`<category id="${category.id}"${parentAttr}>${category.name}</category>`);
     }
     xml.push('</categories>');
+
 
     xml.push('<offers>');
     for (const productId in products) {
@@ -103,7 +105,7 @@ export default class Exporter {
           if (param.old_price) {
             xml.push(`<old_price>${param.old_price}</old_price>`);
           }
-          xml.push(`<description>${param.index?.[0] ?? 1}</description>`);
+          xml.push(`<description>${param.description ?? 1}</description>`);
           xml.push(`<descriptionIndex>${param.index?.[1] ?? 10}</descriptionIndex>`);
           xml.push('</parameter>');
         }

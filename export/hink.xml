@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2025-06-17T10:12:39">
+    <shop>
+        <name>https://khinkalnaya1.ru/</name>
+        <company>https://khinkalnaya1.ru/</company>
+        <url>https://khinkalnaya1.ru/</url>
+        <currencies>
+            <currency id="RUR" rate="1" />
+        </currencies>
+        <categories>
+            <category id="1">ХОЛОДНЫЕ ЗАКУСКИ</category>
+            <category id="2">САЛАТЫ</category>
+            <category id="3">ГОРЯЧИЕ ЗАКУСКИ</category>
+            <category id="4">ХИНКАЛИ</category>
+            <category id="5">СУПЫ</category>
+            <category id="6">ГОРЯЧИЕ БЛЮДА</category>
+            <category id="7">БЛЮДА НА УГЛЯХ</category>
+            <category id="8">ГАРНИРЫ</category>
+            <category id="9">СОУСЫ</category>
+            <category id="10">СВЕЖАЯ ВЫПЕЧКА</category>
+            <category id="11">ДЕСЕРТЫ</category>
+            <category id="12">НАПИТКИ</category>
+            <category id="13" parent_id="12">КОФЕ</category>
+            <category id="14" parent_id="12">ЧАЙ</category>
+            <category id="15" parent_id="12">СОКИ И ЛИМОНАДЫ</category>
+            <category id="16" parent_id="12">МИНЕРАЛЬНАЯ ВОДА</category>
+            <category id="17" parent_id="12">ПИВО</category>
+            <category id="18" parent_id="12">ВИНО ДОМАШНЕЕ</category>
+            <category id="19" parent_id="12">ЧАЧА</category>
+        </categories>
+        <offers>
+            <offer id="79729" available="true">
+                <name>АДЖАПСАНДАЛ</name>
+                <description><![CDATA[Уникальное рагу, которое создается на основе свежих овощей. В качестве основных ингредиентов используются баклажаны, лук, томаты, болгарский перец, морковь и зелень. Такое блюдо является постным, имеет большое содержание витаминов и микроэлементов. Его употребление полезно для здоровья. Овощи...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/01/00/1/images/1/1.200.jpg</picture>
+                <parameters>
+                    <parameter id="2002">
+                        <price>740</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79739" available="true">
+                <name>АССОРТИ ГРУЗИНСКИХ СЫРОВ</name>
+                <description><![CDATA[Изысканный сулугуни, наивкуснейший имеретинский и копченый сыр, идеальное сочетание сырной тарелки грузинского застолья. Такие закуски можно заказать на обед или ужин, чтобы получить гастрономическое удовольствие. Натуральные продукты – лучший выбор для любого застолья. В них содержатся только...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/03/00/3/images/2/2.200.jpg</picture>
+                <parameters>
+                    <parameter id="2004">
+                        <price>780</price>
+                        <description>Вес: 300 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79749" available="true">
+                <name>АССОРТИ ПХАЛИ</name>
+                <description><![CDATA[Ассорти пхали является грузинским традиционным блюдом, в ходе приготовления которого используется грецкий орех (в молотом виде), специи, свежая зелень и аджика. Это идеальная закуска для любого застолья. Вкусовые качества блюда по достоинству оценят даже изысканные гурманы. Авторская рецептура...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/05/00/5/images/163/163.200.jpg</picture>
+                <parameters>
+                    <parameter id="2006">
+                        <price>900</price>
+                        <description>Вес: 500 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79759" available="true">
+                <name>ПХАЛИ ИЗ ЗЕЛЕНОЙ ФАСОЛИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/06/00/6/images/166/166.200.jpg</picture>
+                <parameters>
+                    <parameter id="2008">
+                        <price>590</price>
+                        <description>Вес: 150 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79769" available="true">
+                <name>ДОМАШНИЕ СОЛЕНЬЯ</name>
+                <description><![CDATA[Привлекательно сформированный набор сразу очаровывает гостей, приковывая к нему взгляды. У вас на столе окажутся аккуратно нарезанные огурцы и зеленые помидоры, острый перец, черемша, гурийская капуста, квашеная капуста, чеснок и прочие элементы композиции.]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/08/00/8/images/8/8.200.jpg</picture>
+                <parameters>
+                    <parameter id="2010">
+                        <price>720</price>
+                        <description>Вес: 350 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79779" available="true">
+                <name>МАСЛИНЫ/ОЛИВКИ</name>
+                <description><![CDATA[Маслины можно употреблять отдельно или использовать в качестве одного из основных ингредиентов в различных блюдах. Они способны придать салату или соусу неповторимый вкус, отлично дополняют мясо и закуски, сочетаются с сыром и рыбой. Сегодня маслины – это бестселлер на праздничном застолье в...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/11/00/11/images/10/10.200.jpg</picture>
+                <parameters>
+                    <parameter id="2012">
+                        <price>300</price>
+                        <description>Вес: 100 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79789" available="true">
+                <name>ПХАЛИ ИЗ ШПИНАТА С ГРЕЦКИМИ ОРЕХАМИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/19/00/19/images/17/17.200.jpg</picture>
+                <parameters>
+                    <parameter id="2014">
+                        <price>620</price>
+                        <description>Вес: 150 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79799" available="true">
+                <name>РУЛЕТИКИ ИЗ БАКЛАЖАНОВ</name>
+                <description><![CDATA[Невероятно питательная закуска, которую по достоинству оценит каждый. Она готовится по уникальному рецепту, где овощи нарезаются в виде тонких и длинных пластинок, обжариваются в масле. На основе орехов создается нежная паста, которая заворачивается в баклажаны. Закуска – идеальный вариант для...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/20/00/20/images/18/18.200.jpg</picture>
+                <parameters>
+                    <parameter id="2016">
+                        <price>650</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79809" available="true">
+                <name>САЦИВИ ИЗ КУРИЦЫ</name>
+                <description><![CDATA[Сациви – традиционное блюдо из грузинской кухни, имеющее уникальные вкусовые качества. Здесь использовано качественное куриное мясо, которое является отличным источником белка и аминокислот, но при этом содержит минимум калорий. Оно дополняется грецкими орехами, весьма полезными для организма...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/22/00/22/images/148/148.200.jpg</picture>
+                <parameters>
+                    <parameter id="2018">
+                        <price>690</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79819" available="true">
+                <name>БУКЕТ ИЗ СВЕЖИХ ОВОЩЕЙ</name>
+                <description><![CDATA[После долгой зимы каждый человек желает попробовать сезонные овощи и зелень. Они свежие и ароматные, как будто только сорваны с грядки. С помощью красивых, крепких, насыщенных вкусов помидоров, огурчиков, редиски с дополнением зелени и стручкового перца, можно получить большое количество полезных...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/23/00/23/images/21/21.200.jpg</picture>
+                <parameters>
+                    <parameter id="2020">
+                        <price>700</price>
+                        <description>Вес: 300 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79829" available="true">
+                <name>СЕЛЕДОЧКА ПОД ВОДОЧКУ</name>
+                <description><![CDATA[Классическая закуска, которая обязательно присутствует на праздничном толе. Филе рыбы, обладающее приятным ароматом, разрезается на небольшие ломтики, деликатность дополнят луковые кольца. Нарезка поливается подсолнечным маслом. Холодная закуска, которую оценит каждый.]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/24/00/24/images/22/22.200.jpg</picture>
+                <parameters>
+                    <parameter id="2022">
+                        <price>530</price>
+                        <description>Вес: 170/30 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79839" available="true">
+                <name>СЕМГА ДОМАШНЕГО ПОСОЛА</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/25/00/25/images/149/149.200.jpg</picture>
+                <parameters>
+                    <parameter id="2024">
+                        <price>810</price>
+                        <description>Вес: 120 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79849" available="true">
+                <name>СЫР ИМЕРЕТИНСКИЙ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/26/00/26/images/168/168.200.jpg</picture>
+                <parameters>
+                    <parameter id="2026">
+                        <price>370</price>
+                        <description>Вес: 140 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79859" available="true">
+                <name>СЫР СУЛУГУНИ КОПЧЕНЫЙ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/27/00/27/images/24/24.200.jpg</picture>
+                <parameters>
+                    <parameter id="2028">
+                        <price>370</price>
+                        <description>Вес: 100 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79869" available="true">
+                <name>СЫР МОЛОЧНЫЙ СУЛУГУНИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/28/00/28/images/25/25.200.jpg</picture>
+                <parameters>
+                    <parameter id="2030">
+                        <price>370</price>
+                        <description>Вес: 140 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="79879" available="true">
+                <name>ПХАЛИ ИЗ СВЕКЛЫ</name>
+                <description><![CDATA[ПЕРЕТЕРТАЯ СВЕКЛА С ГРЕЦКИМИ ОРЕХАМИ ОРЕХАМИ И СПЕЦИЯМИ]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/89/01/189/images/167/167.200.jpg</picture>
+                <parameters>
+                    <parameter id="2032">
+                        <price>590</price>
+                        <description>Вес: 150 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="1017" available="true">
+                <name>ЯЗЫК ГОВЯЖИЙ ОТВАРНОЙ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="2034">
+                        <price>600</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="1018" available="true">
+                <name>КАПРЕЗЕ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/92/01/192/images/165/165.200.jpg</picture>
+                <parameters>
+                    <parameter id="2036">
+                        <price>590</price>
+                        <description>Вес: 250 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>1</categoryId>
+            </offer>
+            <offer id="2001" available="true">
+                <name>ГРЕЧЕСКИЙ</name>
+                <description><![CDATA[Греческий салат пользуется популярностью во всем мире, все это благодаря наличию большого количества питательных натуральных ингредиентов в составе. Закуска подойдет для семейного обеда, романтического ужина, отдыха с друзьями. В греческом салате присутствуют различные сезонные овощи, маслины,...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/29/00/29/images/26/26.200.jpg</picture>
+                <parameters>
+                    <parameter id="3002">
+                        <price>670</price>
+                        <description>Вес: 270 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2002" available="true">
+                <name>САЛАТ ПО-ТБИЛИССКИ</name>
+                <description><![CDATA[Овощной салат с добавлением свежей зелени и измельченных грецких орехов представляет собой ароматное и вкуснейшее блюдо. Здесь содержится большое количество полезных веществ, различных витаминов и микроэлементов. Овощной салат станет настоящим украшением для любого праздничного стола. Гости по...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/35/00/35/images/32/32.200.jpg</picture>
+                <parameters>
+                    <parameter id="3004">
+                        <price>660</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2003" available="true">
+                <name>ТЕПЛЫЙ САЛАТ ИЗ ТЕЛЯТИНЫ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/39/00/39/images/36/36.200.jpg</picture>
+                <parameters>
+                    <parameter id="3006">
+                        <price>780</price>
+                        <description>Вес: 250 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2004" available="true">
+                <name>ХРУСТЯЩИЕ БАКЛАЖАНЫ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/41/00/41/images/153/153.200.jpg</picture>
+                <parameters>
+                    <parameter id="3008">
+                        <price>710</price>
+                        <description>Вес: 300 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2005" available="true">
+                <name>ЦЕЗАРЬ С КРЕВЕТКАМИ ГРИЛЬ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/43/00/43/images/40/40.200.jpg</picture>
+                <parameters>
+                    <parameter id="3010">
+                        <price>730</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2006" available="true">
+                <name>ЦЕЗАРЬ С КУРИЦЕЙ</name>
+                <description><![CDATA[Цезарь с куриной грудкой гриль – это один из самых популярных праздничных салатов. Мясо птицы является диетическим и в то же время сытным. Цезарь подойдет для тех, кто хочет вкусно поесть, но при этом следит за своей фигурой. Салат с курицей очень аппетитный, все это благодаря натуральным...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/44/00/44/images/154/154.200.jpg</picture>
+                <parameters>
+                    <parameter id="3012">
+                        <price>660</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2007" available="true">
+                <name>САЛАТ СО СЛАБОСОЛЕНЫМ ЛОСОСЕМ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/94/01/194/images/169/169.200.jpg</picture>
+                <parameters>
+                    <parameter id="3014">
+                        <price>780</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2008" available="true">
+                <name>ОЛИВЬЕ С ЦЫПЛЕНКОМ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/36/02/236/images/170/170.200.jpg</picture>
+                <parameters>
+                    <parameter id="3016">
+                        <price>560</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="2009" available="true">
+                <name>РУККОЛА С КРЕВЕТКАМИ</name>
+                <description><![CDATA[Руккола, тигровые креветки, авокадо, помидоры, фирменная заправка.]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/37/02/237/images/171/171.200.jpg</picture>
+                <parameters>
+                    <parameter id="3018">
+                        <price>710</price>
+                        <description>Вес: 200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>2</categoryId>
+            </offer>
+            <offer id="3001" available="true">
+                <name>ДОЛМА</name>
+                <description><![CDATA[Долма с бараниной в виноградных листьях готовится с учетом всех традиций древней азербайджанской кухни. Перед ней не сможет устоять даже взыскательный гурман. В качестве основного ингредиента использован фарш из баранины, который перемешивается с круглозерным рисом и заворачивается в лист...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/47/00/47/images/140/140.200.jpg</picture>
+                <parameters>
+                    <parameter id="4002">
+                        <price>660</price>
+                        <description>Вес: 160/50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>3</categoryId>
+            </offer>
+            <offer id="3002" available="true">
+                <name>ЧЕБУРЕК С БАРАНИНОЙ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/58/00/58/images/157/157.200.jpg</picture>
+                <parameters>
+                    <parameter id="4004">
+                        <price>430</price>
+                        <description>Кол-во: 2</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>3</categoryId>
+            </offer>
+            <offer id="3003" available="true">
+                <name>ЧЕБУРЕК С ТЕЛЯТИНОЙ И СВИНИНОЙ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/59/00/59/images/158/158.200.jpg</picture>
+                <parameters>
+                    <parameter id="4006">
+                        <price>430</price>
+                        <description>Кол-во: 2</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>3</categoryId>
+            </offer>
+            <offer id="3004" available="true">
+                <name>ХРУСТЯЩИЙ СУЛУГУНИ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="4008">
+                        <price>690</price>
+                        <description>Вес: 250 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>3</categoryId>
+            </offer>
+            <offer id="3005" available="true">
+                <name>ГРИБЫ ЗАПЕЧЕННЫЕ С СЫРОМ СУЛУГУНИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/97/01/197/images/160/160.200.jpg</picture>
+                <parameters>
+                    <parameter id="4010">
+                        <price>540</price>
+                        <description>Вес: 250 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>3</categoryId>
+            </offer>
+            <offer id="2434534645" available="true">
+                <name>ХИНКАЛИ С БАРАНИНОЙ</name>
+                <description><![CDATA[Хинкали – традиционное блюдо грузинской кухни, при создании которого используется древний рецепт. Главной особенностью является наличие ароматной мясной начинки со специями и зеленью, которая заворачивается в нежное тесто. Для усиления вкуса перед употреблением хинкали можно посыпать черным...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/62/00/62/images/54/54.200.jpg</picture>
+                <parameters>
+                    <parameter id="5001">
+                        <price>120</price>
+                        <description>Важно: Стоимость указана за 1 шт., вес 1 шт. 110 гр, порция для
+                            доставки от 3 шт.</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>4</categoryId>
+            </offer>
+            <offer id="2434534655" available="true">
+                <name>ХИНКАЛИ ГОВЯДИНА И СВИНИНА</name>
+                <description><![CDATA[Хинкали – традиционное блюдо грузинской кухни, при создании которого используется древний рецепт. Главной особенностью является наличие ароматной мясной начинки со специями и зеленью, которая заворачивается в нежное тесто. Для усиления вкуса перед употреблением хинкали можно посыпать черным...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/63/00/63/images/55/55.200.jpg</picture>
+                <parameters>
+                    <parameter id="5004">
+                        <price>110</price>
+                        <description>Важно: Стоимость указана за 1 шт., вес 1 шт. 110 гр, порция для
+                            доставки от 3 шт.</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>4</categoryId>
+            </offer>
+            <offer id="4003" available="true">
+                <name>ХИНКАЛИ С СЫРОМ</name>
+                <description><![CDATA[Хинкали – традиционное блюдо грузинской кухни, при создании которого используется древний рецепт. Главной особенностью является наличие ароматной мясной начинки со специями и зеленью, которая заворачивается в нежное тесто. Для усиления вкуса перед употреблением хинкали можно посыпать черным...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/65/00/65/images/57/57.200.jpg</picture>
+                <parameters>
+                    <parameter id="5006">
+                        <price>100</price>
+                        <description>Важно: Стоимость указана за 1 шт., вес 1 шт. 110 гр, порция для
+                            доставки от 3 шт.</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>4</categoryId>
+            </offer>
+            <offer id="4004" available="true">
+                <name>ПОЖАРИТЬ ХИНКАЛИ</name>
+                <description><![CDATA[Стоимость указана за обжарку 1 шт.]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/39/02/239/images/172/172.200.jpg</picture>
+                <parameters>
+                    <parameter id="5008">
+                        <price>20</price>
+                        <description>Кол-во: 1</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>4</categoryId>
+            </offer>
+            <offer id="5001" available="true">
+                <name>БОРЩ</name>
+                <description><![CDATA[Борщ с говядиной и сметаной – вкуснейшая домашняя пища, которая является сытной и невероятно ароматной. Наверное, нет такого человека, кто не любит красный борщ с добавлением сметаны и свежей зелени. Наваристый мясной бульон придаст силы на весь день. Борщ относится как к украинской, так и...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/67/00/67/images/139/139.200.jpg</picture>
+                <parameters>
+                    <parameter id="6002">
+                        <price>580</price>
+                        <description>Вес: 400 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>5</categoryId>
+            </offer>
+            <offer id="5002" available="true">
+                <name>КУРИНЫЙ СУП С ЛАПШОЙ</name>
+                <description><![CDATA[Суп с цыпленком и домашней лапшой очень наваристый, вкусный и ароматный. В ходе его приготовления используются только натуральные ингредиенты и приправы. Куриный супчик напомнит о «бабушкиных деревенских рецептах», когда при его варке использовались овощи с огорода, лапша собственного...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/69/00/69/images/62/62.200.jpg</picture>
+                <parameters>
+                    <parameter id="6004">
+                        <price>560</price>
+                        <description>Вес: 300 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>5</categoryId>
+            </offer>
+            <offer id="5003" available="true">
+                <name>СОЛЯНКА СБОРНАЯ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/71/00/71/images/64/64.200.jpg</picture>
+                <parameters>
+                    <parameter id="6006">
+                        <price>570</price>
+                        <description>Вес: 400/50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>5</categoryId>
+            </offer>
+            <offer id="5004" available="true">
+                <name>СУП ХАРЧО</name>
+                <description><![CDATA[Суп харчо можно смело отнести к традиционному грузинскому блюду, основным ингредиентом которого является отборная говядина. Ароматный и аппетитный суп – оптимальный выбор для обеденного стола. Бульон готовится с применением пряных специй, зелени, лука, томатов и риса. В ходе приготовления харчо...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/73/00/73/images/66/66.200.jpg</picture>
+                <parameters>
+                    <parameter id="6008">
+                        <price>590</price>
+                        <description>Вес: 400 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>5</categoryId>
+            </offer>
+            <offer id="6001" available="true">
+                <name>БАРАБУЛЬКА ЖАРЕНАЯ С СОУСОМ ТКЕМАЛИ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="7002">
+                        <price>720</price>
+                        <description>Вес: 210 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6002" available="true">
+                <name>ОДЖАХУРИ</name>
+                <description><![CDATA[Оджахури готовится с учетом всех традиций грузинской кухни. В составе блюда присутствуют нежные кусочки свинины, которые обжарены на кеце до появления золотистой корочки. Мясо дополняется картофелем, сладким болгарским перцем, луком, чесноком, специями и ароматной зеленью. В ходе приготовления...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/87/00/87/images/78/78.200.jpg</picture>
+                <parameters>
+                    <parameter id="7004">
+                        <price>640</price>
+                        <description>Вес: 150/200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6003" available="true">
+                <name>ОДЖАХУРИ ИЗ ТЕЛЯТИНЫ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/88/00/88/images/79/79.200.jpg</picture>
+                <parameters>
+                    <parameter id="7006">
+                        <price>690</price>
+                        <description>Вес: 150/200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6004" available="true">
+                <name>ЦЫПЛЕНОК ТАПАКА</name>
+                <description><![CDATA[Цыпленок табака – популярное блюдо грузинской кухни, суть приготовления которого в особой разделке курицы перед ее жаркой. В процессе приготовления тушка цыпленка расплющивается, делается максимально плоской. Гурманы любят это блюдо за особый аромат, вкус, нежность и сочность мяса.]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/95/00/95/images/155/155.200.jpg</picture>
+                <parameters>
+                    <parameter id="7008">
+                        <price>660</price>
+                        <description>Кол-во: 1</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6005" available="true">
+                <name>ЧАНАХИ ИЗ БАРАНИНЫ С ОВОЩАМИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/96/00/96/images/85/85.200.jpg</picture>
+                <parameters>
+                    <parameter id="7010">
+                        <price>760</price>
+                        <description>Вес: 425/20 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6006" available="true">
+                <name>ЧАХОХБИЛИ</name>
+                <description><![CDATA[Чахохбили с курицей и овощами готовится с учетом всех традиций грузинской кухни, уникальный вкус и незабываемый аромат не оставят равнодушным даже взыскательного гурмана. В составе присутствуют нежные куски мяса, являющиеся сочной частью куриной тушки. Оно готовится на кеце, томится в собственном...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/97/00/97/images/86/86.200.jpg</picture>
+                <parameters>
+                    <parameter id="7012">
+                        <price>600</price>
+                        <description>Вес: 250 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6007" available="true">
+                <name>ЧАШУШУЛИ ИЗ ГОВЯДИНЫ</name>
+                <description><![CDATA[Чашашули из говядины с овощами – кулинарный шедевр, который создается с учетом всех традиций грузинской кухни. В ходе приготовления используется только нежное мясо. Оно тушится совместно со свежими томатами в собственном соку. К ним добавляются пряные специи, ароматная зелень, чеснок. Уникальное...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/98/00/98/images/87/87.200.jpg</picture>
+                <parameters>
+                    <parameter id="7014">
+                        <price>690</price>
+                        <description>Вес: 250 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6008" available="true">
+                <name>ЦЫПЛЕНОК ЧКМЕРУЛИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/04/02/204/images/159/159.200.jpg</picture>
+                <parameters>
+                    <parameter id="7016">
+                        <price>690</price>
+                        <description>Состав: Цыпленок в чесночно-сливочном соусе</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="6009" available="true">
+                <name>ФИЛЕ СУДАКА СО ШПИНАТОМ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/05/02/205/images/173/173.200.jpg</picture>
+                <parameters>
+                    <parameter id="7018">
+                        <price>720</price>
+                        <description>Вес: 120/160 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>6</categoryId>
+            </offer>
+            <offer id="7001" available="true">
+                <name>ДОРАДО НА УГЛЯХ</name>
+                <description><![CDATA[Дорадо на углях – невероятно питательно и сочное блюдо, которое обязательно должно присутствовать у вас на столе. Готовится оно по традиционному рецепту, известному поварам более сотни лет. Вкус и аромат дорадо никого не оставит равнодушным. Заказав это блюдо к столу, вы расположите своих...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/02/01/102/images/91/91.200.jpg</picture>
+                <parameters>
+                    <parameter id="8002">
+                        <price>780</price>
+                        <description>Кол-во: 1</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7002" available="true">
+                <name>КОРЕЙКА ЯГНЕНКА</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/03/01/103/images/92/92.200.jpg</picture>
+                <parameters>
+                    <parameter id="8004">
+                        <price>820</price>
+                        <description>Вес: 220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7003" available="true">
+                <name>ЛЮЛЯ-КЕБАБ ИЗ БАРАНИНЫ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/06/01/106/images/95/95.200.jpg</picture>
+                <parameters>
+                    <parameter id="8006">
+                        <price>690</price>
+                        <description>Вес: 180 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7004" available="true">
+                <name>ЛЮЛЯ-КЕБАБ ИЗ ГОВЯДИНЫ И СВИНИНЫ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/07/01/107/images/144/144.200.jpg</picture>
+                <parameters>
+                    <parameter id="8008">
+                        <price>610</price>
+                        <description>Вес: 180 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7005" available="true">
+                <name>ЛЮЛЯ-КЕБАБ ИЗ КУРИЦЫ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/09/01/109/images/143/143.200.jpg</picture>
+                <parameters>
+                    <parameter id="8010">
+                        <price>580</price>
+                        <description>Вес: 180 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7006" available="true">
+                <name>ОВОЩИ НА УГЛЯХ</name>
+                <description><![CDATA[Когда привычные блюда надоели, хочется чего-нибудь особенного и в то же время простого. Томаты, баклажаны, перец и цуккини, запеченные на углях, очень вкусные и в то же время полезные. Они подойдут для людей, которые следят за фигурой. Запеченные овощи на гриле прекрасно сочетаются с шашлыком,...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/12/01/112/images/99/99.200.jpg</picture>
+                <parameters>
+                    <parameter id="8012">
+                        <price>480</price>
+                        <description>Вес: 190 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7007" available="true">
+                <name>ШАШЛЫК ИЗ КУРИЦЫ</name>
+                <description><![CDATA[Шашлык из курицы привлекает внимание своей легкостью и нежностью. Это диетическая альтернатива классическому блюду из свинины. Угощение оценят люди, которые следят за фигурой. Процесс приготовления шашлыка подразумевает аккуратную нарезку птицы и бережную обжарку на углях. Подается с аппетитной...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/19/01/119/images/106/106.200.jpg</picture>
+                <parameters>
+                    <parameter id="8014">
+                        <price>580</price>
+                        <description>Вес: 180 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7008" available="true">
+                <name>ШАШЛЫК МЯКОТИ СВИНИНЫ</name>
+                <description><![CDATA[Шашлык из свинины готовится на основе оригинального маринада, обеспечивающего мясу нежность, оптимальную мягкость и неповторимую сочность. Свинина аккуратно нарезается, готовится на углях под контролем опытного повара. Гарантируется идеальная прожарка каждого кусочка, а естественная дымка придает...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/20/01/120/images/107/107.200.jpg</picture>
+                <parameters>
+                    <parameter id="8016">
+                        <price>640</price>
+                        <description>Вес: 180 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7009" available="true">
+                <name>ШАШЛЫК ТЕЛЯТИНЫ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/21/01/121/images/108/108.200.jpg</picture>
+                <parameters>
+                    <parameter id="8018">
+                        <price>730</price>
+                        <description>Вес: 180 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="7010" available="true">
+                <name>СВИНЫЕ РЕБРА</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/06/02/206/images/175/175.200.jpg</picture>
+                <parameters>
+                    <parameter id="8020">
+                        <price>620</price>
+                        <description>Вес: 220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>7</categoryId>
+            </offer>
+            <offer id="8001" available="true">
+                <name>КАРТОФЕЛЬНОЕ ПЮРЕ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/77/00/77/images/177/177.200.jpg</picture>
+                <parameters>
+                    <parameter id="9002">
+                        <price>290</price>
+                        <description>Вес: 150 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>8</categoryId>
+            </offer>
+            <offer id="8002" available="true">
+                <name>КАРТОФЕЛЬ ФРИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/78/00/78/images/151/151.200.jpg</picture>
+                <parameters>
+                    <parameter id="9004">
+                        <price>310</price>
+                        <description>Вес: 150 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>8</categoryId>
+            </offer>
+            <offer id="8003" available="true">
+                <name>КАРТОФЕЛЬ ЖАРЕННЫЙ С ЛУКОМ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/80/00/80/images/176/176.200.jpg</picture>
+                <parameters>
+                    <parameter id="9006">
+                        <price>320</price>
+                        <description>Вес: 150 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>8</categoryId>
+            </offer>
+            <offer id="8004" available="true">
+                <name>РИС МИКС ПРИПУЩЕННЫЙ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/81/00/81/images/74/74.200.jpg</picture>
+                <parameters>
+                    <parameter id="9008">
+                        <price>300</price>
+                        <description>Вес: 150 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>8</categoryId>
+            </offer>
+            <offer id="9001" available="true">
+                <name>АДЖИКА</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/22/01/122/images/109/109.200.webp</picture>
+                <parameters>
+                    <parameter id="10002">
+                        <price>120</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>9</categoryId>
+            </offer>
+            <offer id="9002" available="true">
+                <name>НАРШАРАБ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/25/01/125/images/112/112.200.webp</picture>
+                <parameters>
+                    <parameter id="10004">
+                        <price>120</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>9</categoryId>
+            </offer>
+            <offer id="9003" available="true">
+                <name>САЦЕБЕЛИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/26/01/126/images/113/113.200.webp</picture>
+                <parameters>
+                    <parameter id="10006">
+                        <price>120</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>9</categoryId>
+            </offer>
+            <offer id="9004" available="true">
+                <name>СМЕТАНА</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/27/01/127/images/114/114.200.webp</picture>
+                <parameters>
+                    <parameter id="10008">
+                        <price>120</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>9</categoryId>
+            </offer>
+            <offer id="9005" available="true">
+                <name>ТКЕМАЛИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/28/01/128/images/115/115.200.webp</picture>
+                <parameters>
+                    <parameter id="10010">
+                        <price>120</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>9</categoryId>
+            </offer>
+            <offer id="9006" available="true">
+                <name>СМЕТАНА С ЧЕСНОКОМ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/29/01/129/images/116/116.200.webp</picture>
+                <parameters>
+                    <parameter id="10012">
+                        <price>120</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>9</categoryId>
+            </offer>
+            <offer id="9007" available="true">
+                <name>ГОРЧИЦА</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/41/02/241/images/164/164.200.webp</picture>
+                <parameters>
+                    <parameter id="10014">
+                        <price>120</price>
+                        <description>Вес: 50</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>9</categoryId>
+            </offer>
+            <offer id="10001" available="true">
+                <name>КУБДАРИ</name>
+                <description><![CDATA[Кубдари – это разновидность хачапури, в составе которого имеется мясо. Такое блюдо создается с учетом всех канонов грузинской кухни, традиционно исполняется из говядины. Главный ингредиент начинки – тщательно измельченный фарш, который смешивается со специями и ароматными травами. Сюда же...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/31/01/131/images/118/118.200.jpg</picture>
+                <parameters>
+                    <parameter id="11002">
+                        <price>610</price>
+                        <description>Вес: 520 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>10</categoryId>
+            </offer>
+            <offer id="10002" available="true">
+                <name>ЛЕПЕШКА</name>
+                <description></description>
+                <parameters>
+                    <parameter id="11004">
+                        <price>130</price>
+                        <description>Кол-во: 1</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>10</categoryId>
+            </offer>
+            <offer id="10003" available="true">
+                <name>ХАЧАПУРИ ПО-АДЖАРСКИ С ЯЙЦОМ</name>
+                <description><![CDATA[Хачапури по-аджарски – традиционная выпечка, создаваемая с учетом всех традиций грузинской кухни. Она выглядит как сдобная лепешка, отличается невероятным вкусом, притягательной сырной добавкой. Хачапури по-Аджарски подается к супам, различным блюдам из мяса и овощей. Лепешка очень ароматная,...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/36/01/136/images/122/122.200.jpg</picture>
+                <parameters>
+                    <parameter id="11006">
+                        <price>550</price>
+                        <description>Вес: 350 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>10</categoryId>
+            </offer>
+            <offer id="10004" available="true">
+                <name>ХАЧАПУРИ ПО-ИМЕРЕТИНСКИ</name>
+                <description><![CDATA[Хачапури по-имеретински – вкусная выпечка, которая создается с учетом всех классических традиций грузинской кухни. Она готовится на основе ароматного теста, по итогу имеет округлую форму. В качестве начинки использован нежный сыр сулугуни. Такое блюдо необыкновенно вкусное и достаточно сытное....]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/37/01/137/images/123/123.200.jpg</picture>
+                <parameters>
+                    <parameter id="11008">
+                        <price>590</price>
+                        <description>Вес: 550 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>10</categoryId>
+            </offer>
+            <offer id="10005" available="true">
+                <name>ХАЧАПУРИ ПО-МЕГРЕЛЬСКИ</name>
+                <description><![CDATA[Хачапури по-мегрельски с золотистой корочкой и нежнейшим сыром – выпечка, которая считается гордостью кухни Грузии. Одним из особенностей этого блюда является соотношение пропорций теста и сыра – 1:1. Поэтому и название дословно переводится, как «сыр с хлебом». В состав теста входит секретный...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/38/01/138/images/124/124.200.jpg</picture>
+                <parameters>
+                    <parameter id="11010">
+                        <price>620</price>
+                        <description>Вес: 600 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>10</categoryId>
+            </offer>
+            <offer id="10006" available="true">
+                <name>ХАЧАПУРИ ПО-ЦАРСКИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/12/02/212/images/178/178.200.jpg</picture>
+                <parameters>
+                    <parameter id="11012">
+                        <price>690</price>
+                        <description>Вес: 700 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>10</categoryId>
+            </offer>
+            <offer id="11001" available="true">
+                <name>МЕДОВОЕ ПИРОЖНОЕ</name>
+                <description><![CDATA[Медовик – это одно из наиболее ярких лакомств, которое должно присутствовать у вас на столе при проведении торжественного мероприятия или организации обычных посиделок с друзьями. Оформлен торт весьма лаконично, может служить в качестве дополнительного украшения на столе. Мягкое сочетание меда и...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/40/01/140/images/126/126.200.jpg</picture>
+                <parameters>
+                    <parameter id="12002">
+                        <price>440</price>
+                        <description>Вес: 120 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>11</categoryId>
+            </offer>
+            <offer id="11002" available="true">
+                <name>МОРОЖЕНОЕ В АССОРТИМЕНТЕ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/41/01/141/images/127/127.200.jpg</picture>
+                <parameters>
+                    <parameter id="12004">
+                        <price>280</price>
+                        <description>Вес: 50 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>11</categoryId>
+            </offer>
+            <offer id="11003" available="true">
+                <name>НАПОЛЕОН</name>
+                <description><![CDATA[Наполеон создается с учетом лучших традиций мировых кондитеров. Торт имеет уникальные вкусовые качества, отличается нежностью и воздушностью. Готовится десерт на основе множества легких коржей и сладкой кремовой массы. При создании кондитерского шедевра использованы только свежие и качественные...]]></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/42/01/142/images/128/128.200.jpg</picture>
+                <parameters>
+                    <parameter id="12006">
+                        <price>480</price>
+                        <description>Вес: 180 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>11</categoryId>
+            </offer>
+            <offer id="13001" available="true">
+                <name>КОФЕ ПО-ВОСТОЧНОМУ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="14002">
+                        <price>240</price>
+                        <description>Вес: 60 МЛ</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>13</categoryId>
+            </offer>
+            <offer id="14001" available="true">
+                <name>АССАМ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="15002">
+                        <price>490</price>
+                        <description>Вес: 600 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>14</categoryId>
+            </offer>
+            <offer id="14002" available="true">
+                <name>ЧАЙ ЗЕЛЕНЫЙ С ЖАСМИНОМ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="15004">
+                        <price>490</price>
+                        <description>Вес: 600 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>14</categoryId>
+            </offer>
+            <offer id="14003" available="true">
+                <name>СЕНЧА</name>
+                <description></description>
+                <parameters>
+                    <parameter id="15006">
+                        <price>490</price>
+                        <description>Вес: 600 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>14</categoryId>
+            </offer>
+            <offer id="14004" available="true">
+                <name>ГОРНЫЕ ТРАВЫ С ЧАБРЕЦОМ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="15008">
+                        <price>490</price>
+                        <description>Вес: 600 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>14</categoryId>
+            </offer>
+            <offer id="15001" available="true">
+                <name>НАТАХТАРИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/69/01/169/images/179/179.200.jpg</picture>
+                <parameters>
+                    <parameter id="16002">
+                        <price>300</price>
+                        <description>Вес: 500 МЛ</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>15</categoryId>
+            </offer>
+            <offer id="15002" available="true">
+                <name>СОК RICH В АССОРТИМЕНТЕ</name>
+                <description><![CDATA[Текущий ассортимент соков можно уточнить у менеджера ресторана]]></description>
+                <parameters>
+                    <parameter id="16004">
+                        <price>260</price>
+                        <description>Вес: 200 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>15</categoryId>
+            </offer>
+            <offer id="15003" available="true">
+                <name>МОРС</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/32/02/232/images/180/180.200.jpg</picture>
+                <parameters>
+                    <parameter id="16006">
+                        <price>180</price>
+                        <description>200 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                    <parameter id="16016">
+                        <price>300</price>
+                        <description>400 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                    <parameter id="16016">
+                        <price>680</price>
+                        <description>1000 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>15</categoryId>
+            </offer>
+            <offer id="16001" available="true">
+                <name>БОРЖОМИ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/64/01/164/images/181/181.200.jpg</picture>
+                <parameters>
+                    <parameter id="17002">
+                        <price>360</price>
+                        <description>Вес: 500 МЛ</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>16</categoryId>
+            </offer>
+            <offer id="16002" available="true">
+                <name>САИРМЕ</name>
+                <description></description>
+                <picture>
+                    https://khinkalnaya1.ru/wa-data/public/shop/products/65/01/165/images/182/182.200.jpg</picture>
+                <parameters>
+                    <parameter id="17004">
+                        <price>360</price>
+                        <description>Вес: 500 МЛ</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>16</categoryId>
+            </offer>
+            <offer id="17001" available="true">
+                <name>ПИВО СВЕТЛОЕ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="18002">
+                        <price>300</price>
+                        <description>Вес: 500 МЛ</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>17</categoryId>
+            </offer>
+            <offer id="18001" available="true">
+                <name>КРАСНОЕ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="19002">
+                        <price>2</price>
+                        <description>Вес: 750 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>18</categoryId>
+            </offer>
+            <offer id="18002" available="true">
+                <name>БЕЛОЕ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="19004">
+                        <price>2</price>
+                        <description>Вес: 750 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>18</categoryId>
+            </offer>
+            <offer id="18003" available="true">
+                <name>КИНДЗМАРАУЛИ</name>
+                <description></description>
+                <parameters>
+                    <parameter id="19006">
+                        <price>2</price>
+                        <description>Вес: 400 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>18</categoryId>
+            </offer>
+            <offer id="19001" available="true">
+                <name>ЧАЧА</name>
+                <description></description>
+                <parameters>
+                    <parameter id="20002">
+                        <price>200</price>
+                        <description>50 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                    <parameter id="20012">
+                        <price>2000</price>
+                        <description>500 мл</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>19</categoryId>
+            </offer>
+        </offers>
+    </shop>
+</yml_catalog>

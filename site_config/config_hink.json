@@ -1,0 +1,28 @@
+{
+  "url": "https://khinkalnaya1.ru/",
+  "charset": "utf-8",
+  "cssmode": "css",
+  "product": ".Product__Item-row",
+  "selectors": {
+    "name": ".Product__Item-name",
+    "price": ".price",
+    "url": "catalog-items__name",
+    "picture": ".list-thumb-image_wrap img",
+    "description": ".Product__Item-desc",
+    "weight": ".Product-list__features__item:nth-child(1)"
+  },
+  "menu": {
+    "main": ".Nav__horizontal--list-dd-fw",
+    "children": {
+      "main": ".Nav__horizontal--item",
+      "name": ".Nav__horizontal--link",
+      "url": ".Nav__horizontal--link"
+    },
+    "sub_catgs": {}
+  },
+  "follow_url": true,
+  "product_url": "",
+  "export": "xml",
+  "filename": "export/hink1",
+  "delay": 1000
+}

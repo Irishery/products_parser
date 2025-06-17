@@ -15,7 +15,8 @@ class Parser {
   private cfg!: Types.Config;
   private categories: Types.Category[] = [];
   private products: Types.Product[] = [];
-  private modifiers: Types.ModifierGroup[] = [];
+  private modifierGroups: Types.ModifierGroup[] = [];
+  private modifiers: Types.Modifier[] = [];
 
   init(cfg: Types.Config) {
     this.cfg = cfg;
@@ -70,7 +71,7 @@ class Parser {
       const productNodes = this.select(doc, this.cfg.product);
 
       let localIndex = 1;
-
+      console.log("CATNAME ", category.name)
 
       for (const node of productNodes) {
         if (node.nodeType !== 1) continue;
@@ -114,8 +115,10 @@ class Parser {
     const price_value = doc.querySelector(this.cfg.selectors.price)?.textContent ?? '';
     const weight = doc.querySelector(this.cfg.selectors.weight)?.textContent ?? '';
 
-    console.log(description)
-    console.log(weight)
+    if (this.cfg.modifiers != undefined) {
+      await this.getModifiers(doc);
+
+    }
 
     price.price = parseInt(price_value)
     price.description = weight
@@ -134,8 +137,6 @@ class Parser {
   }
 
   async getDetailedProductInfoElem(doc: Element): Promise<Types.Product> {
-    // const doc = await this.fetch(url);
-
     let price = <Types.ProductPrice>{}
 
     const name = doc.querySelector(this.cfg.selectors.name)?.textContent ?? '';
@@ -160,6 +161,53 @@ class Parser {
     };
   }
 
+  async getModifiers(doc: Document): Promise<Types.ModifierGroup[]> {
+    const modifiers: Types.ModifierGroup[] = [];
+
+    const modifierNodes = this.select(doc, this.cfg.modifiers.main);
+
+    console.log(modifierNodes.length)
+
+    for (const node of modifierNodes) {
+      if (node.nodeType !== 1) continue;
+
+      const gropuName = node.querySelector(this.cfg.modifiers.group_name)?.textContent;
+      const subheader = node.querySelector(this.cfg.modifiers.subheader)?.textContent;
+
+      const groupId = Math.floor(Math.random() * 1000000);
+
+      const modType = this.getModType(subheader);
+
+      const modGroup: Types.ModifierGroup = {
+        id: groupId,
+        name: gropuName ?? '',
+        type: modType,
+        required: modType === 'one_one' ? true : false,
+        max: modType === 'one_one' ? 1 : 3,
+        min: modType === 'one_one' ? 1 : 0,
+      };
+
+      if (!this.ifModGroupExists(modGroup.name)) {
+        this.modifierGroups.push(modGroup);
+      }
+      //TODO: parse group options
+
+    }
+    return this.modifierGroups;
+  }
+
+  ifModGroupExists(name: string): Boolean {
+    return this.modifiers.some((group) => group.name === name);
+  }
+
+  getModType(subheader: any): string {
+    switch (subheader) {
+      case undefined:
+        return 'one_one';
+      default:
+        return 'all_one'
+    }
+  }
 
   async Export() {
     const exportData = {
@@ -177,6 +225,7 @@ class Parser {
     const exporter = new Exporter(exportData, this.cfg);
     exporter.exportXml();
   }
+
 
   select(doc: Document, selector: string, base: Node = doc): Element[] {
     const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;

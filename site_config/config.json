@@ -24,6 +24,12 @@
       "url": "a"
     }
   },
+  "modifiers": {
+    "main": ".catalog-item__properties",
+    "group_title": ".catalog-item__properties-header",
+    "name": ".D_CatalogItem__property-name",
+    "price": ".D_CatalogItem__property-price"
+  },
   "follow_url": true,
   "product_url": "",
   "export": "xml",

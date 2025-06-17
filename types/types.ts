@@ -12,6 +12,14 @@ interface menuConf {
   };
 }
 
+interface modifierConf {
+  main: string;
+  group_name: string;
+  subheader: string;
+  name: string;
+  price: string;
+}
+
 namespace Types {
   export interface Proxy {
     host: string;
@@ -24,6 +32,7 @@ namespace Types {
     id: number;
     type: string;
     name: string;
+    required: boolean;
     max: number;
     min: number;
   }
@@ -58,6 +67,7 @@ namespace Types {
     menu: menuConf;
     product_url?: string;
     selectors: Record<string, string>;
+    modifiers: modifierConf;
     follow_url?: boolean;
     export?: string;
     filename?: string;

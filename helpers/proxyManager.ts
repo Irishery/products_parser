@@ -1,5 +1,5 @@
 import fs from 'fs';
-import Types from './types/types'
+import Types from '../types/types'
 
 
 class ProxyManager {

@@ -1,8 +1,6 @@
 // exporter.ts
 import fs from 'fs';
-import { URL } from 'url';
-import * as utils from './utils';
-import Types from './types/types'
+import Types from '../types/types'
 
 export default class Exporter {
   private data: Types.ExportData;

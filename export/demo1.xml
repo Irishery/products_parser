@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2025-06-17T16:48:08">
+<yml_catalog date="2025-06-17T17:39:39">
     <shop>
         <name></name>
         <company></company>
@@ -8,1399 +8,1399 @@
             <currency id="RUR" rate="1" />
         </currencies>
         <categories>
-            <category id="70610">Комбо и Акции</category>
-            <category id="70050">Пицца</category>
-            <category id="74400">Воки</category>
-            <category id="70210">Шаурма Дёнер Гиро</category>
-            <category id="70550">Паста</category>
-            <category id="70250">Салаты</category>
-            <category id="78810">Закуски</category>
-            <category id="75230">Десерты</category>
-            <category id="70270">Напитки</category>
-            <category id="76460">Гарниры и соусы</category>
-            <category id="71740">Блюда на мангале</category>
+            <category id="78200">Комбо и Акции</category>
+            <category id="74580">Пицца</category>
+            <category id="79360">Воки</category>
+            <category id="72860">Шаурма Дёнер Гиро</category>
+            <category id="78380">Паста</category>
+            <category id="72090">Салаты</category>
+            <category id="74710">Закуски</category>
+            <category id="79970">Десерты</category>
+            <category id="72930">Напитки</category>
+            <category id="78270">Гарниры и соусы</category>
+            <category id="71630">Блюда на мангале</category>
         </categories>
         <offers>
-            <offer id="70050001" available="true">
-                <name>Пицца 4 сезона</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/6f3/2025_06_09_15_39_55.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051002">
-                        <price>620</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050002" available="true">
-                <name>Пицца Американо</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/be5/2025_06_09_17_08_25.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051004">
-                        <price>590</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050003" available="true">
-                <name>Пицца Гавайская</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/1e3/2025_06_09_15_40_08.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051006">
-                        <price>580</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050004" available="true">
-                <name>Пицца Горгонзола</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/1c4/2025_06_09_15_40_21.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051008">
-                        <price>650</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050005" available="true">
-                <name>Пицца Карбонара</name>
-                <description></description>
-                <picture>https://cdn.dlvry.ru/upload/iblock/7d6/karbonara.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051010">
-                        <price>630</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050006" available="true">
-                <name>Пицца Летняя</name>
-                <description></description>
-                <picture>https://cdn.dlvry.ru/upload/iblock/77e/letnyaya.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051012">
-                        <price>570</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050007" available="true">
-                <name>Пицца Маргарита</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/b35/2025_06_09_17_10_06.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051014">
-                        <price>510</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050008" available="true">
-                <name>Пицца Мексиканская</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/6cc/2025_06_09_17_08_11.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051016">
-                        <price>580</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050009" available="true">
-                <name>Пицца Охотничья</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/047/2025_06_09_17_08_37.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051018">
-                        <price>590</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050010" available="true">
-                <name>Пицца Пепперони Халяль</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/dbd/2025_06_09_17_09_34.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051020">
-                        <price>630</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050011" available="true">
-                <name>Пицца Сырная</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/a3d/2025_06_09_17_09_45.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051022">
-                        <price>590</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050012" available="true">
-                <name>Пицца Халяльная</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/d3f/2025_06_09_15_40_40.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051024">
-                        <price>590</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70050013" available="true">
-                <name>Хачапури по-Аджарски</name>
-                <description><![CDATA[Состав: Сыр сулугуни, яйцо]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/73b/fp_8blptou3bvinuctjaa9dtlazplor29fvm7iyks8etwrgrbiiapy8js3dicsaslh6h9t03aqt5vn_yq3guzp5.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70051026">
-                        <price>504</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70050</categoryId>
-            </offer>
-            <offer id="70210001" available="true">
-                <name>"Кировская" Острая • 220 гр</name>
-                <description><![CDATA[Состав: Курица, перец халапеньо, лук, морковь по-корейски, соус сырныйВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/d70/sf_ipdplw_r03ta24guhmhdyfjy5msjodigflhrizfjdu4syyvrc25vyv0m1k07m4tht4ldsktpq_lx2shjan4s.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211002">
-                        <price>240</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210002" available="true">
-                <name>"Центральная" Классическая • 220 гр</name>
-                <description><![CDATA[Состав: Курица, огурец, помидор, лук, соус классическийВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/97b/8ak58ugw0equfh1zaerluxirz7z1v9dsocff96mm692dfgwdrsarepi84mcugx2vza8wnu7m2xd371ztlyay2vl3.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211004">
-                        <price>240</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210003" available="true">
-                <name>Шаурма Студенческая • 220 гр</name>
-                <description><![CDATA[Состав: Курица, капуста пекинская, картофель фри, маринованый огурец, помидор, соус сырныйВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/624/4bpoualtmgyut6n_sxoqef4j6ooxckozhphngfgkwqi3zpqogidh8jpdzth1vsop_ivuyzigzunz5l2fs1103edx.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211006">
-                        <price>240</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210004" available="true">
-                <name>"Заводская" Сырная • 220 гр</name>
-                <description><![CDATA[Состав: Курица, сыр, маринованный огурец, картофель фри, помидор, соус cырныйВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/844/yxqzkdttic6tq5q8sx8pucfvqqw4zsa5tisixnn_xb4yxzsdbekqth9_sntqck8ezrb5snz6sjy4vzcp2jfn8nqa.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211008">
-                        <price>252</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210005" available="true">
-                <name>"Ленинская" Грибная • 220 гр</name>
-                <description><![CDATA[Состав: Курица, огурец, помидор, шимпиньоны, соус классическийВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/106/27c7rcghcbsi_ycrhpw9alfaxjv0zel1avvsijm2rkyqgwmy2x7fs4ee4vhyxrwkryj6qt8dddcc7cntnxub0vft.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211010">
-                        <price>252</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210006" available="true">
-                <name>"Рудничная" Ананасовая • 220 гр</name>
-                <description><![CDATA[Состав: Курица, ананас, лук красный, маринованный огурец, пекинская капуста, соус на выборВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/db5/0r5mjjujtxxd5t9zgbudxdz2bgbgcwrqeh5oqvmuecdwhsalv8m7ob5afagjk3v9899w8wcrsgmoteayrqlgz5cn.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211012">
-                        <price>252</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210007" available="true">
-                <name>"Суховская" Овощная • 220 гр</name>
-                <description><![CDATA[Состав: Картофель фри, огурец, помидор, острая морковь, лук, майонез, соус на выборВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/7dd/gb_wrb3mk6bcmbwiqgvn1rwwd_vif7_t4kfeywszegjcuxn1borauynk1pfesuepuzjvf5v7y2lc_fch3khb51xl.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211014">
-                        <price>216</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210008" available="true">
-                <name>Гиро "Заводский" Сырный</name>
-                <description><![CDATA[Состав: Курица, картофель фри, маринованный огурец, фри, помидор, сырный соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/b3d/mhw1mp0kfugkix6mvbr_gx3ya_cqz1wwipcozzhli25x3dzopq7mdmlvzdop9_qrcubxj_sgh4ctaroyi9retil.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211016">
-                        <price>408</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210009" available="true">
-                <name>Гиро "Кировский" Острый</name>
-                <description><![CDATA[Состав: Курица, картофель фри, перец халапеньо, лук, майонез, острая морковь, острый соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/41c/vcnxmsg_n1opkvqgqhcm49zdqyopoobboefnqn3lxmy8bu0kvupqroq0y7a0mtpzbwu9nyypsvhyvkgdijugyepq.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211018">
-                        <price>408</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210010" available="true">
-                <name>Гиро "Ленинский" Грибной</name>
-                <description><![CDATA[Состав: Курица, картофель фри, огурец, помидор, шампиньоны, майонез, соус сливочный с чесноком]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/4aa/shosykrw2arwv7vuhljsbvz8f_xy3mn866m5bnag4auln0gfmsanbwb4z1xdptatrx43qofp9vmnrajy4djbw_fh.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211020">
-                        <price>408</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210011" available="true">
-                <name>Гиро "Рудничный" Ананасовый</name>
-                <description><![CDATA[Состав: Курица, огурец маринованный, пекинская капуста, лук красный, сырный соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/59f/ag05e71w8dn91qe3ywjkhh9fpmnwtzt4ajukdc14wkl5mgif0x2tuvt01csu6ihcxt7ttpezah3xnptges9zmh9.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211022">
-                        <price>408</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210012" available="true">
-                <name>Гиро "Суховский" Овощной</name>
-                <description><![CDATA[Состав: Картофель фри, огурец, помидор, пекинская капуста, лук, майонез, соус на выбор]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/832/rnjrgya26mgiwyqniev03xx0tovvnzdnlksiin_qh0cth84tmldkxk9au9albw6zujnsugedcvvvfjpsm31u60qy.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211024">
-                        <price>360</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210013" available="true">
-                <name>Гиро "Центральный" Классический</name>
-                <description><![CDATA[Состав: Курица, картофель фри, огурец, помидор, лук, майонез, соус сливочный с чесноком]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/32f/itogk7p3fv7fbo7ohzzw7odhfelljc425c1hqt5epnlc_rr1euwx0zpatzeommscblffigvpy1_tixpac8x5spki.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211026">
-                        <price>408</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210014" available="true">
-                <name>Гиро Мясное</name>
-                <description><![CDATA[Состав: Пита, курица, картофель фри, соус на выбор]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/17b/5filadj6zmc8rwii_etwrpkiqm_lufwff08cjvb_gyguamy25xqos9jpx67umlba4azpt0k13bxgjqfuie_mzxkg.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211028">
-                        <price>468</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210015" available="true">
-                <name>Гиро Студенческий</name>
-                <description><![CDATA[Состав: Курица, капуста пекинская, фри, маринованные огурцы, помидор, соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/34f/rkohygdvk7j0ibgk3fcji2_ht50ji9jwoh4v7gl98c7razf7ncuq23gfjukaxvvcl3replyxtyvpkecijbgc65kc.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211030">
-                        <price>408</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210016" available="true">
-                <name>Денер "Заводский" Сырный</name>
-                <description><![CDATA[Состав: Курица, сыр, маринованный огурец, фри, помидор, сырный соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/76f/hm8npxmiffwah6mcl7bvgttyfs0xspagjj4ts8dgydai3vb9o1yukgp_i2psns54_vjrpycwisf_r33vdbe_jmet.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211032">
-                        <price>384</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210017" available="true">
-                <name>Денер "Кировский" Острый</name>
-                <description><![CDATA[Состав: Курица, перец халапеньо, лук, майонез, острая морковь, острый соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/c9c/9ix0hrfc_qxd5swmxe7xbztkz2y1_ibyydkaeamok_t_t23_4bn4vcba_a0tbx5_m3jhe9jc_7ipq8vyrbk6jrif.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211034">
-                        <price>384</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210018" available="true">
-                <name>Денер "Ленинский" Грибной</name>
-                <description><![CDATA[Состав: Курица, огурец, помидор, шампиньоны, майонез, соус сливочный с чесноком]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/959/i5jvkg_zt8rjbjjlog9arzukxro0bmhircskwurfjssqtnussbg1voqu10vodlcfrgcanybnnwdvifoiieo4j4jl.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211036">
-                        <price>384</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210019" available="true">
-                <name>Денер "Рудничный" Ананасовый</name>
-                <description><![CDATA[Состав: курица, огурец маринованный, пекинская капуста, лук красный, сырный соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/884/n_spe4n_d_jrl5svyvvkrk2ux1d8e_chpukydwi6z945bqby_hibcwudhjycetwpkzfajig5wqbd_fecf0cxx7qc.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211038">
-                        <price>384</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210020" available="true">
-                <name>Денер "Суховский" Овощной</name>
-                <description><![CDATA[Состав: Картофель фри, пекинская капуста, помидор, огурцы, лук, майонез, соус на выбор]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/eaa/raams2rp_cs_smtr9eurq_ogkjaafbosxso9peulwv0xrzb_63_eq5i_zoc7_m0nnt1xs3j3n3je4qulxtozkvne.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211040">
-                        <price>300</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210021" available="true">
-                <name>Денер "Центральный" Классический</name>
-                <description><![CDATA[Состав: Курица, огурец, помидор, лук, майонез, соус сливочный с чесноком]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/dd0/th3wlrthdc9wckweqdksifgeri9rkmnrrgjz78hqdlhan0mllxs8oaspvjoth8wxcd3_rrdker2i6ytb1nlgt3xd.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211042">
-                        <price>384</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210022" available="true">
-                <name>Денер Мясной</name>
-                <description><![CDATA[Состав: Булочка, курица , соус на выбор]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/a8a/masrmcdptp407gky1cyqdpglniyinb4t_4uod7hmhfq6niyz2splz01zyujo00gyeypgjejsyuy4r_x4qul3n0wn.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211044">
-                        <price>468</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210023" available="true">
-                <name>Денер Студенческий</name>
-                <description><![CDATA[Состав: Курица, капуста пекинская, фри, маринованные огурцы, помидор, соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/fc5/zxncgj33tdzljf2yqqfb8ljspyczirtnfzasza86t5nypfwezwos8cscyhlodkrk6phlu2rjmfx6cdcoqw6o7e1b.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211046">
-                        <price>360</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210024" available="true">
-                <name>Денер Халяль</name>
-                <description><![CDATA[Состав: Сосиска, фри, маринованные огурцы, лук, зелень, соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/1d1/hx5lz7rkafyh7r5dnao_xqm7qqpz0wspito_ecqh9ntsoql98ag_yhf8hcllz4pnuyzf5wnn_z9_ev3r6nfa4q3d.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211048">
-                        <price>396</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210025" available="true">
-                <name>Шаурма Мясная • 220 гр</name>
-                <description><![CDATA[Состав: Курица, лаваш, соус на выборВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/fa1/9gzxsetcr0_kv4zpca4iqxpa_tjzneylg1stpxefcdzgztm8kcazgwlm75k3m8hudhtleioreynwlpderrkwjfra.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211050">
-                        <price>372</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70210026" available="true">
-                <name>Шаурма на тарелке</name>
-                <description><![CDATA[Состав: Курица, картофель фри, лаваш, огурец, помидор, лук, соус]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/ea5/dyfefhg5xc_9pl5sqabpq78s4wefwlqt4seqgfwowlvmh2ci5c2xmrxx7ibedkfpvtn1uq3jhcgz6vpy7o_f2gir.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70211052">
-                        <price>384</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70210</categoryId>
-            </offer>
-            <offer id="70250001" available="true">
-                <name>Греческий • 220 гр</name>
-                <description><![CDATA[Состав: Помидор, огурец, перец болгарский, сыр фетакса, оливки, маслины, оливковое масло, лимоная кислотаВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/1e1/5_3cm6l0to4fcsigmptrdrvcgsb3kcp02figao5nif1lheaaxvc1berdqrwhy7hmrpbjc9hjnyooklhu6cwiqwp_.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70251002">
-                        <price>280</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70250</categoryId>
-            </offer>
-            <offer id="70250002" available="true">
-                <name>Фунчоза с Креветками • 220 гр</name>
-                <description><![CDATA[Состав: Лапша, креветки, перец сладкий, огурцы свежие, соусВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/a11/vx7immqqgmod1aspplddzezvsbsgvs_uzhhdeg9ydqveligq8btpuo2kegzbzaj6yykk6nynfwawi4acq_ptfza.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70251004">
-                        <price>456</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70250</categoryId>
-            </offer>
-            <offer id="70250003" available="true">
-                <name>Фунчоза с курицей • 220 гр</name>
-                <description><![CDATA[Состав: Лапша, курица, перец сладкий, огурцы, соусВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/6ef/stjsnpmbuermvr_hdunp8srh67eihgsga5rje6qdbl7nvrkr430edc3pryffpx7bnr4juz48ar_rrmdbj_zxhgiv.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70251006">
-                        <price>336</price>
-                        <description>220 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70250</categoryId>
-            </offer>
-            <offer id="70250004" available="true">
-                <name>Цезарь с креветками • 200 гр</name>
-                <description><![CDATA[Состав: Пекинская капуста, лист салата, курица, помидор черри, яйцо перепелиное, сухарики, сыр пармезан, соусВес: 200 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/885/3gweqfaloqqvblqfhwh2xieds_mobgtzem8o2hwjtw_tylizq_tr6lqo1ivelbhbb1b4hwipawffr6okbid_ibn.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70251008">
-                        <price>456</price>
-                        <description>200 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70250</categoryId>
-            </offer>
-            <offer id="70250005" available="true">
-                <name>Цезарь с курицей • 200 гр</name>
-                <description><![CDATA[Состав: Пекинская капуста, лист салата, курица, помидор черри, яйцо перепелиное, сухарики, сыр пармезан, соусВес: 200 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/fd7/sewxdxmdgow7n4gmbi3cgz3anmxpyn7nq5qhs6dmjdnzhkm_96ihkxi7kexqdqahq98_no20pr_venldxoamdqyq.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70251010">
-                        <price>336</price>
-                        <description>200 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70250</categoryId>
-            </offer>
-            <offer id="70270001" available="true">
-                <name>Adrenaline Rush • 300 гр</name>
-                <description><![CDATA[Состав: Adrenaline RushВес: 300 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/103/xknr62zyppyzvltlvtz4ogopr7sp7hunryhe5astniql2zh83pbtvgu8d507g_sochmenqk31jeqnvhyyp_2xjyz.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271002">
-                        <price>180</price>
-                        <description>300 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270002" available="true">
-                <name>Adrenaline Rush • 500 гр</name>
-                <description><![CDATA[Состав: Adrenaline RushВес: 500 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/860/gxxth1n6akc1uhvd9hjez40n5ckzo0qbjj_tj_w0nh5ugd7i4gl2dligp6lwh0_fuu7uqb3in4e4lyu6l2ectexi.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271004">
-                        <price>280</price>
-                        <description>500 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270003" available="true">
-                <name>Coca-cola • 1000 гр</name>
-                <description><![CDATA[Состав: Coca-colaВес: 1000 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/cbf/vq1vsgnsvx1zj6k8skctes3bmu_ebrp1k1z0zlixucr6ejw0m4qb19ymg21jdwre_nwejwzvrl9znyfe0rv75hf1.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271006">
-                        <price>280</price>
-                        <description>1000 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270004" available="true">
-                <name>Coca-cola в стекле</name>
-                <description><![CDATA[Состав: Coca-cola в стекле]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/a18/ywl5tlcccqy3uuvvbkyjigmvpqt7wfscyc9csdkae7ouwb09xb5iuj4vztaxrzkbpndpvgsswwb2atnz90e_knpg.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271008">
-                        <price>180</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270005" available="true">
-                <name>Evervess Cola</name>
-                <description><![CDATA[Состав: Cильногазированный безалкогольный напиток]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/56a/ty6uglsnsfyw8attzn2bgdqospu4odlxovpu2r4ctoxzozcn39x73pjmtqenzjvdtmstohexqiu_hjdlw860hpf_.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271010">
-                        <price>160</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270006" available="true">
-                <name>Flash</name>
-                <description><![CDATA[Состав: Напиток безалкогольный тонизирующий газированный]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/744/npdad_mye5od2goqltia9zjhb7fng_vnkexbzi8qdr6cssjafol2omb1gtopwcyyl5jztpof3dvgmhqvgoh7gazw.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271012">
-                        <price>120</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270007" available="true">
-                <name>Pepsi • 330 гр</name>
-                <description><![CDATA[Состав: PepsiВес: 330 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/3c7/ra1j5beji7abimo2lvwocxydw8r_g4basedjt5iep45viaynhcvccj4kzu2fm_qbg9gylb_mmb_u_hpduduiaii.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271014">
-                        <price>140</price>
-                        <description>330 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270008" available="true">
-                <name>Вода Aqua Active лимон • 500 гр</name>
-                <description><![CDATA[Состав: Вода Aqua Active лимонВес: 500 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/2cf/8bq5g6ixkonsp0rtfdh5xrvfgaqrv9j5ybwnca9qt_e5hfrawj9fictqfrbtqwywqm8fdvkr5fzs8b_hgjbuebuf.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271016">
-                        <price>95</price>
-                        <description>500 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270009" available="true">
-                <name>Лимонад Апельсин имбирь • 500 гр</name>
-                <description><![CDATA[Состав: Лимонад Апельсин имбирьВес: 500 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/e30/lyuxsqnwudde8mlp1mjmiinfuz0vw_awadabu_9c2vgex39sxkvmiab5dfpyya8lscqorbs6slenjr8rz4rdckz_.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271018">
-                        <price>250</price>
-                        <description>500 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270010" available="true">
-                <name>Морс Вишня • 500 гр</name>
-                <description><![CDATA[Состав: Морс вишняВес: 500 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/0bd/ur_i8hxpnulhr1hry_sjxdlr67d_yl0ffstqw5qbpok5qhxm3wvhoelfeudufd9fddjfwb2spmu6coyhvop88w0.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271020">
-                        <price>180</price>
-                        <description>500 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270011" available="true">
-                <name>Сок "Любимый" • 300 гр</name>
-                <description><![CDATA[Состав:  Сок "Любимый"Вес: 300 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/636/fktutinu7mtrke92c2mvh4pw7zq_hk3vagqeew1fma03idu3poqpzum8odw4zusaf_cgvw26fbpwuxpywkvrf_.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271022">
-                        <price>75</price>
-                        <description>300 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70270012" available="true">
-                <name>Холодный чай Lipton • 500 гр</name>
-                <description><![CDATA[Состав: Холодный чай LiptonВес: 500 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/dfc/lhk_wbmxb_msvgwuykcevw_v0ckifekl4kdlnhcabwosfyk_mkqpwkl7abjqec_oefnxq_irz7zcshrvhtvrwc55.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70271024">
-                        <price>160</price>
-                        <description>500 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70270</categoryId>
-            </offer>
-            <offer id="70550001" available="true">
-                <name>Болоньезе • 350 гр</name>
-                <description><![CDATA[Состав: Лапша спагетти, говяжий фарш, помидор, болгарский перец, лук, соус томатный, пармезанВес: 350 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/630/w_pozpyb3t3posyvezw1sj21kkhffwvqjjtd28llf2qvnqcrh9ftw3eb06cb42k5q_jzzpzjyx4wet1af2f1cd3b.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70551002">
-                        <price>456</price>
-                        <description>350 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70550</categoryId>
-            </offer>
-            <offer id="70550002" available="true">
-                <name>Карбонара • 350 гр</name>
-                <description><![CDATA[Состав: Лапша фетучино, бекон, сливочный соус, пармезанВес: 350 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/6b5/lepuqfdoqokp_kc4paoxaaobz6zxdfthlsngybrjp_ijrnlxlhvvixge8gr6qy2yp_par5ghgglx4vt3vtaqwakb.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70551004">
-                        <price>468</price>
-                        <description>350 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70550</categoryId>
-            </offer>
-            <offer id="70550003" available="true">
-                <name>Паста с ветчиной и грибами • 350 гр</name>
-                <description><![CDATA[Состав: Лапша фетучино, ветчина и шампиньоны, сливочный соус, пармезанВес: 350 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/1f9/y9xylds8_bpvhuze_o7gpt3c28hmr1a7ffu3whdvc2bwxdslns6gj8qpz_kzlsqhxz_tylwzqcoyisoudawkhf4.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70551006">
-                        <price>432</price>
-                        <description>350 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70550</categoryId>
-            </offer>
-            <offer id="70550004" available="true">
-                <name>Паста с Креветками</name>
-                <description><![CDATA[Состав: Лапша, креветки, перец сладкий, томат, сливочный соус, пармезан]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/f1c/we1z3hzogvi45b9abxzdkkx7sdu2nzekgc_gtiragrpsq5oygfzkae_knajgkgzjnctuznbojdylptg8cdzr9zfs.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70551008">
-                        <price>540</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70550</categoryId>
-            </offer>
-            <offer id="70550005" available="true">
-                <name>Паста с Курицей • 350 гр</name>
-                <description><![CDATA[Состав: Лапша, курица, сливочный соус, пармезанВес: 350 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/d8c/mgehavqbfyxvts8ujaq3ejsurhbfmya84cf770lbqkvtpdcksgsdiwutqpjqk8tnr3qansdfm_nh_tkfwfdru8jr.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70551010">
-                        <price>432</price>
-                        <description>350 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70550</categoryId>
-            </offer>
-            <offer id="70610001" available="true">
-                <name>10 Шаверм на выбор 220 гр</name>
-                <description><![CDATA[Состав: 10 шаверм на выбор 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/b41/ubz5octlavtvpnnk4dlmiwvyhxmzrn74_al7lo1agr5k57tuovv6b0m2ziwqva7d5h34ve9wwezt2cshkk2x9i3z.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70611002">
-                        <price>2200</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70610</categoryId>
-            </offer>
-            <offer id="70610002" available="true">
-                <name>10 Шаверм на выбор 400 гр</name>
-                <description><![CDATA[Состав: 10 шаверм на выбор 400 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/1cb/93hcd2nxpph2vcrydecm14aldemnd40tdzu5ch0_zoov_hgauyp_zreb2fcy168qy8whwvavkwsfc2o0xyx7fhmq.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70611004">
-                        <price>3200</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70610</categoryId>
-            </offer>
-            <offer id="70610003" available="true">
-                <name>3 Пиццы 30см</name>
-                <description><![CDATA[Состав: 3 пиццы на выбор]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/19f/zejsmdpfc0hnzyp8ai_xrfm9hxcdofc1qyigjrrrl4uu_f1rboguxsgt03w4qornsrxl7xctaiz82eyeult5n9p0.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70611006">
-                        <price>1700</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70610</categoryId>
-            </offer>
-            <offer id="70610004" available="true">
-                <name>Комбо 4 вида</name>
-                <description><![CDATA[В комбо входят четыре вида шаурмы: острая, сырная, чесночная, грибная]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/f4b/2025_06_08_00_21_45.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70611008">
-                        <price>890</price>
-                        <description>880 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70610</categoryId>
-            </offer>
-            <offer id="70610005" available="true">
-                <name>Люля-кебаб акция 250 руб</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/cd4/48c545c8231bdf5e8b10ee7bd09f2064.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70611010">
-                        <price>250</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70610</categoryId>
-            </offer>
-            <offer id="70610006" available="true">
-                <name>Шашлык акция 250руб</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/be5/be492ca6d4072a09231b1931f0ab2df3.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="70611012">
-                        <price>250</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>70610</categoryId>
-            </offer>
-            <offer id="71740001" available="true">
+            <offer id="71630001" available="true">
                 <name>Кукуруза на гриле</name>
                 <description></description>
                 <picture>
                     https://cdn.dlvry.ru/upload/iblock/4cf/photo_2025_06_13_22_41_42-_2_.jpg?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="71741002">
+                    <parameter id="71631002">
                         <price>364</price>
                         <description>220 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>71740</categoryId>
+                <categoryId>71630</categoryId>
             </offer>
-            <offer id="71740002" available="true">
+            <offer id="71630002" available="true">
                 <name>Люля Кебаб</name>
                 <description></description>
                 <picture>
                     https://cdn.dlvry.ru/upload/iblock/523/0b1f93a7608b8464c1fc837ba5e6d4f2.png?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="71741004">
+                    <parameter id="71631004">
                         <price>380</price>
                         <description>150 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>71740</categoryId>
+                <categoryId>71630</categoryId>
             </offer>
-            <offer id="71740003" available="true">
+            <offer id="71630003" available="true">
                 <name>Сосиски на гриле</name>
                 <description></description>
                 <picture>
                     https://cdn.dlvry.ru/upload/iblock/702/74b28fb179413caf90e8e16ca474ad61.png?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="71741006">
+                    <parameter id="71631006">
                         <price>348</price>
                         <description>170 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>71740</categoryId>
+                <categoryId>71630</categoryId>
             </offer>
-            <offer id="71740004" available="true">
+            <offer id="71630004" available="true">
                 <name>Шампиньоны на гриле</name>
                 <description></description>
                 <picture>
                     https://cdn.dlvry.ru/upload/iblock/256/7373ff44c15d76b85f12150520af8dab.jpeg?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="71741008">
+                    <parameter id="71631008">
                         <price>264</price>
                         <description>150 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>71740</categoryId>
+                <categoryId>71630</categoryId>
             </offer>
-            <offer id="71740005" available="true">
+            <offer id="71630005" available="true">
                 <name>Шашлык из говядины</name>
                 <description></description>
                 <picture>
                     https://cdn.dlvry.ru/upload/iblock/bcc/9783bcaa3718d2fac8a0d1ceb82ccfbb.png?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="71741010">
+                    <parameter id="71631010">
                         <price>450</price>
                         <description>170 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>71740</categoryId>
+                <categoryId>71630</categoryId>
             </offer>
-            <offer id="71740006" available="true">
+            <offer id="71630006" available="true">
                 <name>Шашлык из курицы</name>
                 <description></description>
                 <picture>
                     https://cdn.dlvry.ru/upload/iblock/3b4/39c93d06713c0a5420c55849d03cd883.jpeg?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="71741012">
+                    <parameter id="71631012">
                         <price>350</price>
                         <description>170 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>71740</categoryId>
+                <categoryId>71630</categoryId>
             </offer>
-            <offer id="74400001" available="true">
-                <name>Вок с говядиной Халяль</name>
-                <description></description>
+            <offer id="72090001" available="true">
+                <name>Греческий • 220 гр</name>
+                <description><![CDATA[Состав: Помидор, огурец, перец болгарский, сыр фетакса, оливки, маслины, оливковое масло, лимоная кислотаВес: 220 гр]]></description>
                 <picture>
-                    https://cdn.dlvry.ru/upload/iblock/77c/77ffcb82cd4d1a07336a446bd707d6fc.png?width=1000&quality=100</picture>
+                    https://cdn.dlvry.ru/upload/iblock/1e1/5_3cm6l0to4fcsigmptrdrvcgsb3kcp02figao5nif1lheaaxvc1berdqrwhy7hmrpbjc9hjnyooklhu6cwiqwp_.jpg?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="74401002">
-                        <price>495</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>74400</categoryId>
-            </offer>
-            <offer id="74400002" available="true">
-                <name>Вок с курицей Халяль</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/7ec/44a391efe751e848f3afb370c64b6380.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="74401004">
-                        <price>460</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>74400</categoryId>
-            </offer>
-            <offer id="74400003" available="true">
-                <name>Вок с морепродуктами</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/502/422f467efb28cf37af47d3fe7af776d1.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="74401006">
-                        <price>516</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>74400</categoryId>
-            </offer>
-            <offer id="75230001" available="true">
-                <name>Конфета Goodmix</name>
-                <description><![CDATA[Состав: Конфета со вкусом соленой карамели, с хрустящей вафлей]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/d6d/2atwdwjyju02d9tvnmqzv2fbi_vypnjwc4cgtfs85nmtpwhgvlro4_czmnijrpsuojfsicr4pkqqfbhcstmpkcju.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="75231002">
-                        <price>75</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>75230</categoryId>
-            </offer>
-            <offer id="75230002" available="true">
-                <name>Пахлава • 2 шт</name>
-                <description><![CDATA[Состав: Пахлава восточнаяКоличество: 2 шт]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/5fd/9nyybqtbf5zv19xx4wylrntoolllc1pxe0ccqyw8h0ojwozgjapgly5wr1yi_uzk_bngmqoxb7brr7ufkzmogj94.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="75231004">
-                        <price>120</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>75230</categoryId>
-            </offer>
-            <offer id="75230003" available="true">
-                <name>Пончик</name>
-                <description><![CDATA[Состав: Ванильный, шоколадный]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/9c4/2yftgjwzj4aigrbeby0x125kv2jjqpxyprcozsxfsc6b58nidvapgkwmdkzspkjgmw6k_yub5gojnecvql1deghr.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="75231006">
-                        <price>110</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>75230</categoryId>
-            </offer>
-            <offer id="75230004" available="true">
-                <name>Халва • 6 шт</name>
-                <description><![CDATA[Состав: Ядро фисташки, грецкий орех, арахис, миндаль, фундук, сухие сливки, сливочное масло, сахар, ароматизатор ванилин, лимонная кислота, сгущённое молокоКоличество: 6 шт]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/973/toackbnb8t_l6atw58zssvgalkdyukkxsu7dz_bb6vrx6qkavx1jfull8ttfd1lgf_qxnjn3uxg9d5vxii5ji442.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="75231008">
-                        <price>130</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>75230</categoryId>
-            </offer>
-            <offer id="75230005" available="true">
-                <name>Шоколадные батончики</name>
-                <description><![CDATA[Состав: Snickers, Twix, Bounty]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/0aa/nhfn0cjxtx0cefj_3oaifmg1gpmdsxlqpfffh1ihaojm3iimkvhvxpz0r9scdf1irm4oijseein40t_4mfyq0xwf.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="75231010">
-                        <price>120</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>75230</categoryId>
-            </offer>
-            <offer id="76460001" available="true">
-                <name>Картофель по-деревенски</name>
-                <description><![CDATA[Состав: Картофель по-деревенски]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/714/xsv1dsoxt0xxbm8cxvketa48l8cakcwzyg_b9p07pbyj2sngrhbm9hmpmulgbakg2mzk8p5dgin_ysok2hcsomy.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="76461002">
-                        <price>192</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>76460</categoryId>
-            </offer>
-            <offer id="76460002" available="true">
-                <name>Картофель фри • 100 гр</name>
-                <description><![CDATA[Состав: Картофель фриВес: 100 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/211/im6hbxksua_rc4s1c_nm73cxtinp40_svfkp5jbbrzfcicklyimzyqcjwb_mpznpgi0i_73bbxwlvnwzqpfgh1iu.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="76461004">
-                        <price>166</price>
-                        <description>100 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>76460</categoryId>
-            </offer>
-            <offer id="76460003" available="true">
-                <name>Наггетсы</name>
-                <description><![CDATA[Состав: Наггетсы]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/e2e/kjiuypcmj8o_8maltb8fj6g_gv0yqmhn0b2oumjv1l9yapapmwzwrhcyzeifnq6ahkuzlx3bodss560qx92azgjc.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="76461006">
-                        <price>192</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>76460</categoryId>
-            </offer>
-            <offer id="76460004" available="true">
-                <name>Рис • 160 гр</name>
-                <description><![CDATA[Состав: РисВес: 160 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/1d0/xvzhkwljq7b8zhpx7m8kovu7ln_azrrfom6dfea5g6qb6rus0toxwduid3x4i5zue_p_gwt_1eadyjbqcvohhrqo.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="76461008">
-                        <price>70</price>
-                        <description>160 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>76460</categoryId>
-            </offer>
-            <offer id="76460005" available="true">
-                <name>Соус Heinz • 45 гр</name>
-                <description><![CDATA[Состав: Соус HeinzВес: 45 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/262/tpumtjywia_zbdmaegrfah75zkgegkveucqmwnzigzlwx6gjxvgwyugbjpjcsrc_w1ucxz7zdcljpvdocwtkahe5.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="76461010">
-                        <price>65</price>
-                        <description>45 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>76460</categoryId>
-            </offer>
-            <offer id="78810001" available="true">
-                <name>Кальмар темпура</name>
-                <description></description>
-                <picture>https://cdn.dlvry.ru/img/default-400x300.svg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811002">
+                    <parameter id="72091002">
                         <price>280</price>
-                        <description></description>
+                        <description>220 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>78810</categoryId>
+                <categoryId>72090</categoryId>
             </offer>
-            <offer id="78810002" available="true">
-                <name>Картофель по-деревенски</name>
-                <description></description>
+            <offer id="72090002" available="true">
+                <name>Фунчоза с Креветками • 220 гр</name>
+                <description><![CDATA[Состав: Лапша, креветки, перец сладкий, огурцы свежие, соусВес: 220 гр]]></description>
                 <picture>
-                    https://cdn.dlvry.ru/upload/iblock/28a/2025_06_06_19_35_16.png?width=1000&quality=100</picture>
+                    https://cdn.dlvry.ru/upload/iblock/a11/vx7immqqgmod1aspplddzezvsbsgvs_uzhhdeg9ydqveligq8btpuo2kegzbzaj6yykk6nynfwawi4acq_ptfza.jpg?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="78811004">
-                        <price>192</price>
-                        <description>100 г</description>
+                    <parameter id="72091004">
+                        <price>456</price>
+                        <description>220 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>78810</categoryId>
+                <categoryId>72090</categoryId>
             </offer>
-            <offer id="78810003" available="true">
-                <name>Картофель фри</name>
-                <description><![CDATA[Состав: Картофель фри]]></description>
+            <offer id="72090003" available="true">
+                <name>Фунчоза с курицей • 220 гр</name>
+                <description><![CDATA[Состав: Лапша, курица, перец сладкий, огурцы, соусВес: 220 гр]]></description>
                 <picture>
-                    https://cdn.dlvry.ru/upload/iblock/945/2025_06_06_19_29_57.png?width=1000&quality=100</picture>
+                    https://cdn.dlvry.ru/upload/iblock/6ef/stjsnpmbuermvr_hdunp8srh67eihgsga5rje6qdbl7nvrkr430edc3pryffpx7bnr4juz48ar_rrmdbj_zxhgiv.jpg?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="78811006">
-                        <price>166</price>
-                        <description></description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810004" available="true">
-                <name>Креветки фри</name>
-                <description></description>
-                <picture>https://cdn.dlvry.ru/img/default-400x300.svg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811008">
-                        <price>350</price>
-                        <description>100 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810005" available="true">
-                <name>Наггетсы халяль</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/e6a/2025_06_06_19_32_18.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811010">
-                        <price>220</price>
-                        <description>130 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810006" available="true">
-                <name>Стрипсы куриные</name>
-                <description></description>
-                <picture>https://cdn.dlvry.ru/img/default-400x300.svg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811012">
-                        <price>220</price>
-                        <description>200 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810007" available="true">
-                <name>Сырные палочки</name>
-                <description><![CDATA[Состав: Сыр моцарелла, сухари панировочные, куриное яйцо]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/39e/2025_06_06_19_23_12.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811014">
-                        <price>220</price>
-                        <description>110 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810008" available="true">
-                <name>Сэндвич Rolloff</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/9b8/976c74622c074f7d70e5eac4264a457c.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811016">
-                        <price>348</price>
-                        <description>1000 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810009" available="true">
-                <name>Сэндвич с ветчиной</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/045/16a10ebafb03626cbd7215f90457ff1e.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811018">
-                        <price>348</price>
-                        <description>1000 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810010" available="true">
-                <name>Сэндвич Фирменный</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/ea3/16a10ebafb03626cbd7215f90457ff1e.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811020">
-                        <price>396</price>
-                        <description>1000 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810011" available="true">
-                <name>Сэндвич Цезарь</name>
-                <description></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/874/9df40db2a94847c4b2049bebdd76eeff.png?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811022">
-                        <price>348</price>
-                        <description>1000 г</description>
-                        <descriptionIndex>10</descriptionIndex>
-                    </parameter>
-                </parameters>
-                <categoryId>78810</categoryId>
-            </offer>
-            <offer id="78810012" available="true">
-                <name>Хот Дог Фирменный • 220 гр</name>
-                <description><![CDATA[Состав: Булочка, сосиска, бекон, лук, кетчуп, майонез, горчицаВес: 220 гр]]></description>
-                <picture>
-                    https://cdn.dlvry.ru/upload/iblock/038/60mr1tlastmgnz5e82uohf7ypqszklmuqonhwpgwntyo3ztqd6kkco7sdg_cp5pxe83rdlpokviiqlm33qx1zn0u.jpg?width=1000&quality=100</picture>
-                <parameters>
-                    <parameter id="78811024">
+                    <parameter id="72091006">
                         <price>336</price>
                         <description>220 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>78810</categoryId>
+                <categoryId>72090</categoryId>
             </offer>
-            <offer id="78810013" available="true">
+            <offer id="72090004" available="true">
+                <name>Цезарь с креветками • 200 гр</name>
+                <description><![CDATA[Состав: Пекинская капуста, лист салата, курица, помидор черри, яйцо перепелиное, сухарики, сыр пармезан, соусВес: 200 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/885/3gweqfaloqqvblqfhwh2xieds_mobgtzem8o2hwjtw_tylizq_tr6lqo1ivelbhbb1b4hwipawffr6okbid_ibn.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72091008">
+                        <price>456</price>
+                        <description>200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72090</categoryId>
+            </offer>
+            <offer id="72090005" available="true">
+                <name>Цезарь с курицей • 200 гр</name>
+                <description><![CDATA[Состав: Пекинская капуста, лист салата, курица, помидор черри, яйцо перепелиное, сухарики, сыр пармезан, соусВес: 200 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/fd7/sewxdxmdgow7n4gmbi3cgz3anmxpyn7nq5qhs6dmjdnzhkm_96ihkxi7kexqdqahq98_no20pr_venldxoamdqyq.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72091010">
+                        <price>336</price>
+                        <description>200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72090</categoryId>
+            </offer>
+            <offer id="72860001" available="true">
+                <name>"Кировская" Острая • 220 гр</name>
+                <description><![CDATA[Состав: Курица, перец халапеньо, лук, морковь по-корейски, соус сырныйВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/d70/sf_ipdplw_r03ta24guhmhdyfjy5msjodigflhrizfjdu4syyvrc25vyv0m1k07m4tht4ldsktpq_lx2shjan4s.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861002">
+                        <price>240</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860002" available="true">
+                <name>"Центральная" Классическая • 220 гр</name>
+                <description><![CDATA[Состав: Курица, огурец, помидор, лук, соус классическийВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/97b/8ak58ugw0equfh1zaerluxirz7z1v9dsocff96mm692dfgwdrsarepi84mcugx2vza8wnu7m2xd371ztlyay2vl3.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861004">
+                        <price>240</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860003" available="true">
+                <name>Шаурма Студенческая • 220 гр</name>
+                <description><![CDATA[Состав: Курица, капуста пекинская, картофель фри, маринованый огурец, помидор, соус сырныйВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/624/4bpoualtmgyut6n_sxoqef4j6ooxckozhphngfgkwqi3zpqogidh8jpdzth1vsop_ivuyzigzunz5l2fs1103edx.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861006">
+                        <price>240</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860004" available="true">
+                <name>"Заводская" Сырная • 220 гр</name>
+                <description><![CDATA[Состав: Курица, сыр, маринованный огурец, картофель фри, помидор, соус cырныйВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/844/yxqzkdttic6tq5q8sx8pucfvqqw4zsa5tisixnn_xb4yxzsdbekqth9_sntqck8ezrb5snz6sjy4vzcp2jfn8nqa.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861008">
+                        <price>252</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860005" available="true">
+                <name>"Ленинская" Грибная • 220 гр</name>
+                <description><![CDATA[Состав: Курица, огурец, помидор, шимпиньоны, соус классическийВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/106/27c7rcghcbsi_ycrhpw9alfaxjv0zel1avvsijm2rkyqgwmy2x7fs4ee4vhyxrwkryj6qt8dddcc7cntnxub0vft.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861010">
+                        <price>252</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860006" available="true">
+                <name>"Рудничная" Ананасовая • 220 гр</name>
+                <description><![CDATA[Состав: Курица, ананас, лук красный, маринованный огурец, пекинская капуста, соус на выборВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/db5/0r5mjjujtxxd5t9zgbudxdz2bgbgcwrqeh5oqvmuecdwhsalv8m7ob5afagjk3v9899w8wcrsgmoteayrqlgz5cn.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861012">
+                        <price>252</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860007" available="true">
+                <name>"Суховская" Овощная • 220 гр</name>
+                <description><![CDATA[Состав: Картофель фри, огурец, помидор, острая морковь, лук, майонез, соус на выборВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/7dd/gb_wrb3mk6bcmbwiqgvn1rwwd_vif7_t4kfeywszegjcuxn1borauynk1pfesuepuzjvf5v7y2lc_fch3khb51xl.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861014">
+                        <price>216</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860008" available="true">
+                <name>Гиро "Заводский" Сырный</name>
+                <description><![CDATA[Состав: Курица, картофель фри, маринованный огурец, фри, помидор, сырный соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/b3d/mhw1mp0kfugkix6mvbr_gx3ya_cqz1wwipcozzhli25x3dzopq7mdmlvzdop9_qrcubxj_sgh4ctaroyi9retil.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861016">
+                        <price>408</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860009" available="true">
+                <name>Гиро "Кировский" Острый</name>
+                <description><![CDATA[Состав: Курица, картофель фри, перец халапеньо, лук, майонез, острая морковь, острый соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/41c/vcnxmsg_n1opkvqgqhcm49zdqyopoobboefnqn3lxmy8bu0kvupqroq0y7a0mtpzbwu9nyypsvhyvkgdijugyepq.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861018">
+                        <price>408</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860010" available="true">
+                <name>Гиро "Ленинский" Грибной</name>
+                <description><![CDATA[Состав: Курица, картофель фри, огурец, помидор, шампиньоны, майонез, соус сливочный с чесноком]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/4aa/shosykrw2arwv7vuhljsbvz8f_xy3mn866m5bnag4auln0gfmsanbwb4z1xdptatrx43qofp9vmnrajy4djbw_fh.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861020">
+                        <price>408</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860011" available="true">
+                <name>Гиро "Рудничный" Ананасовый</name>
+                <description><![CDATA[Состав: Курица, огурец маринованный, пекинская капуста, лук красный, сырный соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/59f/ag05e71w8dn91qe3ywjkhh9fpmnwtzt4ajukdc14wkl5mgif0x2tuvt01csu6ihcxt7ttpezah3xnptges9zmh9.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861022">
+                        <price>408</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860012" available="true">
+                <name>Гиро "Суховский" Овощной</name>
+                <description><![CDATA[Состав: Картофель фри, огурец, помидор, пекинская капуста, лук, майонез, соус на выбор]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/832/rnjrgya26mgiwyqniev03xx0tovvnzdnlksiin_qh0cth84tmldkxk9au9albw6zujnsugedcvvvfjpsm31u60qy.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861024">
+                        <price>360</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860013" available="true">
+                <name>Гиро "Центральный" Классический</name>
+                <description><![CDATA[Состав: Курица, картофель фри, огурец, помидор, лук, майонез, соус сливочный с чесноком]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/32f/itogk7p3fv7fbo7ohzzw7odhfelljc425c1hqt5epnlc_rr1euwx0zpatzeommscblffigvpy1_tixpac8x5spki.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861026">
+                        <price>408</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860014" available="true">
+                <name>Гиро Мясное</name>
+                <description><![CDATA[Состав: Пита, курица, картофель фри, соус на выбор]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/17b/5filadj6zmc8rwii_etwrpkiqm_lufwff08cjvb_gyguamy25xqos9jpx67umlba4azpt0k13bxgjqfuie_mzxkg.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861028">
+                        <price>468</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860015" available="true">
+                <name>Гиро Студенческий</name>
+                <description><![CDATA[Состав: Курица, капуста пекинская, фри, маринованные огурцы, помидор, соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/34f/rkohygdvk7j0ibgk3fcji2_ht50ji9jwoh4v7gl98c7razf7ncuq23gfjukaxvvcl3replyxtyvpkecijbgc65kc.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861030">
+                        <price>408</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860016" available="true">
+                <name>Денер "Заводский" Сырный</name>
+                <description><![CDATA[Состав: Курица, сыр, маринованный огурец, фри, помидор, сырный соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/76f/hm8npxmiffwah6mcl7bvgttyfs0xspagjj4ts8dgydai3vb9o1yukgp_i2psns54_vjrpycwisf_r33vdbe_jmet.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861032">
+                        <price>384</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860017" available="true">
+                <name>Денер "Кировский" Острый</name>
+                <description><![CDATA[Состав: Курица, перец халапеньо, лук, майонез, острая морковь, острый соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/c9c/9ix0hrfc_qxd5swmxe7xbztkz2y1_ibyydkaeamok_t_t23_4bn4vcba_a0tbx5_m3jhe9jc_7ipq8vyrbk6jrif.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861034">
+                        <price>384</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860018" available="true">
+                <name>Денер "Ленинский" Грибной</name>
+                <description><![CDATA[Состав: Курица, огурец, помидор, шампиньоны, майонез, соус сливочный с чесноком]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/959/i5jvkg_zt8rjbjjlog9arzukxro0bmhircskwurfjssqtnussbg1voqu10vodlcfrgcanybnnwdvifoiieo4j4jl.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861036">
+                        <price>384</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860019" available="true">
+                <name>Денер "Рудничный" Ананасовый</name>
+                <description><![CDATA[Состав: курица, огурец маринованный, пекинская капуста, лук красный, сырный соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/884/n_spe4n_d_jrl5svyvvkrk2ux1d8e_chpukydwi6z945bqby_hibcwudhjycetwpkzfajig5wqbd_fecf0cxx7qc.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861038">
+                        <price>384</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860020" available="true">
+                <name>Денер "Суховский" Овощной</name>
+                <description><![CDATA[Состав: Картофель фри, пекинская капуста, помидор, огурцы, лук, майонез, соус на выбор]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/eaa/raams2rp_cs_smtr9eurq_ogkjaafbosxso9peulwv0xrzb_63_eq5i_zoc7_m0nnt1xs3j3n3je4qulxtozkvne.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861040">
+                        <price>300</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860021" available="true">
+                <name>Денер "Центральный" Классический</name>
+                <description><![CDATA[Состав: Курица, огурец, помидор, лук, майонез, соус сливочный с чесноком]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/dd0/th3wlrthdc9wckweqdksifgeri9rkmnrrgjz78hqdlhan0mllxs8oaspvjoth8wxcd3_rrdker2i6ytb1nlgt3xd.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861042">
+                        <price>384</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860022" available="true">
+                <name>Денер Мясной</name>
+                <description><![CDATA[Состав: Булочка, курица , соус на выбор]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/a8a/masrmcdptp407gky1cyqdpglniyinb4t_4uod7hmhfq6niyz2splz01zyujo00gyeypgjejsyuy4r_x4qul3n0wn.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861044">
+                        <price>468</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860023" available="true">
+                <name>Денер Студенческий</name>
+                <description><![CDATA[Состав: Курица, капуста пекинская, фри, маринованные огурцы, помидор, соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/fc5/zxncgj33tdzljf2yqqfb8ljspyczirtnfzasza86t5nypfwezwos8cscyhlodkrk6phlu2rjmfx6cdcoqw6o7e1b.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861046">
+                        <price>360</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860024" available="true">
+                <name>Денер Халяль</name>
+                <description><![CDATA[Состав: Сосиска, фри, маринованные огурцы, лук, зелень, соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/1d1/hx5lz7rkafyh7r5dnao_xqm7qqpz0wspito_ecqh9ntsoql98ag_yhf8hcllz4pnuyzf5wnn_z9_ev3r6nfa4q3d.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861048">
+                        <price>396</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860025" available="true">
+                <name>Шаурма Мясная • 220 гр</name>
+                <description><![CDATA[Состав: Курица, лаваш, соус на выборВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/fa1/9gzxsetcr0_kv4zpca4iqxpa_tjzneylg1stpxefcdzgztm8kcazgwlm75k3m8hudhtleioreynwlpderrkwjfra.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861050">
+                        <price>372</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72860026" available="true">
+                <name>Шаурма на тарелке</name>
+                <description><![CDATA[Состав: Курица, картофель фри, лаваш, огурец, помидор, лук, соус]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/ea5/dyfefhg5xc_9pl5sqabpq78s4wefwlqt4seqgfwowlvmh2ci5c2xmrxx7ibedkfpvtn1uq3jhcgz6vpy7o_f2gir.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72861052">
+                        <price>384</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72860</categoryId>
+            </offer>
+            <offer id="72930001" available="true">
+                <name>Adrenaline Rush • 300 гр</name>
+                <description><![CDATA[Состав: Adrenaline RushВес: 300 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/103/xknr62zyppyzvltlvtz4ogopr7sp7hunryhe5astniql2zh83pbtvgu8d507g_sochmenqk31jeqnvhyyp_2xjyz.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931002">
+                        <price>180</price>
+                        <description>300 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930002" available="true">
+                <name>Adrenaline Rush • 500 гр</name>
+                <description><![CDATA[Состав: Adrenaline RushВес: 500 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/860/gxxth1n6akc1uhvd9hjez40n5ckzo0qbjj_tj_w0nh5ugd7i4gl2dligp6lwh0_fuu7uqb3in4e4lyu6l2ectexi.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931004">
+                        <price>280</price>
+                        <description>500 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930003" available="true">
+                <name>Coca-cola • 1000 гр</name>
+                <description><![CDATA[Состав: Coca-colaВес: 1000 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/cbf/vq1vsgnsvx1zj6k8skctes3bmu_ebrp1k1z0zlixucr6ejw0m4qb19ymg21jdwre_nwejwzvrl9znyfe0rv75hf1.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931006">
+                        <price>280</price>
+                        <description>1000 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930004" available="true">
+                <name>Coca-cola в стекле</name>
+                <description><![CDATA[Состав: Coca-cola в стекле]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/a18/ywl5tlcccqy3uuvvbkyjigmvpqt7wfscyc9csdkae7ouwb09xb5iuj4vztaxrzkbpndpvgsswwb2atnz90e_knpg.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931008">
+                        <price>180</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930005" available="true">
+                <name>Evervess Cola</name>
+                <description><![CDATA[Состав: Cильногазированный безалкогольный напиток]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/56a/ty6uglsnsfyw8attzn2bgdqospu4odlxovpu2r4ctoxzozcn39x73pjmtqenzjvdtmstohexqiu_hjdlw860hpf_.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931010">
+                        <price>160</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930006" available="true">
+                <name>Flash</name>
+                <description><![CDATA[Состав: Напиток безалкогольный тонизирующий газированный]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/744/npdad_mye5od2goqltia9zjhb7fng_vnkexbzi8qdr6cssjafol2omb1gtopwcyyl5jztpof3dvgmhqvgoh7gazw.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931012">
+                        <price>120</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930007" available="true">
+                <name>Pepsi • 330 гр</name>
+                <description><![CDATA[Состав: PepsiВес: 330 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/3c7/ra1j5beji7abimo2lvwocxydw8r_g4basedjt5iep45viaynhcvccj4kzu2fm_qbg9gylb_mmb_u_hpduduiaii.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931014">
+                        <price>140</price>
+                        <description>330 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930008" available="true">
+                <name>Вода Aqua Active лимон • 500 гр</name>
+                <description><![CDATA[Состав: Вода Aqua Active лимонВес: 500 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/2cf/8bq5g6ixkonsp0rtfdh5xrvfgaqrv9j5ybwnca9qt_e5hfrawj9fictqfrbtqwywqm8fdvkr5fzs8b_hgjbuebuf.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931016">
+                        <price>95</price>
+                        <description>500 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930009" available="true">
+                <name>Лимонад Апельсин имбирь • 500 гр</name>
+                <description><![CDATA[Состав: Лимонад Апельсин имбирьВес: 500 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/e30/lyuxsqnwudde8mlp1mjmiinfuz0vw_awadabu_9c2vgex39sxkvmiab5dfpyya8lscqorbs6slenjr8rz4rdckz_.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931018">
+                        <price>250</price>
+                        <description>500 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930010" available="true">
+                <name>Морс Вишня • 500 гр</name>
+                <description><![CDATA[Состав: Морс вишняВес: 500 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/0bd/ur_i8hxpnulhr1hry_sjxdlr67d_yl0ffstqw5qbpok5qhxm3wvhoelfeudufd9fddjfwb2spmu6coyhvop88w0.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931020">
+                        <price>180</price>
+                        <description>500 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930011" available="true">
+                <name>Сок "Любимый" • 300 гр</name>
+                <description><![CDATA[Состав:  Сок "Любимый"Вес: 300 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/636/fktutinu7mtrke92c2mvh4pw7zq_hk3vagqeew1fma03idu3poqpzum8odw4zusaf_cgvw26fbpwuxpywkvrf_.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931022">
+                        <price>75</price>
+                        <description>300 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="72930012" available="true">
+                <name>Холодный чай Lipton • 500 гр</name>
+                <description><![CDATA[Состав: Холодный чай LiptonВес: 500 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/dfc/lhk_wbmxb_msvgwuykcevw_v0ckifekl4kdlnhcabwosfyk_mkqpwkl7abjqec_oefnxq_irz7zcshrvhtvrwc55.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="72931024">
+                        <price>160</price>
+                        <description>500 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>72930</categoryId>
+            </offer>
+            <offer id="74580001" available="true">
+                <name>Пицца 4 сезона</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/6f3/2025_06_09_15_39_55.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581002">
+                        <price>620</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580002" available="true">
+                <name>Пицца Американо</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/be5/2025_06_09_17_08_25.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581004">
+                        <price>590</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580003" available="true">
+                <name>Пицца Гавайская</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/1e3/2025_06_09_15_40_08.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581006">
+                        <price>580</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580004" available="true">
+                <name>Пицца Горгонзола</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/1c4/2025_06_09_15_40_21.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581008">
+                        <price>650</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580005" available="true">
+                <name>Пицца Карбонара</name>
+                <description></description>
+                <picture>https://cdn.dlvry.ru/upload/iblock/7d6/karbonara.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581010">
+                        <price>630</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580006" available="true">
+                <name>Пицца Летняя</name>
+                <description></description>
+                <picture>https://cdn.dlvry.ru/upload/iblock/77e/letnyaya.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581012">
+                        <price>570</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580007" available="true">
+                <name>Пицца Маргарита</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/b35/2025_06_09_17_10_06.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581014">
+                        <price>510</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580008" available="true">
+                <name>Пицца Мексиканская</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/6cc/2025_06_09_17_08_11.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581016">
+                        <price>580</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580009" available="true">
+                <name>Пицца Охотничья</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/047/2025_06_09_17_08_37.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581018">
+                        <price>590</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580010" available="true">
+                <name>Пицца Пепперони Халяль</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/dbd/2025_06_09_17_09_34.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581020">
+                        <price>630</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580011" available="true">
+                <name>Пицца Сырная</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/a3d/2025_06_09_17_09_45.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581022">
+                        <price>590</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580012" available="true">
+                <name>Пицца Халяльная</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/d3f/2025_06_09_15_40_40.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581024">
+                        <price>590</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74580013" available="true">
+                <name>Хачапури по-Аджарски</name>
+                <description><![CDATA[Состав: Сыр сулугуни, яйцо]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/73b/fp_8blptou3bvinuctjaa9dtlazplor29fvm7iyks8etwrgrbiiapy8js3dicsaslh6h9t03aqt5vn_yq3guzp5.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74581026">
+                        <price>504</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74580</categoryId>
+            </offer>
+            <offer id="74710001" available="true">
+                <name>Кальмар темпура</name>
+                <description></description>
+                <picture>https://cdn.dlvry.ru/img/default-400x300.svg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711002">
+                        <price>280</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710002" available="true">
+                <name>Картофель по-деревенски</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/28a/2025_06_06_19_35_16.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711004">
+                        <price>192</price>
+                        <description>100 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710003" available="true">
+                <name>Картофель фри</name>
+                <description><![CDATA[Состав: Картофель фри]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/945/2025_06_06_19_29_57.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711006">
+                        <price>166</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710004" available="true">
+                <name>Креветки фри</name>
+                <description></description>
+                <picture>https://cdn.dlvry.ru/img/default-400x300.svg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711008">
+                        <price>350</price>
+                        <description>100 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710005" available="true">
+                <name>Наггетсы халяль</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/e6a/2025_06_06_19_32_18.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711010">
+                        <price>220</price>
+                        <description>130 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710006" available="true">
+                <name>Стрипсы куриные</name>
+                <description></description>
+                <picture>https://cdn.dlvry.ru/img/default-400x300.svg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711012">
+                        <price>220</price>
+                        <description>200 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710007" available="true">
+                <name>Сырные палочки</name>
+                <description><![CDATA[Состав: Сыр моцарелла, сухари панировочные, куриное яйцо]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/39e/2025_06_06_19_23_12.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711014">
+                        <price>220</price>
+                        <description>110 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710008" available="true">
+                <name>Сэндвич Rolloff</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/9b8/976c74622c074f7d70e5eac4264a457c.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711016">
+                        <price>348</price>
+                        <description>1000 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710009" available="true">
+                <name>Сэндвич с ветчиной</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/045/16a10ebafb03626cbd7215f90457ff1e.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711018">
+                        <price>348</price>
+                        <description>1000 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710010" available="true">
+                <name>Сэндвич Фирменный</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/ea3/16a10ebafb03626cbd7215f90457ff1e.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711020">
+                        <price>396</price>
+                        <description>1000 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710011" available="true">
+                <name>Сэндвич Цезарь</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/874/9df40db2a94847c4b2049bebdd76eeff.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711022">
+                        <price>348</price>
+                        <description>1000 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710012" available="true">
+                <name>Хот Дог Фирменный • 220 гр</name>
+                <description><![CDATA[Состав: Булочка, сосиска, бекон, лук, кетчуп, майонез, горчицаВес: 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/038/60mr1tlastmgnz5e82uohf7ypqszklmuqonhwpgwntyo3ztqd6kkco7sdg_cp5pxe83rdlpokviiqlm33qx1zn0u.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="74711024">
+                        <price>336</price>
+                        <description>220 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="74710013" available="true">
                 <name>Хот-дог “Классический” • 180 гр</name>
                 <description><![CDATA[Состав: Булочка, сосиска, майонез, кетчуп, горчицаВес: 180 гр]]></description>
                 <picture>
                     https://cdn.dlvry.ru/upload/iblock/abe/qmmeoi1e2tttnaszovth1tprtoycvytalce5eyycvyeyxchzw_rre_hels_gd34kwpxi1tdqphy8wnnkye4dhyu.jpg?width=1000&quality=100</picture>
                 <parameters>
-                    <parameter id="78811026">
+                    <parameter id="74711026">
                         <price>216</price>
                         <description>180 г</description>
                         <descriptionIndex>10</descriptionIndex>
                     </parameter>
                 </parameters>
-                <categoryId>78810</categoryId>
+                <categoryId>74710</categoryId>
+            </offer>
+            <offer id="78200001" available="true">
+                <name>10 Шаверм на выбор 220 гр</name>
+                <description><![CDATA[Состав: 10 шаверм на выбор 220 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/b41/ubz5octlavtvpnnk4dlmiwvyhxmzrn74_al7lo1agr5k57tuovv6b0m2ziwqva7d5h34ve9wwezt2cshkk2x9i3z.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78201002">
+                        <price>2200</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78200</categoryId>
+            </offer>
+            <offer id="78200002" available="true">
+                <name>10 Шаверм на выбор 400 гр</name>
+                <description><![CDATA[Состав: 10 шаверм на выбор 400 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/1cb/93hcd2nxpph2vcrydecm14aldemnd40tdzu5ch0_zoov_hgauyp_zreb2fcy168qy8whwvavkwsfc2o0xyx7fhmq.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78201004">
+                        <price>3200</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78200</categoryId>
+            </offer>
+            <offer id="78200003" available="true">
+                <name>3 Пиццы 30см</name>
+                <description><![CDATA[Состав: 3 пиццы на выбор]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/19f/zejsmdpfc0hnzyp8ai_xrfm9hxcdofc1qyigjrrrl4uu_f1rboguxsgt03w4qornsrxl7xctaiz82eyeult5n9p0.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78201006">
+                        <price>1700</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78200</categoryId>
+            </offer>
+            <offer id="78200004" available="true">
+                <name>Комбо 4 вида</name>
+                <description><![CDATA[В комбо входят четыре вида шаурмы: острая, сырная, чесночная, грибная]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/f4b/2025_06_08_00_21_45.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78201008">
+                        <price>890</price>
+                        <description>880 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78200</categoryId>
+            </offer>
+            <offer id="78200005" available="true">
+                <name>Люля-кебаб акция 250 руб</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/cd4/48c545c8231bdf5e8b10ee7bd09f2064.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78201010">
+                        <price>250</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78200</categoryId>
+            </offer>
+            <offer id="78200006" available="true">
+                <name>Шашлык акция 250руб</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/be5/be492ca6d4072a09231b1931f0ab2df3.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78201012">
+                        <price>250</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78200</categoryId>
+            </offer>
+            <offer id="78270001" available="true">
+                <name>Картофель по-деревенски</name>
+                <description><![CDATA[Состав: Картофель по-деревенски]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/714/xsv1dsoxt0xxbm8cxvketa48l8cakcwzyg_b9p07pbyj2sngrhbm9hmpmulgbakg2mzk8p5dgin_ysok2hcsomy.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78271002">
+                        <price>192</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78270</categoryId>
+            </offer>
+            <offer id="78270002" available="true">
+                <name>Картофель фри • 100 гр</name>
+                <description><![CDATA[Состав: Картофель фриВес: 100 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/211/im6hbxksua_rc4s1c_nm73cxtinp40_svfkp5jbbrzfcicklyimzyqcjwb_mpznpgi0i_73bbxwlvnwzqpfgh1iu.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78271004">
+                        <price>166</price>
+                        <description>100 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78270</categoryId>
+            </offer>
+            <offer id="78270003" available="true">
+                <name>Наггетсы</name>
+                <description><![CDATA[Состав: Наггетсы]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/e2e/kjiuypcmj8o_8maltb8fj6g_gv0yqmhn0b2oumjv1l9yapapmwzwrhcyzeifnq6ahkuzlx3bodss560qx92azgjc.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78271006">
+                        <price>192</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78270</categoryId>
+            </offer>
+            <offer id="78270004" available="true">
+                <name>Рис • 160 гр</name>
+                <description><![CDATA[Состав: РисВес: 160 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/1d0/xvzhkwljq7b8zhpx7m8kovu7ln_azrrfom6dfea5g6qb6rus0toxwduid3x4i5zue_p_gwt_1eadyjbqcvohhrqo.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78271008">
+                        <price>70</price>
+                        <description>160 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78270</categoryId>
+            </offer>
+            <offer id="78270005" available="true">
+                <name>Соус Heinz • 45 гр</name>
+                <description><![CDATA[Состав: Соус HeinzВес: 45 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/262/tpumtjywia_zbdmaegrfah75zkgegkveucqmwnzigzlwx6gjxvgwyugbjpjcsrc_w1ucxz7zdcljpvdocwtkahe5.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78271010">
+                        <price>65</price>
+                        <description>45 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78270</categoryId>
+            </offer>
+            <offer id="78380001" available="true">
+                <name>Болоньезе • 350 гр</name>
+                <description><![CDATA[Состав: Лапша спагетти, говяжий фарш, помидор, болгарский перец, лук, соус томатный, пармезанВес: 350 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/630/w_pozpyb3t3posyvezw1sj21kkhffwvqjjtd28llf2qvnqcrh9ftw3eb06cb42k5q_jzzpzjyx4wet1af2f1cd3b.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78381002">
+                        <price>456</price>
+                        <description>350 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78380</categoryId>
+            </offer>
+            <offer id="78380002" available="true">
+                <name>Карбонара • 350 гр</name>
+                <description><![CDATA[Состав: Лапша фетучино, бекон, сливочный соус, пармезанВес: 350 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/6b5/lepuqfdoqokp_kc4paoxaaobz6zxdfthlsngybrjp_ijrnlxlhvvixge8gr6qy2yp_par5ghgglx4vt3vtaqwakb.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78381004">
+                        <price>468</price>
+                        <description>350 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78380</categoryId>
+            </offer>
+            <offer id="78380003" available="true">
+                <name>Паста с ветчиной и грибами • 350 гр</name>
+                <description><![CDATA[Состав: Лапша фетучино, ветчина и шампиньоны, сливочный соус, пармезанВес: 350 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/1f9/y9xylds8_bpvhuze_o7gpt3c28hmr1a7ffu3whdvc2bwxdslns6gj8qpz_kzlsqhxz_tylwzqcoyisoudawkhf4.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78381006">
+                        <price>432</price>
+                        <description>350 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78380</categoryId>
+            </offer>
+            <offer id="78380004" available="true">
+                <name>Паста с Креветками</name>
+                <description><![CDATA[Состав: Лапша, креветки, перец сладкий, томат, сливочный соус, пармезан]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/f1c/we1z3hzogvi45b9abxzdkkx7sdu2nzekgc_gtiragrpsq5oygfzkae_knajgkgzjnctuznbojdylptg8cdzr9zfs.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78381008">
+                        <price>540</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78380</categoryId>
+            </offer>
+            <offer id="78380005" available="true">
+                <name>Паста с Курицей • 350 гр</name>
+                <description><![CDATA[Состав: Лапша, курица, сливочный соус, пармезанВес: 350 гр]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/d8c/mgehavqbfyxvts8ujaq3ejsurhbfmya84cf770lbqkvtpdcksgsdiwutqpjqk8tnr3qansdfm_nh_tkfwfdru8jr.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="78381010">
+                        <price>432</price>
+                        <description>350 г</description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>78380</categoryId>
+            </offer>
+            <offer id="79360001" available="true">
+                <name>Вок с говядиной Халяль</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/77c/77ffcb82cd4d1a07336a446bd707d6fc.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79361002">
+                        <price>495</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79360</categoryId>
+            </offer>
+            <offer id="79360002" available="true">
+                <name>Вок с курицей Халяль</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/7ec/44a391efe751e848f3afb370c64b6380.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79361004">
+                        <price>460</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79360</categoryId>
+            </offer>
+            <offer id="79360003" available="true">
+                <name>Вок с морепродуктами</name>
+                <description></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/502/422f467efb28cf37af47d3fe7af776d1.png?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79361006">
+                        <price>516</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79360</categoryId>
+            </offer>
+            <offer id="79970001" available="true">
+                <name>Конфета Goodmix</name>
+                <description><![CDATA[Состав: Конфета со вкусом соленой карамели, с хрустящей вафлей]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/d6d/2atwdwjyju02d9tvnmqzv2fbi_vypnjwc4cgtfs85nmtpwhgvlro4_czmnijrpsuojfsicr4pkqqfbhcstmpkcju.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79971002">
+                        <price>75</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79970</categoryId>
+            </offer>
+            <offer id="79970002" available="true">
+                <name>Пахлава • 2 шт</name>
+                <description><![CDATA[Состав: Пахлава восточнаяКоличество: 2 шт]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/5fd/9nyybqtbf5zv19xx4wylrntoolllc1pxe0ccqyw8h0ojwozgjapgly5wr1yi_uzk_bngmqoxb7brr7ufkzmogj94.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79971004">
+                        <price>120</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79970</categoryId>
+            </offer>
+            <offer id="79970003" available="true">
+                <name>Пончик</name>
+                <description><![CDATA[Состав: Ванильный, шоколадный]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/9c4/2yftgjwzj4aigrbeby0x125kv2jjqpxyprcozsxfsc6b58nidvapgkwmdkzspkjgmw6k_yub5gojnecvql1deghr.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79971006">
+                        <price>110</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79970</categoryId>
+            </offer>
+            <offer id="79970004" available="true">
+                <name>Халва • 6 шт</name>
+                <description><![CDATA[Состав: Ядро фисташки, грецкий орех, арахис, миндаль, фундук, сухие сливки, сливочное масло, сахар, ароматизатор ванилин, лимонная кислота, сгущённое молокоКоличество: 6 шт]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/973/toackbnb8t_l6atw58zssvgalkdyukkxsu7dz_bb6vrx6qkavx1jfull8ttfd1lgf_qxnjn3uxg9d5vxii5ji442.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79971008">
+                        <price>130</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79970</categoryId>
+            </offer>
+            <offer id="79970005" available="true">
+                <name>Шоколадные батончики</name>
+                <description><![CDATA[Состав: Snickers, Twix, Bounty]]></description>
+                <picture>
+                    https://cdn.dlvry.ru/upload/iblock/0aa/nhfn0cjxtx0cefj_3oaifmg1gpmdsxlqpfffh1ihaojm3iimkvhvxpz0r9scdf1irm4oijseein40t_4mfyq0xwf.jpg?width=1000&quality=100</picture>
+                <parameters>
+                    <parameter id="79971010">
+                        <price>120</price>
+                        <description></description>
+                        <descriptionIndex>10</descriptionIndex>
+                    </parameter>
+                </parameters>
+                <categoryId>79970</categoryId>
             </offer>
         </offers>
     </shop>

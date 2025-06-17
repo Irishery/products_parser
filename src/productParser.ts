@@ -1,13 +1,13 @@
 import MenuParser from './menuParser';
-import Types from './types/types'
+import Types from '../types/types'
 import { JSDOM } from 'jsdom';
 import cssToXpath from 'csstoxpath';
 import axios, { AxiosError } from 'axios';
 import iconv from 'iconv-lite';
-import * as utils from './utils';
+import * as utils from '../helpers/utils';
 import Exporter from './exporter';
 import { HttpsProxyAgent } from 'https-proxy-agent';
-import ProxyManager from './proxyManager';
+import ProxyManager from '../helpers/proxyManager';
 
 
 

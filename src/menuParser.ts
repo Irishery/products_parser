@@ -3,11 +3,10 @@ import { JSDOM } from 'jsdom';
 import cssToXpath from 'csstoxpath';
 import axios, { AxiosError } from 'axios';
 import iconv from 'iconv-lite';
-import * as utils from './utils';
-import Types from './types/types'
-import { types } from 'node:util';
+import * as utils from '../helpers/utils';
+import Types from '../types/types'
 import { HttpsProxyAgent } from 'https-proxy-agent';
-import ProxyManager from './proxyManager';
+import ProxyManager from '../helpers/proxyManager';
 
 
 export default class MenuParser {

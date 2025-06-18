@@ -20,20 +20,23 @@ class Parser {
 
   init(cfg: Types.Config) {
     this.cfg = cfg;
+    console.log('[init] Конфигурация инициализирована:', cfg);
   }
 
   async fetch(url: string): Promise<Document> {
+    console.log(`[fetch] Загружаем URL: ${url}`);
     const encoding = this.cfg.charset || 'utf-8';
     const headers: Record<string, string> = {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+      'User-Agent': 'Mozilla/5.0 (...)',
     };
-
 
     let agent;
     if (this.cfg.proxy) {
-      console.log("Proxy using")
+      console.log("[fetch] Используем прокси");
       const proxyManager = new ProxyManager(this.cfg.proxy);
-      agent = new HttpsProxyAgent(proxyManager.getRandomProxy());
+      const proxy = proxyManager.getRandomProxy();
+      console.log(`[fetch] Прокси выбран: ${proxy}`);
+      agent = new HttpsProxyAgent(proxy);
     }
 
     try {
@@ -43,43 +46,53 @@ class Parser {
         ...(agent && { httpAgent: agent, httpsAgent: agent })
       });
 
+      console.log(`[fetch] Успешно загружено: ${url}`);
       const html = iconv.decode(response.data, encoding);
       return new JSDOM(html).window.document;
     } catch (error) {
-      console.error('Axios error:', (error as AxiosError).message);
+      console.error(`[fetch] Ошибка при загрузке ${url}:`, (error as AxiosError).message);
       return new JSDOM('').window.document;
     }
   }
 
   async start(): Promise<void> {
+    console.log('[start] Старт парсера');
     const menuParser = new MenuParser(this.cfg);
 
+    console.log('[start] Получаем меню');
     this.categories = await menuParser.getMenu();
-    console.log(this.categories)
+    console.log('[start] Категории получены:', this.categories);
+
+    console.log('[start] Получаем продукты');
     await this.getProducts();
 
+    console.log('[start] Экспорт данных');
     await this.Export();
-
   }
 
   async getProducts(): Promise<Types.Product[]> {
     let globalIndex = 1;
 
     for (const category of this.categories) {
+      console.log(`[getProducts] Обработка категории: ${category.name} (${category.url})`);
 
       const doc = await this.fetch(category.url);
       const productNodes = this.select(doc, this.cfg.product);
+      console.log(`[getProducts] Найдено ${productNodes.length} товаров`);
 
       let localIndex = 1;
-      console.log("CATNAME ", category.name)
 
       for (const node of productNodes) {
         if (node.nodeType !== 1) continue;
 
         const rawUrl = node.getElementsByClassName(this.cfg.selectors.url)?.[0]?.getAttribute('href') || '';
-        if (!rawUrl) continue;
+        if (!rawUrl) {
+          console.warn(`[getProducts] Пропущен товар: пустой URL`);
+          continue;
+        }
 
         const url = utils.fixUrl(rawUrl, this.cfg.url);
+        console.log(`[getProducts] Парсим товар по URL: ${url}`);
 
         try {
           const product = await this.getDetailedProductInfoUrl(url);
@@ -88,15 +101,15 @@ class Parser {
 
           product.id = generatedId;
           product.category = category.id;
+          product.price[0].id = String(generatedId + localIndex + 1000);
 
-          product.price[0].id = String(generatedId + localIndex + 1000)
-
+          console.log(`[getProducts] Продукт добавлен: ${product.name}, id: ${product.id}`);
           this.products.push(product);
 
           localIndex++;
           globalIndex++;
         } catch (e) {
-          utils.err(`Error parsing product: ${e}`);
+          utils.err(`[getProducts] Ошибка парсинга продукта: ${e}`);
         }
       }
     }
@@ -105,9 +118,8 @@ class Parser {
   }
 
   async getDetailedProductInfoUrl(url: string): Promise<Types.Product> {
+    console.log(`[getDetailedProductInfoUrl] Загружаем подробную информацию по URL: ${url}`);
     const doc = await this.fetch(url);
-
-    let price = <Types.ProductPrice>{}
 
     const name = doc.querySelector(this.cfg.selectors.name)?.textContent ?? '';
     const description = doc.querySelector(this.cfg.selectors.description)?.textContent ?? '';
@@ -115,13 +127,16 @@ class Parser {
     const price_value = doc.querySelector(this.cfg.selectors.price)?.textContent ?? '';
     const weight = doc.querySelector(this.cfg.selectors.weight)?.textContent ?? '';
 
-    if (this.cfg.modifiers != undefined) {
+    console.log(`[getDetailedProductInfoUrl] Имя: ${name}, Цена: ${price_value}, Вес: ${weight}`);
+
+    let price = <Types.ProductPrice>{};
+    price.price = parseInt(price_value);
+    price.description = weight;
+
+    if (this.cfg.modifiers && Object.keys(this.cfg.modifiers).length > 0) {
+      console.log('[getDetailedProductInfoUrl] Обнаружены модификаторы — начинаем парсинг');
       await this.getModifiers(doc);
-
     }
-
-    price.price = parseInt(price_value)
-    price.description = weight
 
     return {
       id: 0,
@@ -136,80 +151,47 @@ class Parser {
     };
   }
 
-  async getDetailedProductInfoElem(doc: Element): Promise<Types.Product> {
-    let price = <Types.ProductPrice>{}
-
-    const name = doc.querySelector(this.cfg.selectors.name)?.textContent ?? '';
-    const description = doc.querySelector(this.cfg.selectors.description)?.textContent ?? '';
-    const raw_picture = doc.querySelector(this.cfg.selectors.picture)?.getAttribute('data-src') ?? '';
-    const price_value = doc.querySelector(this.cfg.selectors.price)?.textContent ?? '';
-    const weight = doc.querySelector(this.cfg.selectors.weight)?.textContent ?? '';
-
-    price.price = parseInt(price_value)
-    price.description = weight
-
-    return {
-      id: 0,
-      name: name.trim(),
-      description: description.trim(),
-      picture: utils.fixUrl(raw_picture, this.cfg.url),
-      price: [price],
-      category: 0,
-      labels: [],
-      modifiers: [],
-      parameters: [] // будет заполняться позже
-    };
-  }
-
   async getModifiers(doc: Document): Promise<Types.ModifierGroup[]> {
-    const modifiers: Types.ModifierGroup[] = [];
-
+    console.log('[getModifiers] Парсим модификаторы');
     const modifierNodes = this.select(doc, this.cfg.modifiers.main);
-
-    console.log(modifierNodes.length)
+    console.log(`[getModifiers] Найдено групп: ${modifierNodes.length}`);
 
     for (const node of modifierNodes) {
       if (node.nodeType !== 1) continue;
 
-      const gropuName = node.querySelector(this.cfg.modifiers.group_name)?.textContent;
+      const groupName = node.querySelector(this.cfg.modifiers.group_name)?.textContent;
       const subheader = node.querySelector(this.cfg.modifiers.subheader)?.textContent;
 
       const groupId = Math.floor(Math.random() * 1000000);
-
       const modType = this.getModType(subheader);
 
       const modGroup: Types.ModifierGroup = {
         id: groupId,
-        name: gropuName ?? '',
+        name: groupName ?? '',
         type: modType,
-        required: modType === 'one_one' ? true : false,
+        required: modType === 'one_one',
         max: modType === 'one_one' ? 1 : 3,
         min: modType === 'one_one' ? 1 : 0,
       };
 
+      console.log(`[getModifiers] Группа модификаторов: ${modGroup.name}, Тип: ${modGroup.type}`);
+
       if (!this.ifModGroupExists(modGroup.name)) {
         this.modifierGroups.push(modGroup);
+        console.log(`[getModifiers] Добавлена новая группа: ${modGroup.name}`);
+      } else {
+        console.log(`[getModifiers] Группа уже существует: ${modGroup.name}`);
       }
-      //TODO: parse group options
 
+      // TODO: Здесь должен быть парсинг опций модификаторов
     }
+
     return this.modifierGroups;
   }
 
-  ifModGroupExists(name: string): Boolean {
-    return this.modifiers.some((group) => group.name === name);
-  }
-
-  getModType(subheader: any): string {
-    switch (subheader) {
-      case undefined:
-        return 'one_one';
-      default:
-        return 'all_one'
-    }
-  }
-
   async Export() {
+    console.log('[Export] Запускаем экспорт');
+
     const exportData = {
       name: this.cfg.name || '',
       company: this.cfg.company || '',
@@ -219,23 +201,39 @@ class Parser {
         acc[product.id] = product;
         return acc;
       }, {} as Record<string, Types.Product>),
-      modifiers_groups: [] // если есть — заполните по логике, иначе оставить пустым
+      modifiers_groups: this.modifierGroups // если их нет — будет пустой массив
     };
 
+    console.log('[Export] Данные для экспорта готовы. Начинаем запись XML.');
     const exporter = new Exporter(exportData, this.cfg);
     exporter.exportXml();
+    console.log('[Export] Экспорт завершён');
   }
 
+  ifModGroupExists(name: string): Boolean {
+    const exists = this.modifiers.some((group) => group.name === name);
+    if (exists) {
+      console.log(`[ifModGroupExists] Группа уже существует: ${name}`);
+    }
+    return exists;
+  }
+
+  getModType(subheader: any): string {
+    const type = subheader === undefined ? 'one_one' : 'all_one';
+    console.log(`[getModType] Тип для "${subheader}": ${type}`);
+    return type;
+  }
 
   select(doc: Document, selector: string, base: Node = doc): Element[] {
     const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
     const result = doc.evaluate(path, base, null, 5, null);
 
-    let els = new Array<Element>();
+    const els: Element[] = [];
     for (let el = result.iterateNext(); el; el = result.iterateNext()) {
       els.push(el as Element);
     }
 
+    console.log(`[select] Селектор: ${selector}, Найдено: ${els.length}`);
     return els;
   }
 }

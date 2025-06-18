@@ -1,0 +1,30 @@
+{
+  "url": "https://lebourg1905.ru/dostavka/",
+  "charset": "utf-8",
+  "cssmode": "css",
+  "product": ".shop-item",
+  "selectors": {
+    "name": ".name_sale",
+    "price": ".shop_param_price span",
+    "url": "name_sale",
+    "picture": ".shop_all_img a img",
+    "description": ".shop_text",
+    "weight": ".catalog-item__weight"
+  },
+  "menu": {
+    "main": ".menu #top-menu",
+    "children": {
+      "main": "li",
+      "name": "a",
+      "url": "a"
+    },
+    "sub_catgs": {}
+  },
+  "modifiers": {},
+  "follow_url": true,
+  "product_url": "",
+  "export": "xml",
+  "filename": "export/ekb",
+  "delay": 1000,
+  "proxy": ""
+}

@@ -17,35 +17,51 @@ export default class MenuParser {
   }
 
   async fetch(url: string): Promise<Document> {
+    console.log(`[fetch] Загружаем URL: ${url}`);
     const encoding = this.cfg.charset || 'utf-8';
     const headers: Record<string, string> = {
       'User-Agent': 'Mozilla/5.0 (...)',
     };
 
-    let agent;
-    if (this.cfg.proxy) {
-      console.log('[fetch] Используем прокси');
-      const proxyManager = new ProxyManager(this.cfg.proxy);
-      const proxy = proxyManager.getRandomProxy();
-      console.log(`[fetch] Выбран прокси: ${proxy}`);
-      agent = new HttpsProxyAgent(proxy);
+    const proxyManager = this.cfg.proxy ? new ProxyManager(this.cfg.proxy) : null;
+    const maxAttempts = 5;
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      let agent;
+      let proxy: string | undefined;
+
+      if (proxyManager) {
+        proxy = proxyManager.getRandomProxy();
+        agent = new HttpsProxyAgent(proxy);
+        console.log(`[fetch] Попытка #${attempt} с прокси: ${proxy}`);
+      } else {
+        console.log(`[fetch] Попытка #${attempt} без прокси`);
+      }
+
+      try {
+        const response = await axios.get(url, {
+          timeout: 10000,
+          responseType: 'arraybuffer',
+          headers,
+          ...(agent && { httpAgent: agent, httpsAgent: agent }),
+        });
+
+        console.log(`[fetch] Успешно загружено: ${url}`);
+        const html = iconv.decode(response.data, encoding);
+        return new JSDOM(html).window.document;
+
+      } catch (error) {
+        const err = error as AxiosError;
+        console.warn(`[fetch] Ошибка при попытке #${attempt}: ${err.message}`);
+        if (attempt === maxAttempts) {
+          console.error(`[fetch] Все ${maxAttempts} попытки не удались. Возвращаем пустой документ.`);
+          break;
+        }
+        await new Promise(res => setTimeout(res, 1000));
+      }
     }
 
-    try {
-      console.log(`[fetch] Загружаем URL: ${url}`);
-      const response = await axios.get(url, {
-        responseType: 'arraybuffer',
-        headers,
-        ...(agent && { httpAgent: agent, httpsAgent: agent })
-      });
-
-      const html = iconv.decode(response.data, encoding);
-      console.log(`[fetch] Страница загружена: ${url}`);
-      return new JSDOM(html).window.document;
-    } catch (error) {
-      console.error(`[fetch] Ошибка загрузки ${url}:`, (error as AxiosError).message);
-      return new JSDOM('').window.document;
-    }
+    return new JSDOM('').window.document;
   }
 
   getRandomBase(min = 70000, max = 80000): number {

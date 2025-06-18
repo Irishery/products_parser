@@ -30,29 +30,45 @@ class Parser {
       'User-Agent': 'Mozilla/5.0 (...)',
     };
 
-    let agent;
-    if (this.cfg.proxy) {
-      console.log("[fetch] Используем прокси");
-      const proxyManager = new ProxyManager(this.cfg.proxy);
-      const proxy = proxyManager.getRandomProxy();
-      console.log(`[fetch] Прокси выбран: ${proxy}`);
-      agent = new HttpsProxyAgent(proxy);
+    const proxyManager = this.cfg.proxy ? new ProxyManager(this.cfg.proxy) : null;
+    const maxAttempts = 5;
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      let agent;
+      let proxy: string | undefined;
+
+      if (proxyManager) {
+        proxy = proxyManager.getRandomProxy();
+        agent = new HttpsProxyAgent(proxy);
+        console.log(`[fetch] Попытка #${attempt} с прокси: ${proxy}`);
+      } else {
+        console.log(`[fetch] Попытка #${attempt} без прокси`);
+      }
+
+      try {
+        const response = await axios.get(url, {
+          timeout: 10000,
+          responseType: 'arraybuffer',
+          headers,
+          ...(agent && { httpAgent: agent, httpsAgent: agent }),
+        });
+
+        console.log(`[fetch] Успешно загружено: ${url}`);
+        const html = iconv.decode(response.data, encoding);
+        return new JSDOM(html).window.document;
+
+      } catch (error) {
+        const err = error as AxiosError;
+        console.warn(`[fetch] Ошибка при попытке #${attempt}: ${err.message}`);
+        if (attempt === maxAttempts) {
+          console.error(`[fetch] Все ${maxAttempts} попытки не удались. Возвращаем пустой документ.`);
+          break;
+        }
+        await new Promise(res => setTimeout(res, 1000));
+      }
     }
 
-    try {
-      const response = await axios.get(url, {
-        responseType: 'arraybuffer',
-        headers,
-        ...(agent && { httpAgent: agent, httpsAgent: agent })
-      });
-
-      console.log(`[fetch] Успешно загружено: ${url}`);
-      const html = iconv.decode(response.data, encoding);
-      return new JSDOM(html).window.document;
-    } catch (error) {
-      console.error(`[fetch] Ошибка при загрузке ${url}:`, (error as AxiosError).message);
-      return new JSDOM('').window.document;
-    }
+    return new JSDOM('').window.document;
   }
 
   async start(): Promise<void> {
@@ -66,8 +82,12 @@ class Parser {
     console.log('[start] Получаем продукты');
     await this.getProducts();
 
-    console.log('[start] Экспорт данных');
-    await this.Export();
+    console.log(this.modifierGroups)
+
+
+
+    // console.log('[start] Экспорт данных');
+    // await this.Export();
   }
 
   async getProducts(): Promise<Types.Product[]> {

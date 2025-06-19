@@ -43,7 +43,7 @@ export default class Exporter {
 
     console.log(`[exportXml] Экспортируем группы модификаторов: ${modifiers_groups.length}`);
     for (const group of modifiers_groups) {
-      mg.push(`<modifiersGroup id="${groupId}">`);
+      mg.push(`<modifiersGroup id="${group.id}">`);
       mg.push(`<name>${group.name}</name>`);
       mg.push(`<type>${group.type}</type>`);
       mg.push(`<minimum>${group.min}</minimum>`);
@@ -54,10 +54,10 @@ export default class Exporter {
       if (anyGroup.modifiers) {
         console.log(`[exportXml] Группа содержит ${anyGroup.modifiers.length} модификаторов`);
         for (const modifier of anyGroup.modifiers) {
-          mm.push(`<modifier id="${modifier.id || modifierId}" required="true">`);
+          mm.push(`<modifier id="${modifier.id}" required="true">`);
           mm.push(`<name>${modifier.name}</name>`);
           mm.push(`<price>${modifier.price}</price>`);
-          mm.push(`<modifiersGroupId>${groupId}</modifiersGroupId>`);
+          mm.push(`<modifiersGroupId>${group.id}</modifiersGroupId>`);
           mm.push('</modifier>');
           modifierId++;
         }

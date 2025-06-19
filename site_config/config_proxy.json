@@ -22,9 +22,10 @@
   },
   "modifiers": {
     "main": ".catalog-item__properties",
+    "group_name": ".catalog-item__properties-header",
     "subheader": ".catalog-item__properties-subheader",
     "type": ".catalog-item__properties-subheader",
-    "name": ".D_CatalogItem__property-name",
+    "name": ".catalog-item__property span",
     "price": ".D_CatalogItem__property-price"
   },
   "follow_url": true,

@@ -35,6 +35,7 @@ namespace Types {
     required: boolean;
     max: number;
     min: number;
+    modifiers: Modifier[];
   }
 
   export interface Modifier {
@@ -86,7 +87,7 @@ namespace Types {
     price: ProductPrice[];
     category: number;
     labels?: string[];
-    modifiers?: string[];
+    modifiers?: number[];
     parameters: any[];
   }
 

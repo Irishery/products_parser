@@ -86,8 +86,8 @@ class Parser {
 
 
 
-    // console.log('[start] Экспорт данных');
-    // await this.Export();
+    console.log('[start] Экспорт данных');
+    await this.Export();
   }
 
   async getProducts(): Promise<Types.Product[]> {
@@ -153,9 +153,10 @@ class Parser {
     price.price = parseInt(price_value);
     price.description = weight;
 
+    let mods: number[] = []
     if (this.cfg.modifiers && Object.keys(this.cfg.modifiers).length > 0) {
       console.log('[getDetailedProductInfoUrl] Обнаружены модификаторы — начинаем парсинг');
-      await this.getModifiers(doc);
+      mods = await this.getModifiers(doc);
     }
 
     return {
@@ -166,12 +167,13 @@ class Parser {
       price: [price],
       category: 0,
       labels: [],
-      modifiers: [],
+      modifiers: mods,
       parameters: []
     };
   }
 
-  async getModifiers(doc: Document): Promise<Types.ModifierGroup[]> {
+  async getModifiers(doc: Document): Promise<number[]> {
+    const result = [];
     console.log('[getModifiers] Парсим модификаторы');
     const modifierNodes = this.select(doc, this.cfg.modifiers.main);
     console.log(`[getModifiers] Найдено групп: ${modifierNodes.length}`);
@@ -179,7 +181,10 @@ class Parser {
     for (const node of modifierNodes) {
       if (node.nodeType !== 1) continue;
 
-      const groupName = node.querySelector(this.cfg.modifiers.group_name)?.textContent;
+      let groupName = node.querySelector(this.cfg.modifiers.group_name)?.textContent;
+      if (groupName == undefined) {
+        groupName = node.querySelector("catalog-item__properties-header")?.textContent
+      }
       const subheader = node.querySelector(this.cfg.modifiers.subheader)?.textContent;
 
       const groupId = Math.floor(Math.random() * 1000000);
@@ -192,21 +197,58 @@ class Parser {
         required: modType === 'one_one',
         max: modType === 'one_one' ? 1 : 3,
         min: modType === 'one_one' ? 1 : 0,
+        modifiers: []
       };
 
       console.log(`[getModifiers] Группа модификаторов: ${modGroup.name}, Тип: ${modGroup.type}`);
 
-      if (!this.ifModGroupExists(modGroup.name)) {
-        this.modifierGroups.push(modGroup);
-        console.log(`[getModifiers] Добавлена новая группа: ${modGroup.name}`);
+      this.modifierGroups.push(modGroup);
+      result.push(groupId)
+
+      console.log("AAAAAAAAAAA", node.querySelectorAll(this.cfg.modifiers.name).length == 0, node.querySelectorAll(this.cfg.modifiers.name).length)
+      if (node.querySelectorAll(this.cfg.modifiers.name).length == 0) {
+        const options = node.querySelectorAll(".catalog-item__property")
+        for (const option of options) {
+          if (node.nodeType !== 1) continue;
+          const modName = option?.textContent
+          const modPrice = option.getElementsByTagName("meta")[0].getAttribute("content")
+          const modId = Math.floor(Math.random() * 1000000);
+          const mod: Types.Modifier = {
+            id: modId,
+            name: modName ?? '',
+            price: parseInt(modPrice ?? '0'),
+            group: groupId
+          }
+          modGroup.modifiers.push(mod)
+          console.log(`[getModifiers] Модификатор: ${mod.name}, Цена: ${mod.price}`);
+        }
       } else {
-        console.log(`[getModifiers] Группа уже существует: ${modGroup.name}`);
+        const options = node.querySelectorAll(".catalog-item__property")
+        console.log(options)
+        console.log(options[0])
+        console.log(options.length)
+        for (const option of options) {
+          if (node.nodeType !== 1) continue;
+          const modName = option.querySelector(this.cfg.modifiers.name)?.textContent
+          const modPrice = option.querySelector(this.cfg.modifiers.price)?.textContent
+          const modId = Math.floor(Math.random() * 1000000);
+          const mod: Types.Modifier = {
+            id: modId,
+            name: modName ?? '',
+            price: parseInt(modPrice ?? '0'),
+            group: groupId
+          }
+          modGroup.modifiers.push(mod)
+          console.log(`[getModifiers] Модификатор: ${mod.name}, Цена: ${mod.price}`);
+        }
+
       }
+
 
       // TODO: Здесь должен быть парсинг опций модификаторов
     }
 
-    return this.modifierGroups;
+    return result;
   }
 
   async Export() {
@@ -230,12 +272,13 @@ class Parser {
     console.log('[Export] Экспорт завершён');
   }
 
-  ifModGroupExists(name: string): Boolean {
-    const exists = this.modifiers.some((group) => group.name === name);
-    if (exists) {
-      console.log(`[ifModGroupExists] Группа уже существует: ${name}`);
+  ifModGroupExists(name: string): boolean {
+    for (const group of this.modifierGroups) {
+      if (group.name === name) {
+        console.log("ТАКАЯ ЖЕ ", group)
+      }
     }
-    return exists;
+    return this.modifierGroups.some(group => group.name === name);
   }
 
   getModType(subheader: any): string {

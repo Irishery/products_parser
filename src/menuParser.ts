@@ -86,7 +86,8 @@ export default class MenuParser {
 
       const el = node as Element;
       const nameElement = el.querySelector(menuConf.children.name);
-      const rawUrl = el.getAttribute("href");
+      // const rawUrl = el.getAttribute("href");
+      const rawUrl = el.querySelector(menuConf.children.url)?.getAttribute("href");
       const rawName = nameElement?.textContent;
 
       const url = utils.fixUrl(rawUrl ?? '', this.cfg.url);

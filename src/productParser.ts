@@ -60,6 +60,7 @@ class Parser {
       } catch (error) {
         const err = error as AxiosError;
         console.warn(`[fetch] Ошибка при попытке #${attempt}: ${err.message}`);
+        console.log(url)
         if (attempt === maxAttempts) {
           console.error(`[fetch] Все ${maxAttempts} попытки не удались. Возвращаем пустой документ.`);
           break;
@@ -105,7 +106,9 @@ class Parser {
       for (const node of productNodes) {
         if (node.nodeType !== 1) continue;
 
-        const rawUrl = node.getElementsByClassName(this.cfg.selectors.url)?.[0]?.getAttribute('href') || '';
+        console.log(node.className)
+        const elem = node.querySelector(this.cfg.selectors.url)?.textContent;
+        const rawUrl = node.querySelector(this.cfg.selectors.url)?.getAttribute('href') || '';
         if (!rawUrl) {
           console.warn(`[getProducts] Пропущен товар: пустой URL`);
           continue;
@@ -142,9 +145,7 @@ class Parser {
     const doc = await this.fetch(url);
 
     const name = doc.querySelector(this.cfg.selectors.name)?.textContent ?? '';
-    if (name == "Хот-дог классический Халяль") {
-      console.log("АМЕРИКАНО АМЕРИКАНО")
-    }
+
     const description = doc.querySelector(this.cfg.selectors.description)?.textContent ?? '';
     const picture = doc.querySelector(this.cfg.selectors.picture)?.getAttribute('src') ?? '';
     const price_value = doc.querySelector(this.cfg.selectors.price)?.textContent ?? '';
@@ -168,7 +169,7 @@ class Parser {
 
 
     let mods: number[] = []
-    if (this.cfg.modifiers && Object.keys(this.cfg.modifiers).length > 0) {
+    if (this.cfg.modifiers_flag) {
       console.log('[getDetailedProductInfoUrl] Обнаружены модификаторы — начинаем парсинг');
       mods = await this.getModifiers(doc);
     }
@@ -201,7 +202,6 @@ class Parser {
       }
       const subheader = node.querySelector(this.cfg.modifiers.subheader)?.textContent;
 
-      const groupId = Math.floor(Math.random() * 1000000);
       const modType = this.getModType(subheader);
 
       const modGroup: Types.ModifierGroup = {
@@ -230,7 +230,7 @@ class Parser {
             id: this.modifiers.length + 1,
             name: modName ?? '',
             price: parseInt(modPrice ?? '0'),
-            group: groupId
+            group: this.modifierGroups.length
           }
           modGroup.modifiers.push(mod)
           this.modifiers.push(mod)
@@ -249,7 +249,7 @@ class Parser {
             id: this.modifiers.length + 1,
             name: modName ?? '',
             price: parseInt(modPrice ?? '0'),
-            group: groupId
+            group: this.modifierGroups.length
           }
           modGroup.modifiers.push(mod)
           this.modifiers.push(mod)

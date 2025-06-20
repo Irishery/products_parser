@@ -1,6 +1,6 @@
 // index.ts
 import parser from "./src/productParser";
-import config from "./site_config/config_proxy.json";
+import config from "./site_config/config_buket.json";
 
 
 

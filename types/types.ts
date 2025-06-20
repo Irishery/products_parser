@@ -64,6 +64,7 @@ namespace Types {
     menu: menuConf;
     product_url?: string;
     selectors: Record<string, string>;
+    modifiers_flag: Boolean,
     modifiers: modifierConf;
     follow_url?: boolean;
     export?: string;

@@ -121,7 +121,7 @@ export default class Exporter {
             xml.push(`<old_price>${param.old_price}</old_price>`);
           }
           xml.push(`<description>${param.description ?? 1}</description>`);
-          xml.push(`<descriptionIndex>${param.index?.[1] ?? 10}</descriptionIndex>`);
+          xml.push(`<descriptionIndex>${param.index ?? 10}</descriptionIndex>`);
           xml.push('</parameter>');
           console.log(`[exportXml] Параметр цены: ${param.price}`);
         }
@@ -138,12 +138,17 @@ export default class Exporter {
         xml.push('</labelsIds>');
       }
 
+      console.log("ЭКСПОРТ МОДИФИКАТОРОВ")
       if (product.modifiers?.length) {
         xml.push('<modifiersGroupsIds>');
+        console.log("МОДИФИКАТОРЫ ЕСТЬ ", product.name)
+        console.log(product.modifiers)
         for (const mod of product.modifiers) {
           xml.push(`<modifiersGroupId>${mod}</modifiersGroupId>`);
         }
         xml.push('</modifiersGroupsIds>');
+      } else {
+        console.log("МОДИФИКАТОРОВ НЕТ ", product.name)
       }
 
       xml.push('</offer>');

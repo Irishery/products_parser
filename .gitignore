@@ -11,3 +11,5 @@
 # Other ignored files
 .DS_Store
 proxy.txt
+out
+export

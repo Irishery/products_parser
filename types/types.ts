@@ -5,11 +5,7 @@ interface menuConf {
     name: string;
     url: string;
   };
-  sub_catgs: {
-    main: string;
-    name: string;
-    url: string;
-  };
+  sub_catgs?: undefined;
 }
 
 interface modifierConf {
@@ -50,7 +46,7 @@ namespace Types {
     price: number;
     description?: string;
     old_price?: number;
-    index?: [number, number];
+    index?: number;
   }
 
   export interface Category {

@@ -17,8 +17,7 @@
       "main": ".catalog-sections-horizontal__section",
       "name": ".catalog-sections-horizontal__name",
       "url": "a"
-    },
-    "sub_catgs": {}
+    }
   },
   "modifiers": {
     "main": ".catalog-item__properties",
@@ -31,7 +30,7 @@
   "follow_url": true,
   "product_url": "",
   "export": "xml",
-  "filename": "export/demo1",
+  "filename": "export/3",
   "delay": 1000,
   "proxy": "./proxy.txt"
 }

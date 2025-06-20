@@ -64,7 +64,7 @@ export default class MenuParser {
     return new JSDOM('').window.document;
   }
 
-  getRandomBase(min = 70000, max = 80000): number {
+  getRandomBase(min = 10000, max = 100000): number {
     const rand = Math.floor(Math.random() * ((max - min) / 10)) * 10 + min;
     console.log(`[getRandomBase] Сгенерирован ID: ${rand}`);
     return rand;
@@ -91,7 +91,7 @@ export default class MenuParser {
 
       const url = utils.fixUrl(rawUrl ?? '', this.cfg.url);
       const name = utils.convertString(rawName ?? '');
-      const baseId = this.getRandomBase();
+      const baseId = (this.categories.length + 1) * 10000;
 
       console.log(`[getMenu] Найдена категория: ${name}, URL: ${url}, ID: ${baseId}`);
 
@@ -101,46 +101,46 @@ export default class MenuParser {
         url: url
       });
 
-      if (this.cfg.menu.sub_catgs.main) {
-        console.log(`[getMenu] Загружаем подкатегории для: ${name}`);
-        const subcatgs = await this.getSubCatgs(url, baseId);
-        this.categories.push(...subcatgs);
-        console.log(`[getMenu] Добавлено подкатегорий: ${subcatgs.length}`);
-      }
+      // if (this.cfg.menu.sub_catgs.main) {
+      //   console.log(`[getMenu] Загружаем подкатегории для: ${name}`);
+      //   const subcatgs = await this.getSubCatgs(url, baseId);
+      //   this.categories.push(...subcatgs);
+      //   console.log(`[getMenu] Добавлено подкатегорий: ${subcatgs.length}`);
+      // }
     }
 
     console.log(`[getMenu] Всего категорий: ${this.categories.length}`);
     return this.categories;
   }
 
-  async getSubCatgs(url: string, parentId: number): Promise<Types.Category[]> {
-    console.log(`[getSubCatgs] Загружаем подкатегории с ${url}`);
-    const doc = await this.fetch(url);
-    const doc_catgs = this.selectmany(doc, this.cfg.menu.sub_catgs.main);
-    const catgs: Types.Category[] = [];
+  // async getSubCatgs(url: string, parentId: number): Promise<Types.Category[]> {
+  //   console.log(`[getSubCatgs] Загружаем подкатегории с ${url}`);
+  //   const doc = await this.fetch(url);
+  //   const doc_catgs = this.selectmany(doc, this.cfg.menu.sub_catgs.main);
+  //   const catgs: Types.Category[] = [];
 
-    let offset = 1;
+  //   let offset = 1;
 
-    for (const cat of doc_catgs) {
-      const rawUrl = cat.querySelector(this.cfg.menu.sub_catgs.url)?.getAttribute("href");
-      const rawName = cat.textContent;
-      const name = utils.convertString(rawName ?? '');
-      const fixedUrl = utils.fixUrl(rawUrl ?? '', this.cfg.url);
+  //   for (const cat of doc_catgs) {
+  //     const rawUrl = cat.querySelector(this.cfg.menu.sub_catgs.url)?.getAttribute("href");
+  //     const rawName = cat.textContent;
+  //     const name = utils.convertString(rawName ?? '');
+  //     const fixedUrl = utils.fixUrl(rawUrl ?? '', this.cfg.url);
 
-      console.log(`[getSubCatgs] Подкатегория: ${name}, URL: ${fixedUrl}, ID: ${parentId + offset}`);
+  //     console.log(`[getSubCatgs] Подкатегория: ${name}, URL: ${fixedUrl}, ID: ${parentId + offset}`);
 
-      catgs.push({
-        id: parentId + offset,
-        name: name,
-        url: fixedUrl,
-        parent_id: parentId
-      });
+  //     catgs.push({
+  //       id: parentId + offset,
+  //       name: name,
+  //       url: fixedUrl,
+  //       parent_id: parentId
+  //     });
 
-      offset++;
-    }
+  //     offset++;
+  //   }
 
-    return catgs;
-  }
+  //   return catgs;
+  // }
 
   select(doc: Document, selector: string, base: Node = doc): Element {
     const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;

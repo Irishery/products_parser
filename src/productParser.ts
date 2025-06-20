@@ -117,11 +117,11 @@ class Parser {
         try {
           const product = await this.getDetailedProductInfoUrl(url);
 
-          const generatedId = 1000 * category.id + localIndex;
+          const generatedId = category.id + localIndex;
 
           product.id = generatedId;
           product.category = category.id;
-          product.price[0].id = String(generatedId + localIndex + 1000);
+          product.price[0].id = String(generatedId + 1000);
 
           console.log(`[getProducts] Продукт добавлен: ${product.name}, id: ${product.id}`);
           this.products.push(product);
@@ -142,6 +142,9 @@ class Parser {
     const doc = await this.fetch(url);
 
     const name = doc.querySelector(this.cfg.selectors.name)?.textContent ?? '';
+    if (name == "Хот-дог классический Халяль") {
+      console.log("АМЕРИКАНО АМЕРИКАНО")
+    }
     const description = doc.querySelector(this.cfg.selectors.description)?.textContent ?? '';
     const picture = doc.querySelector(this.cfg.selectors.picture)?.getAttribute('src') ?? '';
     const price_value = doc.querySelector(this.cfg.selectors.price)?.textContent ?? '';
@@ -151,7 +154,18 @@ class Parser {
 
     let price = <Types.ProductPrice>{};
     price.price = parseInt(price_value);
-    price.description = weight;
+    let desc_index = this.getDescriptionIndex(weight)
+    if (desc_index == -1) {
+      console.log("[getDetailedProductInfoUrl] Не удалось определить индекс описания")
+      console.log(weight)
+      desc_index = 10
+      price.description = "1";
+      price.index = desc_index;
+    } else {
+      price.description = weight;
+      price.index = desc_index;
+    }
+
 
     let mods: number[] = []
     if (this.cfg.modifiers && Object.keys(this.cfg.modifiers).length > 0) {
@@ -191,7 +205,7 @@ class Parser {
       const modType = this.getModType(subheader);
 
       const modGroup: Types.ModifierGroup = {
-        id: groupId,
+        id: this.modifierGroups.length + 1,
         name: groupName ?? '',
         type: modType,
         required: modType === 'one_one',
@@ -203,7 +217,7 @@ class Parser {
       console.log(`[getModifiers] Группа модификаторов: ${modGroup.name}, Тип: ${modGroup.type}`);
 
       this.modifierGroups.push(modGroup);
-      result.push(groupId)
+      result.push(this.modifierGroups.length)
 
       console.log("AAAAAAAAAAA", node.querySelectorAll(this.cfg.modifiers.name).length == 0, node.querySelectorAll(this.cfg.modifiers.name).length)
       if (node.querySelectorAll(this.cfg.modifiers.name).length == 0) {
@@ -212,14 +226,14 @@ class Parser {
           if (node.nodeType !== 1) continue;
           const modName = option?.textContent
           const modPrice = option.getElementsByTagName("meta")[0].getAttribute("content")
-          const modId = Math.floor(Math.random() * 1000000);
           const mod: Types.Modifier = {
-            id: modId,
+            id: this.modifiers.length + 1,
             name: modName ?? '',
             price: parseInt(modPrice ?? '0'),
             group: groupId
           }
           modGroup.modifiers.push(mod)
+          this.modifiers.push(mod)
           console.log(`[getModifiers] Модификатор: ${mod.name}, Цена: ${mod.price}`);
         }
       } else {
@@ -231,21 +245,18 @@ class Parser {
           if (node.nodeType !== 1) continue;
           const modName = option.querySelector(this.cfg.modifiers.name)?.textContent
           const modPrice = option.querySelector(this.cfg.modifiers.price)?.textContent
-          const modId = Math.floor(Math.random() * 1000000);
           const mod: Types.Modifier = {
-            id: modId,
+            id: this.modifiers.length + 1,
             name: modName ?? '',
             price: parseInt(modPrice ?? '0'),
             group: groupId
           }
           modGroup.modifiers.push(mod)
+          this.modifiers.push(mod)
           console.log(`[getModifiers] Модификатор: ${mod.name}, Цена: ${mod.price}`);
         }
 
       }
-
-
-      // TODO: Здесь должен быть парсинг опций модификаторов
     }
 
     return result;
@@ -272,6 +283,31 @@ class Parser {
     console.log('[Export] Экспорт завершён');
   }
 
+  getDescriptionIndex(desc: string): number {
+    const map: Record<string, number> = {
+      'ед.': 0,
+      'гр.': 1, 'гр': 1, 'г': 1, 'грамм': 1,
+      'кг.': 2, 'кг': 2, 'килограмм': 2,
+      'мл.': 3, 'мл': 3,
+      'л.': 4, 'л': 4, 'литр': 4,
+      'см.': 5, 'см': 5,
+      'м.': 6, 'м': 6,
+      'мин.': 7, 'мин': 7,
+      'ч.': 8, 'ч': 8, 'час': 8,
+      'шт.': 9, 'шт': 9,
+      'порц.': 10, 'порция': 10
+    };
+
+    // Извлекаем возможную единицу измерения (после числа)
+    const match = desc.toLowerCase().match(/[\d,.]+\s*([а-яё.]+)/i);
+    if (!match) return -1;
+
+    const unit = match[1].replace(/\.+$/, '').trim(); // убираем точку в конце
+    return map[unit] ?? -1;
+  }
+
+
+
   ifModGroupExists(name: string): boolean {
     for (const group of this.modifierGroups) {
       if (group.name === name) {
@@ -282,7 +318,7 @@ class Parser {
   }
 
   getModType(subheader: any): string {
-    const type = subheader === undefined ? 'one_one' : 'all_one';
+    const type = subheader === undefined ? 'one_one' : 'all_unlimited';
     console.log(`[getModType] Тип для "${subheader}": ${type}`);
     return type;
   }

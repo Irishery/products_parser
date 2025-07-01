@@ -1,0 +1,37 @@
+{
+  "url": "https://rybusya-sushi.ru/",
+  "charset": "utf-8",
+  "cssmode": "css",
+  "product": ".jet-woo-products__inner-box",
+  "selectors": {
+    "name": ".jet-woo-product-title a",
+    "price": ".jet-woo-product-price span",
+    "url": ".jet-woo-product-title a",
+    "picture": ".jet-woo-product-thumbnail img",
+    "description": ".jet-woo-product-excerpt",
+    "weight": ".catalog-item__weight"
+  },
+  "menu": {
+    "main": ".elementor-nav-menu",
+    "children": {
+      "main": ".menu-item",
+      "name": "a",
+      "url": "a"
+    }
+  },
+  "modifiers_flag": false,
+  "modifiers": {
+    "main": "",
+    "group_name": "",
+    "subheader": "",
+    "type": "",
+    "name": "",
+    "price": ""
+  },
+  "follow_url": true,
+  "product_url": "",
+  "export": "xml",
+  "filename": "export/rubrub1",
+  "delay": 1000,
+  "proxy": ""
+}

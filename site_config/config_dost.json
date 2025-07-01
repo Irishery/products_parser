@@ -1,0 +1,42 @@
+{
+  "url": "https://dostaevsky.ru/",
+  "charset": "utf-8",
+  "cssmode": "css",
+  "product": ".catalog-list__item .catalog-item",
+  "selectors": {
+    "name": ".product__title",
+    "price": ".product__price .product-price__value",
+    "url": ".catalog-item__info",
+    "picture": ".product__container .product__image img",
+    "description": ".product__desc .product__composition",
+    "weight": ".product__price .catalog-item__weight"
+  },
+  "menu": {
+    "main": ".category__container",
+    "children": {
+      "main": ".category__item",
+      "name": ".category__name",
+      "url": ".category__item"
+    },
+    "sub_catgs": {
+      "main": ".catalog-type__list",
+      "name": "a",
+      "url": "a"
+    }
+  },
+  "modifiers_flag": false,
+  "modifiers": {
+    "main": "",
+    "group_name": "",
+    "subheader": "",
+    "type": "",
+    "name": "",
+    "price": ""
+  },
+  "follow_url": true,
+  "product_url": "",
+  "export": "xml",
+  "filename": "export/dost3",
+  "delay": 1000,
+  "proxy": ""
+}

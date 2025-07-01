@@ -1,0 +1,37 @@
+{
+  "url": "https://anfleur.ru/",
+  "charset": "utf-8",
+  "cssmode": "css",
+  "product": ".wd-product",
+  "selectors": {
+    "name": ".product_title",
+    "price": ".summary-inner .price span",
+    "url": ".product-wrapper h3 a",
+    "picture": ".wd-carousel-item a img",
+    "description": ".woocommerce-product-details__short-description",
+    "weight": ".catalog-item__weight"
+  },
+  "menu": {
+    "main": "#menu-categories",
+    "children": {
+      "main": "li",
+      "name": "a span",
+      "url": "a"
+    }
+  },
+  "modifiers_flag": false,
+  "modifiers": {
+    "main": "",
+    "group_name": "",
+    "subheader": "",
+    "type": "",
+    "name": "",
+    "price": ""
+  },
+  "follow_url": true,
+  "product_url": "",
+  "export": "xml",
+  "filename": "export/fluer",
+  "delay": 1000,
+  "proxy": ""
+}

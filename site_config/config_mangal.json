@@ -1,0 +1,37 @@
+{
+  "url": "https://staryj-mangal.clients.site/",
+  "charset": "utf-8",
+  "cssmode": "css",
+  "product": ".grid-list .product-preview__content",
+  "selectors": {
+    "name": ".product__title",
+    "price": ".product__price span",
+    "url": ".product-preview__title a",
+    "picture": ".product__photo .img-ratio__inner img",
+    "description": ".product-info .product__description p",
+    "weight": ".catalog-item__weight"
+  },
+  "menu": {
+    "main": ".services__categories",
+    "children": {
+      "main": ".header__collections-item ",
+      "name": "a",
+      "url": "a"
+    }
+  },
+  "modifiers_flag": false,
+  "modifiers": {
+    "main": "",
+    "group_name": "",
+    "subheader": "",
+    "type": "",
+    "name": "",
+    "price": ""
+  },
+  "follow_url": true,
+  "product_url": "",
+  "export": "xml",
+  "filename": "export/223322",
+  "delay": 1000,
+  "proxy": ""
+}

@@ -5,7 +5,11 @@ interface menuConf {
     name: string;
     url: string;
   };
-  sub_catgs?: undefined;
+  sub_catgs: {
+    main: string;
+    name: string;
+    url: string;
+  };
 }
 
 interface modifierConf {

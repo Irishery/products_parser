@@ -7,6 +7,7 @@ import Types from '../types/types';
 import { HttpsProxyAgent } from 'https-proxy-agent';
 import ProxyManager from '../helpers/proxyManager';
 
+
 export default class MenuParser {
   private cfg: Types.Config;
   public categories: Types.Category[] = [];
@@ -48,7 +49,20 @@ export default class MenuParser {
 
         console.log(`[fetch] Успешно загружено: ${url}`);
         const html = iconv.decode(response.data, encoding);
-        return new JSDOM(html).window.document;
+        return new JSDOM(html, {
+          // runScripts: "dangerously", // если нужно выполнять скрипты
+          // resources: "usable",       // если нужно загружать ресурсы
+          pretendToBeVisual: true,  // для эмуляции визуального рендеринга
+          // Отключаем обработку стилей
+          beforeParse(window) {
+            window._virtualConsole.emit = function (event: any) {
+              if (event.name === 'Could not parse CSS stylesheet') {
+                return false; // игнорируем ошибки парсинга CSS
+              }
+              return true;
+            };
+          }
+        }).window.document;
 
       } catch (error) {
         const err = error as AxiosError;
@@ -88,10 +102,11 @@ export default class MenuParser {
       const nameElement = el.querySelector(menuConf.children.name);
       // const rawUrl = el.getAttribute("href");
       const rawUrl = el.querySelector(menuConf.children.url)?.getAttribute("href");
+
       const rawName = nameElement?.textContent;
 
       const url = utils.fixUrl(rawUrl ?? '', this.cfg.url);
-      const name = utils.convertString(rawName ?? '');
+      const name = utils.convertString(rawName ?? '').trim();
       const baseId = (this.categories.length + 1) * 10000;
 
       console.log(`[getMenu] Найдена категория: ${name}, URL: ${url}, ID: ${baseId}`);
@@ -102,6 +117,34 @@ export default class MenuParser {
         url: url
       });
 
+
+      // const sub_doc = await this.fetch(url)
+      // console.log("AASDDS ", sub_doc.querySelector(".catalog-type .catalog-type__list a")?.textContent)
+      // if (sub_doc.querySelector(".catalog-type .catalog-type__list")) {
+      //   console.log("FLAG")
+      //   let offset = 1;
+      //   for (const sub of sub_doc.querySelectorAll(".catalog-type .catalog-type__list a")) {
+      //     console.log(sub.querySelectorAll(".catalog-type .catalog-type__list a").length)
+      //     const sub_name = sub?.textContent?.trim() ?? '';
+      //     if (sub_name == "Все") {
+      //       continue
+      //     }
+      //     const raw_url = sub?.getAttribute("href");
+      //     const sub_url = utils.fixUrl(raw_url ?? '', this.cfg.url);
+
+      //     this.categories.push({
+      //       id: (this.categories.length + 1) * 10000,
+      //       name: sub_name,
+      //       url: sub_url,
+      //       parent_id: baseId
+      //     });
+
+      //     offset++;
+      //   }
+      // }
+
+
+
       // if (this.cfg.menu.sub_catgs.main) {
       //   console.log(`[getMenu] Загружаем подкатегории для: ${name}`);
       //   const subcatgs = await this.getSubCatgs(url, baseId);
@@ -110,12 +153,12 @@ export default class MenuParser {
       // }
     }
 
-    console.log(`[getMenu] Всего категорий: ${this.categories.length}`);
+    console.log(`[getMenu] Всего категорий: ${this.categories.length} `);
     return this.categories;
   }
 
   // async getSubCatgs(url: string, parentId: number): Promise<Types.Category[]> {
-  //   console.log(`[getSubCatgs] Загружаем подкатегории с ${url}`);
+  //   console.log(`[getSubCatgs] Загружаем подкатегории с ${ url } `);
   //   const doc = await this.fetch(url);
   //   const doc_catgs = this.selectmany(doc, this.cfg.menu.sub_catgs.main);
   //   const catgs: Types.Category[] = [];
@@ -128,7 +171,7 @@ export default class MenuParser {
   //     const name = utils.convertString(rawName ?? '');
   //     const fixedUrl = utils.fixUrl(rawUrl ?? '', this.cfg.url);
 
-  //     console.log(`[getSubCatgs] Подкатегория: ${name}, URL: ${fixedUrl}, ID: ${parentId + offset}`);
+  //     console.log(`[getSubCatgs] Подкатегория: ${ name }, URL: ${ fixedUrl }, ID: ${ parentId + offset } `);
 
   //     catgs.push({
   //       id: parentId + offset,
@@ -143,15 +186,18 @@ export default class MenuParser {
   //   return catgs;
   // }
 
+
+
+
   select(doc: Document, selector: string, base: Node = doc): Element {
     const path = this.cfg.cssmode !== 'xpath' ? cssToXpath(selector) : selector;
     const result = doc.evaluate(path, base, null, 5, null);
     const el = result.iterateNext() as Element;
 
     if (!el) {
-      console.warn(`[select] Не найден элемент по селектору: ${selector}`);
+      console.warn(`[select] Не найден элемент по селектору: ${selector} `);
     } else {
-      console.log(`[select] Найден элемент по селектору: ${selector}`);
+      console.log(`[select] Найден элемент по селектору: ${selector} `);
     }
 
     return el;
@@ -166,7 +212,7 @@ export default class MenuParser {
       els.push(el as Element);
     }
 
-    console.log(`[selectmany] Селектор: ${selector}, Найдено элементов: ${els.length}`);
+    console.log(`[selectmany] Селектор: ${selector}, Найдено элементов: ${els.length} `);
     return els;
   }
 }

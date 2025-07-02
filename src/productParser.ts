@@ -15,6 +15,13 @@ interface WeightAndDescription {
   description: string;
 }
 
+interface Variation {
+  attributes: {
+    attribute_razmer: string;
+  };
+  display_price: number;
+}
+
 
 class Parser {
   private cfg!: Types.Config;
@@ -191,7 +198,11 @@ class Parser {
 
           product.id = generatedId;
           product.category = category.id;
-          product.price[0].id = String(generatedId + 1000);
+
+          for (let price_idx = 0; price_idx < product.price.length; price_idx++) {
+            product.price[price_idx].id = String(generatedId + 1000 + price_idx);
+
+          }
 
           console.log(`[getProducts] Продукт добавлен: ${product.name}, id: ${product.id}`);
           this.products.push(product);
@@ -234,6 +245,8 @@ class Parser {
     let price_value = doc.querySelector(this.cfg.selectors.price)?.textContent ?? '';
     const weight = doc.querySelector(this.cfg.selectors.weight)?.textContent ?? '';
 
+
+
     // console.log(doc.querySelector(".product__price span")?.textContent)
 
     // if (!price_value) {
@@ -256,19 +269,49 @@ class Parser {
 
     console.log(`[getDetailedProductInfoUrl] Имя: ${name}, Цена: ${this.extractPrice(price_value)}, Вес: ${weight} `);
 
-    let price = <Types.ProductPrice>{};
-    price.price = this.extractPrice(price_value);
-    let desc_index = this.getDescriptionIndex(weight)
-    if (desc_index == -1) {
-      console.log("[getDetailedProductInfoUrl] Не удалось определить индекс описания")
-      console.log(weight)
-      desc_index = 10
-      price.description = "1";
-      price.index = desc_index;
+    let prices: Types.ProductPrice[] = [];
+
+    // price.price = this.extractPrice(price_value);
+    // let desc_index = this.getDescriptionIndex(weight)
+    // if (desc_index == -1) {
+    // console.log("[getDetailedProductInfoUrl] Не удалось определить индекс описания")
+    // console.log(weight)
+    // desc_index = 10
+    //   price.description = "1";
+    //   price.index = desc_index;
+    // } else {
+    //   price.description = weight;
+    //   price.index = desc_index
+    // ;
+    // }
+    const formEl = doc.querySelector<HTMLFormElement>(
+      'form[data-product_variations]'
+    );
+    if (formEl) {
+      const variations = this.parseProductVariations(formEl);
+
+      console.log("VARIATIONS")
+      for (const variation of variations) {
+        let price = <Types.ProductPrice>{};
+        price.price = variation.price;
+        price.description = variation.size
+        price.index = 9
+
+        prices.push(price)
+      }
+      console.log(variations)
     } else {
-      price.description = weight;
-      price.index = desc_index;
+      let price = <Types.ProductPrice>{};
+
+      price.price = this.extractPrice(price_value);
+      price.description = "1"
+      price.index = 9;
+
+      prices.push(
+        price
+      )
     }
+
 
 
     let mods: number[] = []
@@ -276,18 +319,22 @@ class Parser {
     //   console.log('[getDetailedProductInfoUrl] Обнаружены модификаторы — начинаем парсинг');
     //   mods = await this.getModifiers(doc);
     // }
-
+    console.log(description.trim())
     return {
       id: 0,
       name: name.trim(),
-      description: description.trim(),
+      description: this.normalizeText(description.trim()),
       picture: picture.trim(),
-      price: [price],
+      price: prices,
       category: 0,
       labels: [],
       modifiers: mods,
       parameters: []
     };
+  }
+
+  normalizeText(input: string): string {
+    return input.replace(/\s*\n\s*/g, " ").trim();
   }
 
   async getDetailedProductInfoElem(elem: Element): Promise<Types.Product> {
@@ -305,19 +352,18 @@ class Parser {
 
     console.log(`[getDetailedProductInfoUrl] Имя: ${name}, Цена: ${price_value}, Вес: ${weight} `);
 
-    let price = <Types.ProductPrice>{};
-    price.price = parseInt(price_value);
-    let desc_index = this.getDescriptionIndex(weight)
-    if (desc_index == -1) {
-      console.log("[getDetailedProductInfoUrl] Не удалось определить индекс описания")
-      console.log(weight)
-      desc_index = 10
-      price.description = "1";
-      price.index = desc_index;
-    } else {
-      price.description = weight;
-      price.index = desc_index;
-    }
+    // price.price = parseInt(price_value);
+    // let desc_index = this.getDescriptionIndex(weight)
+    // if (desc_index == -1) {
+    //   console.log("[getDetailedProductInfoUrl] Не удалось определить индекс описания")
+    //   console.log(weight)
+    //   desc_index = 10
+    //   price.description = "1";
+    //   price.index = desc_index;
+    // } else {
+    //   price.description = weight;
+    //   price.index = desc_index;
+    // }
 
 
     let mods: number[] = []
@@ -331,7 +377,7 @@ class Parser {
       name: name.trim(),
       description: description,
       picture: picture.trim(),
-      price: [price],
+      price: [],
       category: 0,
       labels: [],
       modifiers: mods,
@@ -368,12 +414,6 @@ class Parser {
       description: match[2].trim() || null
     };
   }
-
-
-
-
-
-
 
 
 
@@ -496,6 +536,33 @@ class Parser {
     const unit = match[1].replace(/\.+$/, '').trim(); // убираем точку в конце
     return map[unit] ?? -1;
   }
+
+
+  parseProductVariations(formEl: HTMLFormElement): { size: string; price: number }[] {
+
+    if (!formEl) {
+      console.warn("Форма с data-product_variations не найдена");
+      return [];
+    }
+
+    const dataAttr = formEl.getAttribute("data-product_variations");
+    if (!dataAttr) return [];
+
+    let variations: Variation[] = [];
+
+    try {
+      variations = JSON.parse(dataAttr);
+    } catch (e) {
+      console.error("Ошибка парсинга JSON:", e);
+      return [];
+    }
+
+    return variations.map((v) => ({
+      size: v.attributes.attribute_razmer,
+      price: v.display_price,
+    }));
+  }
+
 
 
 
